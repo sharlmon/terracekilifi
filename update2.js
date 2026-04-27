@@ -31,10 +31,10 @@ processFile('index.html', ($) => {
   if (footer.length) {
     // Add specific footer CTA block
     const contactHtml = `
-      <div class="footer-contact-block" style="text-align: center; padding: 40px; background: var(--color-charcoal); color: var(--color-warm-white);">
-        <h2 style="color: var(--color-warm-white) !important;">Get In Touch</h2>
-        <p style="margin: 0 auto; color: var(--color-warm-white) !important;"><a href="mailto:residency@terracekilifi.com" style="color: var(--color-terracotta) !important; font-size: 1.5rem;">residency@terracekilifi.com</a></p>
-        <p style="margin: 10px auto 0; color: var(--color-warm-white) !important;">Bandari Rd, Mnarani, Kilifi, Kenya<br>Turn off the Mombasa–Malindi Highway at the junction opposite Mnarani Club.</p>
+      <div class="footer-contact-block" style="text-align: center; padding: 40px; background: var(--color-charcoal); color: var(--color-warm-ivory);">
+        <h2 style="color: var(--color-warm-ivory) !important;">Get In Touch</h2>
+        <p style="margin: 0 auto; color: var(--color-warm-ivory) !important;"><a href="mailto:residency@localhost:8080" style="color: var(--color-terracotta) !important; font-size: 1.5rem;">residency@localhost:8080</a></p>
+        <p style="margin: 10px auto 0; color: var(--color-warm-ivory) !important;">Bandari Rd, Mnarani, Kilifi, Kenya<br>Turn off the Mombasa–Malindi Highway at the junction opposite Mnarani Club.</p>
       </div>
     `;
     footer.prepend(contactHtml);
@@ -59,13 +59,13 @@ processFile('art-space.html', ($) => {
         <p class="sqsrte-large">The Terrace Art Space is a non-profit platform that celebrates the power of art to connect, inspire, and gently shift perspectives.</p>
         <div class="story-layout reveal-on-scroll">
           <div class="story-content">
-            <h2 class="oceanic-accent">Voices of Kilifi</h2>
+            <h2 class="deep-ocean-accent">Voices of Kilifi</h2>
             <p>At our heart are the voices and lived experiences of the Kilifi community. They are the vital contributors shaping culture and driving real, tangible change in the region. We create space for creativity to spark conversation, nurture understanding, and contribute to a more inclusive cultural landscape.</p>
           </div>
         </div>
         <div class="story-layout reveal-on-scroll">
           <div class="story-content">
-            <h2 class="earth-accent">Decades of Collaboration</h2>
+            <h2 class="mangrove-accent">Decades of Collaboration</h2>
             <p>Rooted in a desire for deeper community connection, The Terrace builds from over two decades of creative collaboration alongside partners such as <strong>Afrofilms International</strong> and <strong>I'll Tell You My Story</strong>. Our work is an open invitation to reimagine who shapes culture and to embrace creativity as a powerful driver of lasting impact.</p>
           </div>
         </div>
@@ -89,7 +89,7 @@ processFile('arts-residency.html', ($) => {
           
           <!-- Professional Residency Portal -->
           <div class="portal-card portal-professional reveal-on-scroll">
-            <h2 class="oceanic-accent">Professional Residency</h2>
+            <h2 class="deep-ocean-accent">Professional Residency</h2>
             <p><strong>A Place for Focus, Exchange and Renewal</strong></p>
             <p>An exclusive, artist-run environment for established artists seeking dedicated time and space. Nestled in a serene creek and mangrove setting, ensuring deep focus and eco-conscious living.</p>
             

@@ -26,7 +26,7 @@ processFile('art-space.html', ($) => {
       <div class="page-section">
         <div class="story-layout reveal-on-scroll">
           <div class="story-content">
-            <h2 class="oceanic-accent">A Platform for Connection</h2>
+            <h2 class="deep-ocean-accent">A Platform for Connection</h2>
             <p>The Terrace Art Space is a non-profit platform that celebrates the power of art to connect, inspire, and gently shift perspectives. At its heart are the voices and lived experiences of the Kilifi community as vital contributors shaping culture and driving change in the region.</p>
           </div>
           <div class="story-visual">
@@ -36,7 +36,7 @@ processFile('art-space.html', ($) => {
 
         <div class="story-layout reveal-on-scroll">
           <div class="story-content">
-            <h2 class="earth-accent">Two Decades of Storytelling</h2>
+            <h2 class="mangrove-accent">Two Decades of Storytelling</h2>
             <p>Rooted in a desire for deeper community connection and real, tangible change, The Terrace builds from over two decades of creative collaboration alongside partners such as <strong>Afrofilms International</strong> and <strong>I'll Tell You My Story</strong>. We support artists and communities in turning creative expression into meaningful, sustainable impact.</p>
           </div>
           <div class="story-visual">
@@ -65,7 +65,7 @@ processFile('arts-residency.html', ($) => {
           <!-- Professional Residency -->
           <div class="portal-card portal-professional reveal-on-scroll">
             <img src="kilifi_art_hero.png" alt="Professional Residency Mangroves">
-            <h2 class="oceanic-accent">Professional Residency</h2>
+            <h2 class="deep-ocean-accent">Professional Residency</h2>
             <p><strong>Peaceful & Reflective</strong></p>
             <p>A focused environment for established artists to reflect, create and grow. Respite from the everyday challenges of creative careers.</p>
             

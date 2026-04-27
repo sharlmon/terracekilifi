@@ -28,13 +28,13 @@
 }
 
 .portal-professional {
-  background-color: var(--color-warm-white);
+  background-color: var(--color-warm-ivory);
   border: 1px solid rgba(44,42,41,0.05);
   /* Peaceful / Reflective Theme */
 }
 
 .portal-emerging {
-  background-color: var(--color-sand);
+  background-color: var(--color-sandstone);
   /* Dynamic / Collaborative Theme */
 }
 
@@ -59,13 +59,13 @@
 .feature-icon {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: var(--color-oceanic);
+  color: var(--color-deep-ocean);
 }
 
 /* Duration Call-out Box */
 .duration-callout {
-  background-color: var(--color-earth);
-  color: var(--color-warm-white);
+  background-color: var(--color-mangrove);
+  color: var(--color-warm-ivory);
   padding: 30px;
   border-radius: 8px;
   text-align: center;
@@ -73,21 +73,21 @@
 }
 
 .duration-callout h4 {
-  color: var(--color-warm-white) !important;
+  color: var(--color-warm-ivory) !important;
   margin-bottom: 10px;
 }
 
 /* Module Highlight */
 .module-highlight {
-  background: linear-gradient(135deg, var(--color-sand) 0%, var(--color-terracotta) 100%);
+  background: linear-gradient(135deg, var(--color-sandstone) 0%, var(--color-terracotta) 100%);
   padding: 40px;
   border-radius: 12px;
-  color: var(--color-warm-white);
+  color: var(--color-warm-ivory);
   margin-top: 40px;
 }
 
 .module-highlight h3, .module-highlight p {
-  color: var(--color-warm-white) !important;
+  color: var(--color-warm-ivory) !important;
 }
 
 /* Story-telling Layout */
@@ -156,12 +156,12 @@
   position: relative;
   z-index: 3;
   text-align: center;
-  color: var(--color-warm-white);
+  color: var(--color-warm-ivory);
   padding: 0 20px;
 }
 
 .hero-content h1 {
-  color: var(--color-warm-white) !important;
+  color: var(--color-warm-ivory) !important;
 }
 
 .story-visual img {

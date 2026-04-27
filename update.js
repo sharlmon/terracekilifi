@@ -65,8 +65,8 @@ processFile('index.html', ($) => {
 
   // Contact Section
   const emailNode = $('a[href^="mailto"]');
-  emailNode.attr('href', 'mailto:residency@terracekilifi.com');
-  emailNode.text('residency@terracekilifi.com');
+  emailNode.attr('href', 'mailto:residency@localhost:8080');
+  emailNode.text('residency@localhost:8080');
   
   $('*').filter((i, el) => $(el).text().includes('Bandari Rd')).each((i, el) => {
     if (el.tagName === 'p') {
@@ -138,7 +138,7 @@ processFile('arts-residency.html', ($) => {
     "<p>With the support of Mastercard's Sanara Program, The Terrace Residency currently operates a community music studio offering mentorship, technical training, and performance opportunities. Artists are supported not only in refining their skills but also in accessing markets and building networks for collaboration and growth. These collaborative platforms create a rich ecosystem for artistic experimentation and community-led storytelling.</p>";
 
   const profHtml = "<div class='professional-residency page-section' style='padding-top: 50px; padding-bottom: 50px;'>" +
-      "<h2 class='oceanic-accent'>Professional Residency</h2>" +
+      "<h2 class='deep-ocean-accent'>Professional Residency</h2>" +
       "<h3>Overview</h3>" +
       "<p><strong>A Place for Focus, Exchange and Renewal</strong></p>" +
       "<p>Our Professional Residency offers an exclusive, high-end environment for established artists seeking dedicated time and space. The residency is completely artist-run, nestled in a serene creek and mangrove setting, ensuring deep focus and eco-conscious living.</p>" +
