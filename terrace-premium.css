@@ -142,14 +142,56 @@ a:hover {
   transform: translateY(0);
 }
 
-/* Wave Divider Motif */
-.wave-divider {
-  width: 100%;
-  height: 60px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23F8F5EE'/%3E%3C/svg%3E");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-top: -1px;
+/* Global Image Constraints */
+img, .sqs-block-image img, .section-background img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 70vh !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-smooth);
+}
+
+/* Specific Hero and Large Visual Overrides */
+.main-hero img, .hero-section img {
+  max-height: none !important; /* Heros can be taller */
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* White Space Management */
+.page-section, .story-layout, .dual-portal-layout {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+h2, h3 {
+  margin-top: 40px !important;
+  margin-bottom: 24px !important;
+}
+
+/* Horizontal Gallery / Grid for Artists Exchange */
+.horizontal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: start;
+  margin: 40px 0;
+}
+
+.gallery-item-with-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .gallery-item-with-text {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Pull Quote Styling */
