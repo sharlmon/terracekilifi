@@ -1,0 +1,180 @@
+/* UI ENHANCEMENTS FOR TERRACE REDESIGN */
+
+/* Grid and Portal Layouts */
+.dual-portal-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .dual-portal-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portal-card {
+  padding: 60px 40px;
+  border-radius: var(--border-radius-soft);
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.portal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.portal-professional {
+  background-color: var(--color-warm-white);
+  border: 1px solid rgba(44,42,41,0.05);
+  /* Peaceful / Reflective Theme */
+}
+
+.portal-emerging {
+  background-color: var(--color-sand);
+  /* Dynamic / Collaborative Theme */
+}
+
+/* Feature Grid (Icons) */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 8px;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--color-oceanic);
+}
+
+/* Duration Call-out Box */
+.duration-callout {
+  background-color: var(--color-earth);
+  color: var(--color-warm-white);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.duration-callout h4 {
+  color: var(--color-warm-white) !important;
+  margin-bottom: 10px;
+}
+
+/* Module Highlight */
+.module-highlight {
+  background: linear-gradient(135deg, var(--color-sand) 0%, var(--color-terracotta) 100%);
+  padding: 40px;
+  border-radius: 12px;
+  color: var(--color-warm-white);
+  margin-top: 40px;
+}
+
+.module-highlight h3, .module-highlight p {
+  color: var(--color-warm-white) !important;
+}
+
+/* Story-telling Layout */
+.story-layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.story-layout:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .story-layout, .story-layout:nth-child(even) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.story-content {
+  flex: 1;
+}
+
+.story-visual {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Hero and Story Visuals */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 60px;
+  border-radius: var(--border-radius-soft);
+}
+
+.hero-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 42, 41, 0.4);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--color-warm-white);
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  color: var(--color-warm-white) !important;
+}
+
+.story-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.portal-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
