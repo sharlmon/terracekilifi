@@ -2,20 +2,11 @@ import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
-import { z } from "zod";
 import { MapPin, Mail, Instagram, Facebook, ArrowUpRight } from "lucide-react";
 import heroImg from "../assets/images/hero-architecture.jpg";
 import { SITE, mapEmbedSrc, mapDirectionsUrl } from "@/lib/site";
 
 export default ContactPage;
-
-const schema = z.object({
-  firstName: z.string().trim().min(1, "Please enter your first name").max(80),
-  lastName: z.string().trim().min(1, "Please enter your last name").max(80),
-  email: z.string().trim().email("Please enter a valid email").max(255),
-  subject: z.string().trim().min(1, "Please add a subject").max(120),
-  message: z.string().trim().min(10, "Tell us a little more").max(2000),
-});
 
 function ContactPage() {
   const [status, setStatus] = useState<"idle" | "ok" | "error">("idle");
@@ -24,18 +15,41 @@ function ContactPage() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-    const result = schema.safeParse({
-      firstName: form.get("firstName"),
-      lastName: form.get("lastName"),
-      email: form.get("email"),
-      subject: form.get("subject"),
-      message: form.get("message"),
-    });
-    if (!result.success) {
+    const data = {
+      firstName: form.get("firstName") as string,
+      lastName: form.get("lastName") as string,
+      email: form.get("email") as string,
+      subject: form.get("subject") as string,
+      message: form.get("message") as string,
+    };
+
+    // Simple manual validation
+    if (!data.firstName.trim()) {
       setStatus("error");
-      setError(result.error.issues[0]?.message ?? "Please review the form.");
+      setError("Please enter your first name");
       return;
     }
+    if (!data.lastName.trim()) {
+      setStatus("error");
+      setError("Please enter your last name");
+      return;
+    }
+    if (!data.email.trim() || !/^\S+@\S+\.\S+$/.test(data.email)) {
+      setStatus("error");
+      setError("Please enter a valid email");
+      return;
+    }
+    if (!data.subject.trim()) {
+      setStatus("error");
+      setError("Please add a subject");
+      return;
+    }
+    if (!data.message.trim() || data.message.length < 10) {
+      setStatus("error");
+      setError("Tell us a little more (at least 10 characters)");
+      return;
+    }
+
     setStatus("ok");
     setError(null);
     e.currentTarget.reset();
