@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, Instagram, Facebook, Mail, MapPin } from "lucide-react";
 import { SITE } from "@/lib/site";
@@ -40,14 +40,17 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-9">
           {NAV.map((item) => (
-            <Link
+            <NavLink
               key={item.to}
               to={item.to}
-              className="link-underline text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-              activeProps={{ className: "text-foreground" }}
+              className={({ isActive }) =>
+                `link-underline text-sm font-medium transition-colors ${
+                  isActive ? "text-foreground" : "text-foreground/80 hover:text-foreground"
+                }`
+              }
             >
               {item.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 

@@ -1,60 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
 import { z } from "zod";
 import { MapPin, Mail, Instagram, Facebook, ArrowUpRight } from "lucide-react";
-import heroImg from "../../kilifiimages/hero-architecture.jpg";
+import heroImg from "../assets/images/hero-architecture.jpg";
 import { SITE, mapEmbedSrc, mapDirectionsUrl } from "@/lib/site";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — The Terrace Kilifi" },
-      {
-        name: "description",
-        content:
-          "Visit The Terrace Kilifi on Bandari Road, Mnarani, Kilifi, Kenya. Apply for a residency, propose a project, or send us a message.",
-      },
-      { property: "og:title", content: "Contact — The Terrace Kilifi" },
-      {
-        property: "og:description",
-        content:
-          "Get in touch with The Terrace Kilifi — artist-led arts space and residency on Kilifi Creek, Kenya.",
-      },
-      { property: "og:image", content: heroImg },
-      { property: "twitter:image", content: heroImg },
-    ],
-    links: [
-      { rel: "preload", as: "image", href: heroImg },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          name: SITE.name,
-          email: SITE.email,
-          url: SITE.url,
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: SITE.address.street,
-            addressLocality: SITE.address.locality,
-            addressCountry: SITE.address.country,
-          },
-          geo: {
-            "@type": "GeoCoordinates",
-            latitude: SITE.geo.lat,
-            longitude: SITE.geo.lng,
-          },
-          sameAs: [SITE.social.instagram, SITE.social.facebook],
-        }),
-      },
-    ],
-  }),
-  component: ContactPage,
-});
+export default ContactPage;
 
 const schema = z.object({
   firstName: z.string().trim().min(1, "Please enter your first name").max(80),

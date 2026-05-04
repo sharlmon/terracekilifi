@@ -1,27 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import artImg from "../../kilifiimages/social-collaboration.jpg";
-import weaveImg from "../../kilifiimages/communal-dining.jpg";
+import artImg from "../assets/images/social-collaboration.jpg";
+import weaveImg from "../assets/images/communal-dining.jpg";
 
-export const Route = createFileRoute("/art-space")({
-  head: () => ({
-    meta: [
-      { title: "The Art Space — The Terrace Kilifi" },
-      {
-        name: "description",
-        content:
-          "Exhibitions, performances, screenings, workshops and talks. A vibrant cultural platform on Kilifi Creek.",
-      },
-      { property: "og:title", content: "The Art Space — The Terrace Kilifi" },
-      { property: "og:image", content: artImg },
-    ],
-    links: [
-      { rel: "preload", as: "image", href: artImg },
-    ],
-  }),
-  component: ArtSpacePage,
-});
+export default ArtSpacePage;
 
 const PROGRAMS = [
   { title: "Exhibitions", body: "Solo and group shows, curated with care, that travel between local rootedness and international dialogue." },

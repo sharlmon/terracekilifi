@@ -1,26 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import exchangeImg from "../../kilifiimages/social-collaboration.jpg";
+import exchangeImg from "../assets/images/social-collaboration.jpg";
 
-export const Route = createFileRoute("/exchange")({
-  head: () => ({
-    meta: [
-      { title: "Artists' Exchange — The Terrace Kilifi" },
-      {
-        name: "description",
-        content:
-          "A bridge between cultures, disciplines and communities. Cross-cultural dialogue and collaborative creation.",
-      },
-      { property: "og:title", content: "Artists' Exchange — The Terrace Kilifi" },
-      { property: "og:image", content: exchangeImg },
-    ],
-    links: [
-      { rel: "preload", as: "image", href: exchangeImg },
-    ],
-  }),
-  component: ExchangePage,
-});
+export default ExchangePage;
 
 const PILLARS = [
   { n: "01", title: "Cross-cultural dialogue", body: "Hosted conversations between artists working across geographies, languages and traditions." },

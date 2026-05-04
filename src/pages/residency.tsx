@@ -1,28 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { Check } from "lucide-react";
-import residencyImg from "../../kilifiimages/interior-living-space.jpg";
-import mangroveImg from "../../kilifiimages/garden-sanctuary.jpg";
+import residencyImg from "../assets/images/interior-living-space.jpg";
+import mangroveImg from "../assets/images/garden-sanctuary.jpg";
 
-export const Route = createFileRoute("/residency")({
-  head: () => ({
-    meta: [
-      { title: "Residency — The Terrace Kilifi" },
-      {
-        name: "description",
-        content:
-          "Professional and emerging residencies on Kilifi Creek. Reflection, experimentation, and deep creative work.",
-      },
-      { property: "og:title", content: "Residency — The Terrace Kilifi" },
-      { property: "og:image", content: residencyImg },
-    ],
-    links: [
-      { rel: "preload", as: "image", href: residencyImg },
-    ],
-  }),
-  component: ResidencyPage,
-});
+export default ResidencyPage;
 
 const PROFESSIONAL = [
   "5 private bedrooms with ensuite facilities",

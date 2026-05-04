@@ -1,31 +1,14 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import heroImg from "../../kilifiimages/hero-architecture.jpg";
-import artImg from "../../kilifiimages/social-collaboration.jpg";
-import residencyImg from "../../kilifiimages/interior-living-space.jpg";
-import exchangeImg from "../../kilifiimages/balcony-office-view.jpg";
-import weaveImg from "../../kilifiimages/architectural-detail.jpg";
-import mangroveImg from "../../kilifiimages/garden-sanctuary.jpg";
+import heroImg from "../assets/images/hero-architecture.jpg";
+import artImg from "../assets/images/social-collaboration.jpg";
+import residencyImg from "../assets/images/interior-living-space.jpg";
+import exchangeImg from "../assets/images/balcony-office-view.jpg";
+import weaveImg from "../assets/images/architectural-detail.jpg";
+import mangroveImg from "../assets/images/garden-sanctuary.jpg";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "The Terrace Kilifi — Where Art, Community & Coast Converge" },
-      {
-        name: "description",
-        content:
-          "An artist-led independent arts space and residency on Kilifi Creek, Kenya. Exhibitions, residencies, and cross-cultural exchange.",
-      },
-      { property: "og:title", content: "The Terrace Kilifi" },
-      { property: "og:image", content: heroImg },
-    ],
-    links: [
-      { rel: "preload", as: "image", href: heroImg },
-    ],
-  }),
-  component: HomePage,
-});
+export default HomePage;
 
 const PILLARS = [
   {

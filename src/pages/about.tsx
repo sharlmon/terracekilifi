@@ -1,28 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import mangroveImg from "../../kilifiimages/garden-sanctuary.jpg";
-import weaveImg from "../../kilifiimages/architectural-detail.jpg";
-import artImg from "../../kilifiimages/communal-garden-swings.jpg";
+import mangroveImg from "../assets/images/garden-sanctuary.jpg";
+import weaveImg from "../assets/images/architectural-detail.jpg";
+import artImg from "../assets/images/communal-garden-swings.jpg";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — The Terrace Kilifi" },
-      {
-        name: "description",
-        content:
-          "An artist-led, independent arts space and residency on Kilifi Creek, Kenya. Our story, our team, our place.",
-      },
-      { property: "og:title", content: "About — The Terrace Kilifi" },
-      { property: "og:image", content: mangroveImg },
-    ],
-    links: [
-      { rel: "preload", as: "image", href: mangroveImg },
-    ],
-  }),
-  component: AboutPage,
-});
+export default AboutPage;
 
 const TEAM = [
   { name: "Artistic Direction", role: "Curatorial vision and programming", img: artImg },
