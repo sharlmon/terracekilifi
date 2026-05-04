@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import exchangeImg from "../assets/images/social-collaboration.jpg";
+import exchangeImg from "../assets/images/social-collaboration.webp";
 
 export default ExchangePage;
 
@@ -52,7 +52,7 @@ function ExchangePage() {
       </section>
 
       <section className="relative py-28 md:py-36 overflow-hidden">
-        <img src={exchangeImg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={exchangeImg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-charcoal/70" />
         <div className="relative container-editorial text-ivory text-center">
           <Reveal>

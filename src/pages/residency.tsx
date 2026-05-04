@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { Check } from "lucide-react";
-import residencyImg from "../assets/images/interior-living-space.jpg";
-import mangroveImg from "../assets/images/garden-sanctuary.jpg";
+import residencyImg from "../assets/images/interior-living-space.webp";
+import mangroveImg from "../assets/images/garden-sanctuary.webp";
 
 export default ResidencyPage;
 
@@ -64,7 +64,10 @@ function ResidencyPage() {
               Deep work. Open horizons.
             </h2>
             <p className="mt-6 text-foreground/80 leading-relaxed text-lg">
-              The Terrace Professional Residency is an artist-run residency space founded and operated by African Women Artists. A quiet container for ambitious projects — interdisciplinary, intentional, and rooted in place. For mid-career and established artists across disciplines seeking time for deep creative reflection and experimentation.
+              The Terrace Professional Residency is an artist-run residency space founded and operated by African Women Artists. A quiet container for ambitious projects — interdisciplinary, intentional, and rooted in place.
+            </p>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-lg">
+              For mid-career and established artists across disciplines seeking time for deep creative reflection and experimentation. We provide the silence and the space; you provide the vision.
             </p>
             <div className="mt-8 pt-8 border-t border-border">
               <p className="eyebrow text-primary/80">Duration of residency</p>
@@ -97,7 +100,10 @@ function ResidencyPage() {
               Mentorship, momentum, community.
             </h2>
             <p className="mt-6 text-foreground/80 leading-relaxed text-lg">
-              The Terrace Residency is a creative hub for emerging artists — featuring a co-working studio, performance deck, and sound recording studio. For early-career artists, particularly from coastal Kenya and the wider region. The Emerging Residency pairs studio time with mentorship, mentorship with community, and community with the skills to sustain a practice.
+              The Terrace Residency is a creative hub for emerging artists — featuring a co-working studio, performance deck, and sound recording studio.
+            </p>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-lg">
+              For early-career artists, particularly from coastal Kenya and the wider region. The Emerging Residency pairs studio time with mentorship, mentorship with community, and community with the skills to sustain a practice.
             </p>
             <div className="mt-8 pt-8 border-t border-border">
               <p className="eyebrow text-accent/80">Sanara Program</p>

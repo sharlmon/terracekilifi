@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import heroImg from "../assets/images/hero-architecture.jpg";
-import artImg from "../assets/images/social-collaboration.jpg";
-import residencyImg from "../assets/images/interior-living-space.jpg";
-import exchangeImg from "../assets/images/balcony-office-view.jpg";
-import weaveImg from "../assets/images/architectural-detail.jpg";
-import mangroveImg from "../assets/images/garden-sanctuary.jpg";
+import heroImg from "../assets/images/hero-architecture.webp";
+import artImg from "../assets/images/social-collaboration.webp";
+import residencyImg from "../assets/images/interior-living-space.webp";
+import exchangeImg from "../assets/images/balcony-office-view.webp";
+import weaveImg from "../assets/images/architectural-detail.webp";
+import mangroveImg from "../assets/images/garden-sanctuary.webp";
 
 export default HomePage;
 
@@ -79,7 +79,7 @@ function HomePage() {
               to="/residency"
               className="group inline-flex items-center gap-3 rounded-full bg-ivory px-7 py-4 text-xs uppercase tracking-[0.22em] text-charcoal hover:bg-clay transition-colors duration-500"
             >
-              Discover the residency
+              Apply for Residency
               <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
             <Link
@@ -117,7 +117,7 @@ function HomePage() {
       </section>
 
       {/* PILLARS */}
-      <section className="bg-secondary/40 py-28 md:py-36">
+      <section id="pillars" className="bg-secondary/40 py-28 md:py-36">
         <div className="container-editorial">
           <Reveal>
             <p className="eyebrow">Three pillars</p>
@@ -136,7 +136,8 @@ function HomePage() {
                   <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-muted">
                     <img
                       src={p.image}
-                      alt=""
+                      alt={p.title}
+                      loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)] group-hover:scale-[1.06]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
@@ -185,11 +186,11 @@ function HomePage() {
           </Reveal>
           <Reveal delay={200} className="md:col-span-6 order-1 md:order-2">
             <div className="relative">
-              <div className="aspect-[4/5] overflow-hidden rounded-sm">
-                <img src={mangroveImg} alt="Mangrove roots in still water" className="h-full w-full object-cover" />
+              <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
+                <img src={mangroveImg} alt="Mangrove roots in still water" className="h-full w-full object-cover" loading="lazy" />
               </div>
-              <div className="absolute -bottom-8 -left-8 w-40 aspect-square overflow-hidden rounded-sm border-8 border-background hidden md:block float-slow">
-                <img src={weaveImg} alt="" className="h-full w-full object-cover" />
+              <div className="absolute -bottom-8 -left-8 w-40 aspect-square overflow-hidden rounded-sm border-8 border-background hidden md:block float-slow shadow-xl">
+                <img src={weaveImg} alt="Architectural detail" className="h-full w-full object-cover" loading="lazy" />
               </div>
             </div>
           </Reveal>
@@ -197,20 +198,21 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="bg-charcoal text-ivory py-28 md:py-36">
+      <section id="testimonials" className="bg-charcoal text-ivory py-28 md:py-36">
         <div className="container-editorial">
           <Reveal>
             <Quote className="text-clay" size={36} />
           </Reveal>
-          <div className="mt-10 grid gap-12 md:grid-cols-3">
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
             {TESTIMONIALS.map((t, i) => (
-              <Reveal key={t.name} delay={i * 150}>
-                <blockquote className="font-serif text-2xl md:text-[1.7rem] leading-[1.25] text-ivory/95 text-pretty">
+              <Reveal key={t.name} delay={i * 150} className="bg-ivory/5 p-8 rounded-lg border border-ivory/10 hover:bg-ivory/10 transition-colors duration-500">
+                <Quote className="text-clay mb-6 opacity-40" size={24} />
+                <blockquote className="font-serif text-xl md:text-2xl leading-[1.3] text-ivory/95 text-pretty italic">
                   "{t.quote}"
                 </blockquote>
-                <footer className="mt-7">
-                  <p className="text-sm font-medium">{t.name}</p>
-                  <p className="text-xs uppercase tracking-[0.18em] text-ivory/55 mt-1">{t.role}</p>
+                <footer className="mt-8 pt-6 border-t border-ivory/10">
+                  <p className="text-sm font-medium tracking-wide">{t.name}</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-ivory/40 mt-1">{t.role}</p>
                 </footer>
               </Reveal>
             ))}
@@ -254,7 +256,7 @@ function HomePage() {
 
       {/* CTA */}
       <section className="relative py-32 md:py-44 overflow-hidden">
-        <img src={heroImg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={heroImg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-charcoal/65" />
         <div className="relative container-editorial text-center text-ivory">
           <Reveal>
@@ -272,11 +274,11 @@ function HomePage() {
           </Reveal>
           <Reveal delay={360}>
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center gap-3 rounded-full bg-ivory px-8 py-4 text-xs uppercase tracking-[0.22em] text-charcoal hover:bg-clay transition-colors duration-500">
-                Get in touch <ArrowUpRight size={16} />
+              <Link to="/contact" className="inline-flex items-center gap-3 rounded-full bg-ivory px-8 py-4 text-xs uppercase tracking-[0.22em] text-charcoal hover:bg-clay transition-colors duration-500 shadow-lg">
+                Collaborate With Us <ArrowUpRight size={16} />
               </Link>
               <Link to="/residency" className="inline-flex items-center gap-3 px-2 py-4 text-xs uppercase tracking-[0.22em] text-ivory link-underline">
-                Apply for residency
+                Join the Community
               </Link>
             </div>
           </Reveal>

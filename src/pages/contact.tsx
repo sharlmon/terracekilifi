@@ -3,7 +3,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
 import { MapPin, Mail, Instagram, Facebook, ArrowUpRight } from "lucide-react";
-import heroImg from "../assets/images/hero-architecture.jpg";
+import heroImg from "../assets/images/hero-architecture.webp";
 import { SITE, mapEmbedSrc, mapDirectionsUrl } from "@/lib/site";
 
 export default ContactPage;

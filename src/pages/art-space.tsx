@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import artImg from "../assets/images/social-collaboration.jpg";
-import weaveImg from "../assets/images/communal-dining.jpg";
+import artImg from "../assets/images/social-collaboration.webp";
+import weaveImg from "../assets/images/communal-dining.webp";
 
 export default ArtSpacePage;
 
@@ -64,7 +64,7 @@ function ArtSpacePage() {
       <section className="container-editorial py-28 md:py-36 grid md:grid-cols-12 gap-10 md:gap-16 items-center">
         <Reveal className="md:col-span-6">
           <div className="aspect-[4/5] overflow-hidden rounded-sm">
-            <img src={weaveImg} alt="" className="h-full w-full object-cover" />
+            <img src={weaveImg} alt="" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </Reveal>
         <Reveal delay={150} className="md:col-span-6">

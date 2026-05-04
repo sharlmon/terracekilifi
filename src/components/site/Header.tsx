@@ -83,6 +83,14 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-foreground px-6 py-4 text-xs font-medium uppercase tracking-[0.18em] text-background hover:bg-primary transition-colors duration-500"
+            >
+              Apply for Residency
+            </Link>
 
             <div className="mt-4 pt-6 border-t border-border/60 space-y-3 text-sm text-foreground/75">
               <a href={`mailto:${SITE.email}`} className="flex items-center gap-3 hover:text-foreground transition-colors">

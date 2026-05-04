@@ -41,6 +41,16 @@ function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       <Footer />
+      
+      {/* Sticky Mobile CTA */}
+      <div className="fixed bottom-6 left-0 right-0 z-40 px-6 md:hidden">
+        <Link 
+          to="/contact" 
+          className="flex items-center justify-center gap-3 w-full bg-foreground text-background py-4 px-6 rounded-full shadow-2xl font-medium uppercase tracking-widest text-xs animate-in fade-in slide-in-from-bottom-4 duration-1000"
+        >
+          Collaborate With Us
+        </Link>
+      </div>
     </>
   );
 }

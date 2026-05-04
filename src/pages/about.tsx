@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import mangroveImg from "../assets/images/garden-sanctuary.jpg";
-import weaveImg from "../assets/images/architectural-detail.jpg";
-import artImg from "../assets/images/communal-garden-swings.jpg";
+import mangroveImg from "../assets/images/garden-sanctuary.webp";
+import weaveImg from "../assets/images/architectural-detail.webp";
+import artImg from "../assets/images/communal-garden-swings.webp";
 
 export default AboutPage;
 
@@ -81,7 +81,7 @@ function AboutPage() {
           {TEAM.map((t, i) => (
             <Reveal key={t.name} delay={i * 120}>
               <div className="aspect-[4/5] overflow-hidden rounded-sm bg-muted">
-                <img src={t.img} alt="" className="h-full w-full object-cover" />
+                <img src={t.img} alt="" loading="lazy" className="h-full w-full object-cover" />
               </div>
               <h3 className="mt-6 font-serif text-2xl">{t.name}</h3>
               <p className="mt-2 text-foreground/65 text-sm">{t.role}</p>
