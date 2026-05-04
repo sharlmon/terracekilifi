@@ -12,6 +12,7 @@ export function PageHero({ eyebrow, title, description, image }: PageHeroProps) 
         src={image}
         alt=""
         className="absolute inset-0 h-full w-full object-cover ken-burns"
+        fetchPriority="high"
       />
       <div className="absolute inset-0 bg-[var(--gradient-dusk)]" />
       <div className="absolute inset-0 bg-charcoal/30" />

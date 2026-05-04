@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import mangroveImg from "@/assets/mangrove.jpg";
-import weaveImg from "@/assets/texture-weave.jpg";
-import artImg from "@/assets/art-space.jpg";
+import mangroveImg from "../../kilifiimages/garden-sanctuary.jpg";
+import weaveImg from "../../kilifiimages/architectural-detail.jpg";
+import artImg from "../../kilifiimages/communal-garden-swings.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -16,6 +16,9 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:title", content: "About — The Terrace Kilifi" },
       { property: "og:image", content: mangroveImg },
+    ],
+    links: [
+      { rel: "preload", as: "image", href: mangroveImg },
     ],
   }),
   component: AboutPage,
@@ -95,7 +98,7 @@ function AboutPage() {
           {TEAM.map((t, i) => (
             <Reveal key={t.name} delay={i * 120}>
               <div className="aspect-[4/5] overflow-hidden rounded-sm bg-muted">
-                <img src={t.img} alt="" loading="lazy" className="h-full w-full object-cover" />
+                <img src={t.img} alt="" className="h-full w-full object-cover" />
               </div>
               <h3 className="mt-6 font-serif text-2xl">{t.name}</h3>
               <p className="mt-2 text-foreground/65 text-sm">{t.role}</p>

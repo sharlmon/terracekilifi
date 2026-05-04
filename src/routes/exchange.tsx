@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import exchangeImg from "@/assets/exchange.jpg";
+import exchangeImg from "../../kilifiimages/social-collaboration.jpg";
 
 export const Route = createFileRoute("/exchange")({
   head: () => ({
@@ -14,6 +14,9 @@ export const Route = createFileRoute("/exchange")({
       },
       { property: "og:title", content: "Artists' Exchange — The Terrace Kilifi" },
       { property: "og:image", content: exchangeImg },
+    ],
+    links: [
+      { rel: "preload", as: "image", href: exchangeImg },
     ],
   }),
   component: ExchangePage,
@@ -32,24 +35,22 @@ function ExchangePage() {
     <>
       <PageHero
         eyebrow="Artists' Exchange"
-        title="A bridge between cultures, disciplines, and communities."
-        description="The Artists' Exchange weaves connections — between local and international artists, between disciplines, between Kilifi and the world."
+        title="Bridging Cultures, Disciplines, and Communities."
+        description="The Artists' Exchange is a space where cultures bridge, disciplines converge, and communities collaborate. We foster deep partnerships with local initiatives, particularly through our work with the Mtongani Kidundu community initiative, creating meaningful cross-cultural dialogue rooted in Kilifi."
         image={exchangeImg}
       />
 
       <section className="container-editorial py-24 md:py-32">
         <div className="grid md:grid-cols-12 gap-12">
           <Reveal className="md:col-span-5">
-            <p className="eyebrow">Five threads</p>
+            <p className="eyebrow">Bridging Cultures</p>
             <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
-              Exchange as practice, not transaction.
+              Exchange rooted in place, open to the world.
             </h2>
           </Reveal>
           <Reveal delay={150} className="md:col-span-6 md:col-start-7 text-lg leading-relaxed text-foreground/80">
             <p>
-              We believe meaningful exchange takes time. Our programmes are designed for
-              depth — slow conversations, shared studios, and projects that reward patience
-              with new ways of seeing.
+              Our exchange programmes are grounded in Kilifi and rooted in authentic partnership. Through collaboration with the Mtongani Kidundu community initiative and artists across the region, we create space for genuine cross-cultural dialogue. We believe that meaningful exchange takes time — slow conversations, shared creation, and projects that emerge from trust and mutual respect.
             </p>
           </Reveal>
         </div>
@@ -68,7 +69,7 @@ function ExchangePage() {
       </section>
 
       <section className="relative py-28 md:py-36 overflow-hidden">
-        <img src={exchangeImg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={exchangeImg} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-charcoal/70" />
         <div className="relative container-editorial text-ivory text-center">
           <Reveal>

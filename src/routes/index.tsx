@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import heroImg from "@/assets/hero-creek.jpg";
-import artImg from "@/assets/art-space.jpg";
-import residencyImg from "@/assets/residency.jpg";
-import exchangeImg from "@/assets/exchange.jpg";
-import weaveImg from "@/assets/texture-weave.jpg";
-import mangroveImg from "@/assets/mangrove.jpg";
+import heroImg from "../../kilifiimages/hero-architecture.jpg";
+import artImg from "../../kilifiimages/social-collaboration.jpg";
+import residencyImg from "../../kilifiimages/interior-living-space.jpg";
+import exchangeImg from "../../kilifiimages/balcony-office-view.jpg";
+import weaveImg from "../../kilifiimages/architectural-detail.jpg";
+import mangroveImg from "../../kilifiimages/garden-sanctuary.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,6 +19,9 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "The Terrace Kilifi" },
       { property: "og:image", content: heroImg },
+    ],
+    links: [
+      { rel: "preload", as: "image", href: heroImg },
     ],
   }),
   component: HomePage,
@@ -121,14 +124,10 @@ function HomePage() {
           </Reveal>
           <Reveal delay={150} className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80">
             <p>
-              The Terrace is a creative sanctuary on Kilifi Creek — a meeting point for
-              artists, thinkers, and communities. We make room for slow work and bold
-              ideas, for experimentation grounded in the rhythms of the coast.
+              The Terrace is an artist-led, independent arts space and residency created to provide a focused environment for artists to reflect, create and grow. Rooted on Kilifi Creek in coastal Kenya, we provide a sanctuary where artists can engage in deep, meaningful work.
             </p>
             <p>
-              Three intertwined programmes — an art space, a residency, and an artists'
-              exchange — form a single ecosystem where local and international voices meet,
-              collaborate, and create.
+              Three interconnected initiatives — The Terrace Art Space, The Terrace Residency, and The Terrace Artists' Exchange — form a single ecosystem where local and international voices meet, collaborate, and create. We operate through the Sawazisha (Equalize) approach, which guides our commitment to equitable artistic practice and community engagement.
             </p>
           </Reveal>
         </div>
@@ -155,7 +154,6 @@ function HomePage() {
                     <img
                       src={p.image}
                       alt=""
-                      loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)] group-hover:scale-[1.06]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
@@ -205,10 +203,10 @@ function HomePage() {
           <Reveal delay={200} className="md:col-span-6 order-1 md:order-2">
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-sm">
-                <img src={mangroveImg} alt="Mangrove roots in still water" loading="lazy" className="h-full w-full object-cover" />
+                <img src={mangroveImg} alt="Mangrove roots in still water" className="h-full w-full object-cover" />
               </div>
               <div className="absolute -bottom-8 -left-8 w-40 aspect-square overflow-hidden rounded-sm border-8 border-background hidden md:block float-slow">
-                <img src={weaveImg} alt="" loading="lazy" className="h-full w-full object-cover" />
+                <img src={weaveImg} alt="" className="h-full w-full object-cover" />
               </div>
             </div>
           </Reveal>
@@ -273,7 +271,7 @@ function HomePage() {
 
       {/* CTA */}
       <section className="relative py-32 md:py-44 overflow-hidden">
-        <img src={heroImg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={heroImg} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-charcoal/65" />
         <div className="relative container-editorial text-center text-ivory">
           <Reveal>
@@ -285,8 +283,8 @@ function HomePage() {
             </h2>
           </Reveal>
           <Reveal delay={240}>
-            <p className="mt-8 text-lg text-ivory/80 max-w-xl mx-auto leading-relaxed">
-              Whether you are an artist, a collaborator, or simply curious — we'd love to hear from you.
+            <p className="mt-8 text-xl md:text-2xl text-ivory/90 max-w-2xl mx-auto leading-relaxed">
+              We cultivate a space where artists can express themselves freely. Open to all forms of artistic expression — whether painting, performance, film, sound, writing, or interdisciplinary work — we welcome your voice and your vision.
             </p>
           </Reveal>
           <Reveal delay={360}>

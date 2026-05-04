@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import artImg from "@/assets/art-space.jpg";
-import weaveImg from "@/assets/texture-weave.jpg";
+import artImg from "../../kilifiimages/social-collaboration.jpg";
+import weaveImg from "../../kilifiimages/communal-dining.jpg";
 
 export const Route = createFileRoute("/art-space")({
   head: () => ({
@@ -15,6 +15,9 @@ export const Route = createFileRoute("/art-space")({
       },
       { property: "og:title", content: "The Art Space — The Terrace Kilifi" },
       { property: "og:image", content: artImg },
+    ],
+    links: [
+      { rel: "preload", as: "image", href: artImg },
     ],
   }),
   component: ArtSpacePage,
@@ -35,7 +38,7 @@ function ArtSpacePage() {
       <PageHero
         eyebrow="The Art Space"
         title="A platform that connects, inspires, and amplifies."
-        description="The Terrace Art Space is a vibrant cultural platform — a place where contemporary practice meets community life on Kilifi Creek."
+        description="The Terrace Art Space is a non-profit platform that celebrates the power of art to connect, inspire and gently shift perspectives. Rooted on Kilifi Creek, we draw on 20 years of collaboration with Afrofilms International and I'll Tell You My Story to create vibrant cultural experiences."
         image={artImg}
       />
 
@@ -48,14 +51,10 @@ function ArtSpacePage() {
         </Reveal>
         <Reveal delay={150} className="md:col-span-6 md:col-start-7 space-y-5 text-lg leading-relaxed text-foreground/80">
           <p>
-            The Art Space is open, modular, and artist-driven. We host exhibitions and live
-            programmes that prioritise depth over spectacle, and that hold room for the
-            voices of the coast alongside artists from across the world.
+            The Terrace Art Space is a non-profit platform that celebrates the power of art to connect, inspire and gently shift perspectives. We host exhibitions and live programmes that prioritise depth over spectacle, and that hold room for the voices of the coast alongside artists from across the world.
           </p>
           <p>
-            Whether you're attending a screening, joining a workshop, or proposing a project,
-            you become part of a creative community that values experiment, conversation
-            and care.
+            Whether you're attending a screening, joining a workshop, or proposing a project, you become part of a creative community that values experiment, conversation and care. Grounded in our partnership traditions and 20 years of collaborative practice, we believe art is a tool for transformation.
           </p>
         </Reveal>
       </section>
@@ -82,7 +81,7 @@ function ArtSpacePage() {
       <section className="container-editorial py-28 md:py-36 grid md:grid-cols-12 gap-10 md:gap-16 items-center">
         <Reveal className="md:col-span-6">
           <div className="aspect-[4/5] overflow-hidden rounded-sm">
-            <img src={weaveImg} alt="" loading="lazy" className="h-full w-full object-cover" />
+            <img src={weaveImg} alt="" className="h-full w-full object-cover" />
           </div>
         </Reveal>
         <Reveal delay={150} className="md:col-span-6">

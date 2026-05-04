@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { Check } from "lucide-react";
-import residencyImg from "@/assets/residency.jpg";
-import mangroveImg from "@/assets/mangrove.jpg";
+import residencyImg from "../../kilifiimages/interior-living-space.jpg";
+import mangroveImg from "../../kilifiimages/garden-sanctuary.jpg";
 
 export const Route = createFileRoute("/residency")({
   head: () => ({
@@ -17,17 +17,19 @@ export const Route = createFileRoute("/residency")({
       { property: "og:title", content: "Residency — The Terrace Kilifi" },
       { property: "og:image", content: residencyImg },
     ],
+    links: [
+      { rel: "preload", as: "image", href: residencyImg },
+    ],
   }),
   component: ResidencyPage,
 });
 
 const PROFESSIONAL = [
-  "Reflection, experimentation, and deep creative work",
-  "Creekside seclusion and natural beauty",
-  "Interdisciplinary practice across mediums",
+  "5 private bedrooms with ensuite facilities",
+  "Shared outdoor kitchen and communal dining spaces",
+  "Traditional hut for reflection and gathering",
+  "Private studios and creative work spaces",
   "Eco-conscious living and slow rhythms",
-  "Flexible stays from one week to three months",
-  "Private living spaces, studios, and shared amenities",
 ];
 
 const EMERGING = [
@@ -70,7 +72,7 @@ function ResidencyPage() {
         <div className="container-editorial grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <Reveal className="md:col-span-5 md:sticky md:top-32">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src={residencyImg} alt="Creekside villa at twilight" loading="lazy" className="h-full w-full object-cover" />
+              <img src={residencyImg} alt="Creekside villa at twilight" className="h-full w-full object-cover" />
             </div>
           </Reveal>
           <Reveal delay={150} className="md:col-span-7">
@@ -79,10 +81,12 @@ function ResidencyPage() {
               Deep work. Open horizons.
             </h2>
             <p className="mt-6 text-foreground/80 leading-relaxed text-lg">
-              For mid-career and established artists across disciplines. The
-              Professional Residency is a quiet container for ambitious projects
-              — interdisciplinary, intentional, and rooted in place.
+              The Terrace Professional Residency is an artist-run residency space founded and operated by African Women Artists. A quiet container for ambitious projects — interdisciplinary, intentional, and rooted in place. For mid-career and established artists across disciplines seeking time for deep creative reflection and experimentation.
             </p>
+            <div className="mt-8 pt-8 border-t border-border">
+              <p className="eyebrow text-primary/80">Duration of residency</p>
+              <p className="mt-3 text-foreground/75 leading-relaxed">Stays are flexible and tailored to your creative needs — from one week to three months. We work with each artist to design a residency that supports their practice.</p>
+            </div>
             <ul className="mt-10 space-y-4">
               {PROFESSIONAL.map((item) => (
                 <li key={item} className="flex gap-4 text-foreground/85">
@@ -110,11 +114,12 @@ function ResidencyPage() {
               Mentorship, momentum, community.
             </h2>
             <p className="mt-6 text-foreground/80 leading-relaxed text-lg">
-              For early-career artists, particularly from coastal Kenya and the
-              wider region. The Emerging Residency pairs studio time with
-              mentorship, mentorship with community, and community with the
-              skills to sustain a practice.
+              The Terrace Residency is a creative hub for emerging artists — featuring a co-working studio, performance deck, and sound recording studio. For early-career artists, particularly from coastal Kenya and the wider region. The Emerging Residency pairs studio time with mentorship, mentorship with community, and community with the skills to sustain a practice.
             </p>
+            <div className="mt-8 pt-8 border-t border-border">
+              <p className="eyebrow text-accent/80">Sanara Program</p>
+              <p className="mt-3 text-foreground/75 leading-relaxed">The Terrace hosts Mastercard's Sanara Program, a community music studio and mentorship initiative. This programme provides emerging musicians and audio producers from the region access to professional recording equipment, production training, and connection to broader networks of creative practitioners.</p>
+            </div>
             <ul className="mt-10 space-y-4">
               {EMERGING.map((item) => (
                 <li key={item} className="flex gap-4 text-foreground/85">
@@ -132,7 +137,7 @@ function ResidencyPage() {
           </Reveal>
           <Reveal delay={150} className="md:col-span-5 order-1 md:order-2 md:sticky md:top-32">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src={mangroveImg} alt="Mangroves at dawn" loading="lazy" className="h-full w-full object-cover" />
+              <img src={mangroveImg} alt="Mangroves at dawn" className="h-full w-full object-cover" />
             </div>
           </Reveal>
         </div>

@@ -4,7 +4,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
 import { z } from "zod";
 import { MapPin, Mail, Instagram, Facebook, ArrowUpRight } from "lucide-react";
-import heroImg from "@/assets/hero-creek.jpg";
+import heroImg from "../../kilifiimages/hero-architecture.jpg";
 import { SITE, mapEmbedSrc, mapDirectionsUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
@@ -24,6 +24,9 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:image", content: heroImg },
       { property: "twitter:image", content: heroImg },
+    ],
+    links: [
+      { rel: "preload", as: "image", href: heroImg },
     ],
     scripts: [
       {
@@ -216,7 +219,6 @@ function ContactPage() {
             <iframe
               title="The Terrace Kilifi location map"
               src={mapEmbedSrc}
-              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 w-full h-full border-0"
               allowFullScreen
