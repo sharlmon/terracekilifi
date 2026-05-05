@@ -19,14 +19,16 @@ export function PageHero({ eyebrow, title, description, image, srcSet, loading =
         className="absolute inset-0 h-full w-full object-cover ken-burns"
         fetchPriority={loading === "eager" ? "high" : "auto"}
       />
-      <div className="absolute inset-0 bg-[var(--gradient-dusk)]" />
-      <div className="absolute inset-0 bg-charcoal/30" />
-      <div className="relative z-10 container-editorial h-full flex flex-col justify-end pb-20 md:pb-28 text-ivory">
-        <p className="eyebrow text-ivory/70 reveal">{eyebrow}</p>
-        <h1 className="reveal reveal-delay-1 mt-5 font-serif text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.98] max-w-4xl text-balance">
+      <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.65)] to-[rgba(0,0,0,0.1)]" />
+
+      <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-20 text-white max-w-[800px]">
+        <p className="uppercase tracking-[0.25em] text-xs md:text-sm text-white/70 font-medium reveal">
+          {eyebrow}
+        </p>
+        <h1 className="reveal reveal-delay-1 mt-5 font-serif text-5xl md:text-6xl lg:text-[5rem] leading-[1.05] tracking-tight text-balance">
           {title}
         </h1>
-        <p className="reveal reveal-delay-2 mt-7 max-w-xl text-base md:text-lg text-ivory/85 leading-relaxed text-pretty">
+        <p className="reveal reveal-delay-2 mt-7 max-w-xl text-base md:text-lg text-white/85 leading-relaxed text-pretty">
           {description}
         </p>
       </div>

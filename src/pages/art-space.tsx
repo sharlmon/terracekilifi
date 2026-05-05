@@ -19,8 +19,8 @@ function ArtSpacePage() {
     <>
       <PageHero
         eyebrow="The Art Space"
-        title="A platform that connects, inspires, and amplifies."
-        description="The Terrace Art Space is a non-profit platform that celebrates the power of art to connect, inspire and gently shift perspectives. Rooted on Kilifi Creek, we draw on 20 years of collaboration with Afrofilms International and I'll Tell You My Story to create vibrant cultural experiences."
+        title="Connecting, Inspiring, and Amplifying."
+        description="A non-profit platform celebrating the power of art to gently shift perspectives. Rooted on Kilifi Creek, we draw on 20 years of collaboration to create vibrant cultural experiences."
         image={IMAGES.ART_SPACE_HERO.src}
         srcSet={IMAGES.ART_SPACE_HERO.srcSet}
       />

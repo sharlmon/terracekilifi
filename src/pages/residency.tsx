@@ -28,8 +28,8 @@ function ResidencyPage() {
     <>
       <PageHero
         eyebrow="The Residency"
-        title="Time to reflect, room to risk, a creek to listen to."
-        description="Two distinct residencies — Professional and Emerging — held in a creekside setting designed for deep, generous work."
+        title="Reflect, Risk, and Listen."
+        description="Two distinct residencies — Professional and Emerging — held in a creekside setting designed for deep, generous work and creative growth."
         image={IMAGES.RESIDENCY_HERO.src}
       />
 

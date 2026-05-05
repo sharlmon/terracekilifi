@@ -63,33 +63,29 @@ function HomePage() {
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/15 to-charcoal/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.65)] to-[rgba(0,0,0,0.1)]" />
 
-        <div className="relative z-10 container-editorial h-full flex flex-col justify-end pb-20 md:pb-28 text-ivory">
-          <p className="eyebrow text-ivory/70 reveal">Kilifi Creek · Coastal Kenya</p>
-          <h1 className="reveal reveal-delay-1 mt-6 font-serif text-[3.4rem] sm:text-7xl md:text-[6rem] lg:text-[7.5rem] leading-[0.95] max-w-5xl text-balance">
-            An artist-led <em className="not-italic text-clay">sanctuary</em><br className="hidden sm:block" />
-            on the East African coast.
+        <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-20 text-white max-w-[760px]">
+          <p className="uppercase tracking-[0.25em] text-xs md:text-sm text-white/70 font-medium reveal">
+            Artist-led sanctuary
+          </p>
+          <h1 className="reveal reveal-delay-1 mt-5 font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+            On the East African Coast
           </h1>
-          <div className="reveal reveal-delay-2 mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
+          <div className="reveal reveal-delay-2 mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
             <Link
               to="/residency"
-              className="group inline-flex items-center gap-3 rounded-full bg-ivory px-7 py-4 text-xs uppercase tracking-[0.22em] text-charcoal hover:bg-clay transition-colors duration-500"
+              className="inline-flex justify-center items-center rounded-full bg-[#f5f5f0] text-charcoal px-8 py-3.5 text-xs font-bold uppercase tracking-[0.2em] hover:scale-105 transition-transform duration-300 shadow-xl"
             >
               Apply for Residency
-              <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
             <Link
               to="/art-space"
-              className="inline-flex items-center gap-3 px-2 py-4 text-xs uppercase tracking-[0.22em] text-ivory/90 link-underline"
+              className="inline-flex justify-center items-center rounded-full border border-white/40 bg-white/5 text-white backdrop-blur-sm px-8 py-3.5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-charcoal hover:border-white transition-all duration-300"
             >
               Explore the art space
             </Link>
           </div>
-        </div>
-
-        <div className="absolute bottom-8 right-6 md:right-12 z-10 text-ivory/60 text-[10px] uppercase tracking-[0.3em] writing-vertical hidden md:block">
-          <span>Est. on the creek</span>
         </div>
       </section>
 

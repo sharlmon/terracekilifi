@@ -18,8 +18,8 @@ function ExchangePage() {
     <>
       <PageHero
         eyebrow="Artists' Exchange"
-        title="Bridging Cultures, Disciplines, and Communities."
-        description="The Artists' Exchange is a space where cultures bridge, disciplines converge, and communities collaborate. We foster deep partnerships with local initiatives, particularly through our work with the Mtongani Kidundu community initiative, creating meaningful cross-cultural dialogue rooted in Kilifi."
+        title="Cultures, Disciplines, and Communities."
+        description="A collaborative space where disciplines converge and communities bridge. We foster meaningful cross-cultural dialogue rooted in authentic Kilifi partnerships."
         image={exchangeImg}
       />
 

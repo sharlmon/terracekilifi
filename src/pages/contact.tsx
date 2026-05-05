@@ -59,8 +59,8 @@ function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Let's begin a conversation."
-        description="Whether it's a residency, a proposal, or a question — we read every message."
+        title="Let’s Begin a Conversation."
+        description="Whether it’s a residency inquiry, a project proposal, or a general question — we value every message and look forward to hearing from you."
         image={heroImg}
       />
 
