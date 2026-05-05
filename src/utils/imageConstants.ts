@@ -25,8 +25,8 @@ export const IMAGES = {
   
   // Art Space Page
   ART_SPACE_HERO: {
-    src: `${BASE_URL}/assets/images/content_133.jpg`,
-    srcSet: `${BASE_URL}/assets/images/content_135.jpg 500w, ${BASE_URL}/assets/images/content_130.jpg 1000w, ${BASE_URL}/assets/images/content_133.jpg 2500w`,
+    src: `${BASE_URL}/assets/images/content_133.jpg?v=2`,
+    srcSet: `${BASE_URL}/assets/images/content_135.jpg?v=2 500w, ${BASE_URL}/assets/images/content_130.jpg?v=2 1000w, ${BASE_URL}/assets/images/content_133.jpg?v=2 2500w`,
   },
   ART_SPACE_EVENTS: {
     src: `${BASE_URL}/assets/images/content_149.jpg`,
