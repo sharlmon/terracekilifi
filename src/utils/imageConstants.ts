@@ -57,4 +57,3 @@ export const IMAGES = {
     src: uiFont,
   },
 } as const;
-
