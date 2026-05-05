@@ -52,6 +52,13 @@ function ContactPage() {
 
     setStatus("ok");
     setError(null);
+
+    // Construct mailto link
+    const mailtoLink = `mailto:${SITE.email}?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(
+      `Name: ${data.firstName} ${data.lastName}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
     e.currentTarget.reset();
   };
 

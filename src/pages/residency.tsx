@@ -80,12 +80,12 @@ function ResidencyPage() {
                 </li>
               ))}
             </ul>
-            <Link
-              to="/contact"
+            <a
+              href={`mailto:${SITE.email}?subject=Professional Residency Application`}
               className="mt-10 inline-flex items-center rounded-full bg-foreground px-7 py-4 text-xs uppercase tracking-[0.22em] text-background hover:bg-primary transition-colors duration-500"
             >
               Apply for Professional Residency
-            </Link>
+            </a>
           </Reveal>
         </div>
       </section>
@@ -116,12 +116,12 @@ function ResidencyPage() {
                 </li>
               ))}
             </ul>
-            <Link
-              to="/contact"
+            <a
+              href={`mailto:${SITE.email}?subject=Emerging Residency Application`}
               className="mt-10 inline-flex items-center rounded-full bg-foreground px-7 py-4 text-xs uppercase tracking-[0.22em] text-background hover:bg-primary transition-colors duration-500"
             >
               Apply for Emerging Residency
-            </Link>
+            </a>
           </Reveal>
           <Reveal delay={150} className="md:col-span-5 order-1 md:order-2 md:sticky md:top-32">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">

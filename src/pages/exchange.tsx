@@ -71,7 +71,7 @@ function ExchangePage() {
           </Reveal>
           <Reveal delay={360}>
             <a
-              href="/contact"
+              href={`mailto:${SITE.email}?subject=Collaboration Inquiry`}
               className="mt-10 inline-flex items-center rounded-full bg-ivory px-8 py-4 text-xs uppercase tracking-[0.22em] text-charcoal hover:bg-clay transition-colors duration-500"
             >
               Start a conversation

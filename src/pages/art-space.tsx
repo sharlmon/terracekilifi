@@ -77,7 +77,7 @@ function ArtSpacePage() {
             Tell us what you'd like to make and how the Art Space can support it.
           </p>
           <a
-            href="/contact"
+            href={`mailto:${SITE.email}?subject=Project Proposal`}
             className="mt-9 inline-flex items-center rounded-full bg-foreground px-7 py-4 text-xs uppercase tracking-[0.22em] text-background hover:bg-primary transition-colors duration-500"
           >
             Submit a proposal

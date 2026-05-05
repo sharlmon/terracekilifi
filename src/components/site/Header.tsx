@@ -59,22 +59,16 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-6 ml-4">
-            <Link
-              to="/contact"
+          <div className="hidden lg:flex items-center ml-4">
+            <a
+              href={`mailto:${SITE.email}?subject=Residency Application`}
               className="inline-flex justify-center items-center rounded-full bg-[#f5f5f0] px-6 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0f0f0f] hover:scale-105 transition-transform duration-300"
             >
               Apply
-            </Link>
-            <button aria-label="Cart" className="p-1 hover:opacity-70 transition-opacity invert">
-              <img src={IMAGES.UI_CART.src} alt="Cart" className="w-5 h-5 object-contain" />
-            </button>
+            </a>
           </div>
 
-          <div className="flex items-center gap-4 lg:hidden z-50 relative">
-            <button aria-label="Cart" className="p-1 hover:opacity-70 transition-opacity invert">
-              <img src={IMAGES.UI_CART.src} alt="Cart" className="w-5 h-5 object-contain" />
-            </button>
+          <div className="flex items-center lg:hidden z-50 relative">
             <button
               aria-label="Toggle menu"
               className="p-1 text-white"
@@ -112,13 +106,13 @@ export function Header() {
 
           <div className="w-12 h-[1px] bg-white/20 my-2" />
 
-          <Link
-            to="/contact"
+          <a
+            href={`mailto:${SITE.email}?subject=Residency Application`}
             onClick={() => setOpen(false)}
             className="w-full inline-flex items-center justify-center rounded-full bg-[#f5f5f0] px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] text-[#0f0f0f] hover:scale-105 transition-transform duration-300"
           >
             Apply for Residency
-          </Link>
+          </a>
 
           <div className="flex gap-4 mt-4">
             <a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"
