@@ -56,14 +56,15 @@ function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section 
-        className="relative h-[100svh] min-h-[640px] w-full overflow-hidden"
-        style={{ 
-          backgroundImage: `url(${BASE_URL}/assets/images/kilifi_terrace_view.webp)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
+      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
+        <img
+          src={IMAGES.ART_SPACE_HERO.src}
+          srcSet={IMAGES.ART_SPACE_HERO.srcSet}
+          alt="Art space at The Terrace Kilifi"
+          className="absolute inset-0 h-full w-full object-cover ken-burns img-mask-in"
+          loading="eager"
+          fetchPriority="high"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.65)] to-[rgba(0,0,0,0.1)]" />
 
         <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-20 text-white max-w-[760px]">
