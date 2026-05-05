@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import { SITE, mapDirectionsUrl } from "@/lib/site";
+import { IMAGES } from "@/utils/imageConstants";
 
 export function Footer() {
   return (

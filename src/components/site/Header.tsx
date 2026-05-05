@@ -1,7 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Menu, X, Instagram, Facebook, Mail, MapPin } from "lucide-react";
+import { Menu, X, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import { SITE } from "@/lib/site";
+import { IMAGES } from "@/utils/imageConstants";
 
 const NAV = [
   { to: "/art-space", label: "Art Space" },
@@ -54,12 +55,17 @@ export function Header() {
           ))}
         </nav>
 
-        <Link
-          to="/contact"
-          className="hidden md:inline-flex items-center rounded-full bg-foreground px-5 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-background hover:bg-primary transition-colors duration-500"
-        >
-          Apply
-        </Link>
+        <div className="hidden md:flex items-center gap-4">
+          <Link
+            to="/contact"
+            className="inline-flex items-center rounded-full bg-foreground px-5 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-background hover:bg-primary transition-colors duration-500"
+          >
+            Apply
+          </Link>
+          <button aria-label="Cart" className="p-1 hover:opacity-70 transition-opacity">
+            <img src={IMAGES.UI_CART.src} alt="Cart" className="w-6 h-6 invert dark:invert-0" />
+          </button>
+        </div>
 
         <button
           aria-label="Toggle menu"

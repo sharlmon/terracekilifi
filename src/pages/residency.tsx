@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { Check } from "lucide-react";
-import residencyImg from "../assets/images/interior-living-space.webp";
-import mangroveImg from "../assets/images/garden-sanctuary.webp";
+import { IMAGES } from "@/utils/imageConstants";
 
 export default ResidencyPage;
 
@@ -31,7 +30,7 @@ function ResidencyPage() {
         eyebrow="The Residency"
         title="Time to reflect, room to risk, a creek to listen to."
         description="Two distinct residencies — Professional and Emerging — held in a creekside setting designed for deep, generous work."
-        image={residencyImg}
+        image={IMAGES.RESIDENCY_HERO.src}
       />
 
       <section className="container-editorial py-24 md:py-32 grid md:grid-cols-12 gap-12">
@@ -55,7 +54,7 @@ function ResidencyPage() {
         <div className="container-editorial grid md:grid-cols-12 gap-10 md:gap-16 items-start">
           <Reveal className="md:col-span-5 md:sticky md:top-32">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src={residencyImg} alt="Creekside villa at twilight" className="h-full w-full object-cover" />
+              <img src={IMAGES.RESIDENCY_PRO.src} srcSet={IMAGES.RESIDENCY_PRO.srcSet} sizes="(max-width: 768px) 100vw, 50vw" alt="Professional Residency Space" className="h-full w-full object-cover" loading="lazy" />
             </div>
           </Reveal>
           <Reveal delay={150} className="md:col-span-7">
@@ -126,7 +125,7 @@ function ResidencyPage() {
           </Reveal>
           <Reveal delay={150} className="md:col-span-5 order-1 md:order-2 md:sticky md:top-32">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src={mangroveImg} alt="Mangroves at dawn" className="h-full w-full object-cover" />
+              <img src={IMAGES.RESIDENCY_EMERGING.src} srcSet={IMAGES.RESIDENCY_EMERGING.srcSet} sizes="(max-width: 768px) 100vw, 50vw" alt="Emerging Artist Mentorship" className="h-full w-full object-cover" loading="lazy" />
             </div>
           </Reveal>
         </div>

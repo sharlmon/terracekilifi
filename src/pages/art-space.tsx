@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import artImg from "../assets/images/social-collaboration.webp";
-import weaveImg from "../assets/images/communal-dining.webp";
+import { IMAGES } from "@/utils/imageConstants";
 
 export default ArtSpacePage;
 
@@ -22,7 +21,8 @@ function ArtSpacePage() {
         eyebrow="The Art Space"
         title="A platform that connects, inspires, and amplifies."
         description="The Terrace Art Space is a non-profit platform that celebrates the power of art to connect, inspire and gently shift perspectives. Rooted on Kilifi Creek, we draw on 20 years of collaboration with Afrofilms International and I'll Tell You My Story to create vibrant cultural experiences."
-        image={artImg}
+        image={IMAGES.ART_SPACE_HERO.src}
+        srcSet={IMAGES.ART_SPACE_HERO.srcSet}
       />
 
       <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-12">
@@ -64,7 +64,7 @@ function ArtSpacePage() {
       <section className="container-editorial py-28 md:py-36 grid md:grid-cols-12 gap-10 md:gap-16 items-center">
         <Reveal className="md:col-span-6">
           <div className="aspect-[4/5] overflow-hidden rounded-sm">
-            <img src={weaveImg} alt="" loading="lazy" className="h-full w-full object-cover" />
+            <img src={IMAGES.ART_SPACE_EVENTS.src} srcSet={IMAGES.ART_SPACE_EVENTS.srcSet} sizes="(max-width: 768px) 100vw, 50vw" alt="Live Event" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </Reveal>
         <Reveal delay={150} className="md:col-span-6">

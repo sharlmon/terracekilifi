@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import heroImg from "../assets/images/hero-architecture.webp";
-import artImg from "../assets/images/social-collaboration.webp";
-import residencyImg from "../assets/images/interior-living-space.webp";
-import exchangeImg from "../assets/images/balcony-office-view.webp";
-import weaveImg from "../assets/images/architectural-detail.webp";
-import mangroveImg from "../assets/images/garden-sanctuary.webp";
+import { IMAGES } from "@/utils/imageConstants";
 
 export default HomePage;
 
@@ -15,21 +10,22 @@ const PILLARS = [
     label: "01 — Art Space",
     title: "A platform for community voice",
     body: "Exhibitions, performances, screenings, workshops and talks that connect, inspire and amplify.",
-    image: artImg,
+    image: IMAGES.ART_SPACE_PILLAR.src,
     href: "/art-space" as const,
   },
   {
     label: "02 — Residency",
     title: "Time, space and the creek",
     body: "Professional and emerging residencies set in creekside seclusion. From a week to three months.",
-    image: residencyImg,
+    image: IMAGES.RESIDENCY_PILLAR.src,
     href: "/residency" as const,
   },
   {
     label: "03 — Artists' Exchange",
     title: "A bridge between cultures",
     body: "Cross-cultural dialogue, knowledge exchange and collaborative creation across disciplines.",
-    image: exchangeImg,
+    image: IMAGES.EXCHANGE_PILLAR.src,
+    srcSet: IMAGES.EXCHANGE_PILLAR.srcSet,
     href: "/exchange" as const,
   },
 ];
@@ -61,9 +57,10 @@ function HomePage() {
       {/* HERO */}
       <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
         <img
-          src={heroImg}
+          src={IMAGES.HERO_SUNSET.src}
           alt="Mangroves at sunrise on Kilifi Creek"
           className="absolute inset-0 h-full w-full object-cover ken-burns"
+          loading="eager"
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/15 to-charcoal/70" />
@@ -97,7 +94,7 @@ function HomePage() {
       </section>
 
       {/* INTRO / STORY */}
-      <section className="container-editorial py-28 md:py-40">
+      <section id="intro" className="container-editorial py-28 md:py-40">
         <div className="grid md:grid-cols-12 gap-12 md:gap-20 items-start">
           <Reveal className="md:col-span-5">
             <p className="eyebrow">A creekside ethos</p>
@@ -136,6 +133,8 @@ function HomePage() {
                   <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-muted">
                     <img
                       src={p.image}
+                      srcSet={p.srcSet}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       alt={p.title}
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)] group-hover:scale-[1.06]"
@@ -158,7 +157,7 @@ function HomePage() {
       </section>
 
       {/* EDITORIAL SPLIT */}
-      <section className="container-editorial py-28 md:py-40">
+      <section id="place" className="container-editorial py-28 md:py-40">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
           <Reveal className="md:col-span-6 order-2 md:order-1">
             <p className="eyebrow">The place</p>
@@ -187,10 +186,10 @@ function HomePage() {
           <Reveal delay={200} className="md:col-span-6 order-1 md:order-2">
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
-                <img src={mangroveImg} alt="Mangrove roots in still water" className="h-full w-full object-cover" loading="lazy" />
+                <img src={IMAGES.FACILITY_MANGROVE.src} alt="Mangrove roots in still water" className="h-full w-full object-cover" loading="lazy" />
               </div>
               <div className="absolute -bottom-8 -left-8 w-40 aspect-square overflow-hidden rounded-sm border-8 border-background hidden md:block float-slow shadow-xl">
-                <img src={weaveImg} alt="Architectural detail" className="h-full w-full object-cover" loading="lazy" />
+                <img src={IMAGES.FACILITY_SUNDECK.src} srcSet={IMAGES.FACILITY_SUNDECK.srcSet} sizes="200px" alt="Sundeck" className="h-full w-full object-cover" loading="lazy" />
               </div>
             </div>
           </Reveal>
@@ -221,7 +220,7 @@ function HomePage() {
       </section>
 
       {/* PROGRAMS PREVIEW */}
-      <section className="container-editorial py-28 md:py-36">
+      <section id="programs" className="container-editorial py-28 md:py-36">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <Reveal>
             <p className="eyebrow">Programmes & opportunities</p>
@@ -255,8 +254,8 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-32 md:py-44 overflow-hidden">
-        <img src={heroImg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+      <section id="cta" className="relative py-32 md:py-44 overflow-hidden">
+        <img src={IMAGES.HERO_SUNSET.src} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-charcoal/65" />
         <div className="relative container-editorial text-center text-ivory">
           <Reveal>

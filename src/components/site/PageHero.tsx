@@ -3,16 +3,21 @@ interface PageHeroProps {
   title: string;
   description: string;
   image: string;
+  srcSet?: string;
+  loading?: "eager" | "lazy";
 }
 
-export function PageHero({ eyebrow, title, description, image }: PageHeroProps) {
+export function PageHero({ eyebrow, title, description, image, srcSet, loading = "eager" }: PageHeroProps) {
   return (
     <section className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
       <img
         src={image}
+        srcSet={srcSet}
+        sizes="100vw"
+        loading={loading}
         alt=""
         className="absolute inset-0 h-full w-full object-cover ken-burns"
-        fetchPriority="high"
+        fetchPriority={loading === "eager" ? "high" : "auto"}
       />
       <div className="absolute inset-0 bg-[var(--gradient-dusk)]" />
       <div className="absolute inset-0 bg-charcoal/30" />
