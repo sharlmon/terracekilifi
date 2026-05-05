@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { IMAGES } from "@/utils/imageConstants";
+import { SITE } from "@/lib/site";
 
 export default ArtSpacePage;
 
