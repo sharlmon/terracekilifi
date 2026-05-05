@@ -6,12 +6,30 @@ import { IMAGES } from "@/utils/imageConstants";
 export default ArtSpacePage;
 
 const PROGRAMS = [
-  { title: "Exhibitions", body: "Solo and group shows, curated with care, that travel between local rootedness and international dialogue." },
-  { title: "Performances", body: "Music, dance, and live art that breathe with the rhythms of the coast." },
-  { title: "Screenings", body: "Independent cinema, artist film, and documentary nights under open skies." },
-  { title: "Workshops", body: "Hands-on sessions in craft, sound, writing and image-making, led by practising artists." },
-  { title: "Talks", body: "Conversations between artists, curators and communities — slow, generous, public." },
-  { title: "Collaborations", body: "Long-form partnerships with collectives, institutions and neighbours along the creek." },
+  {
+    title: "Exhibitions",
+    body: "Solo and group shows, curated with care, that travel between local rootedness and international dialogue.",
+  },
+  {
+    title: "Performances",
+    body: "Music, dance, and live art that breathe with the rhythms of the coast.",
+  },
+  {
+    title: "Screenings",
+    body: "Independent cinema, artist film, and documentary nights under open skies.",
+  },
+  {
+    title: "Workshops",
+    body: "Hands-on sessions in craft, sound, writing and image-making, led by practising artists.",
+  },
+  {
+    title: "Talks",
+    body: "Conversations between artists, curators and communities — slow, generous, public.",
+  },
+  {
+    title: "Collaborations",
+    body: "Long-form partnerships with collectives, institutions and neighbours along the creek.",
+  },
 ];
 
 function ArtSpacePage() {
@@ -22,22 +40,30 @@ function ArtSpacePage() {
         title="Connecting, Inspiring, and Amplifying."
         description="A non-profit platform celebrating the power of art to gently shift perspectives. Rooted on Kilifi Creek, we draw on 20 years of collaboration to create vibrant cultural experiences."
         image={IMAGES.ART_SPACE_HERO.src}
-        srcSet={IMAGES.ART_SPACE_HERO.srcSet}
       />
 
-      <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-12">
+      <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-12 bg-grain">
         <Reveal className="md:col-span-5">
           <p className="eyebrow">Our approach</p>
           <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
             A space shaped by the people who use it.
           </h2>
         </Reveal>
-        <Reveal delay={150} className="md:col-span-6 md:col-start-7 space-y-5 text-lg leading-relaxed text-foreground/80">
+        <Reveal
+          delay={150}
+          className="md:col-span-6 md:col-start-7 space-y-5 text-lg leading-relaxed text-foreground/80"
+        >
           <p>
-            The Terrace Art Space is a non-profit platform that celebrates the power of art to connect, inspire and gently shift perspectives. We host exhibitions and live programmes that prioritise depth over spectacle, and that hold room for the voices of the coast alongside artists from across the world.
+            The Terrace Art Space is a non-profit platform that celebrates the power of art to
+            connect, inspire and gently shift perspectives. We host exhibitions and live programmes
+            that prioritise depth over spectacle, and that hold room for the voices of the coast
+            alongside artists from across the world.
           </p>
           <p>
-            Whether you're attending a screening, joining a workshop, or proposing a project, you become part of a creative community that values experiment, conversation and care. Grounded in our partnership traditions and 20 years of collaborative practice, we believe art is a tool for transformation.
+            Whether you're attending a screening, joining a workshop, or proposing a project, you
+            become part of a creative community that values experiment, conversation and care.
+            Grounded in our partnership traditions and 20 years of collaborative practice, we
+            believe art is a tool for transformation.
           </p>
         </Reveal>
       </section>
@@ -52,7 +78,11 @@ function ArtSpacePage() {
           </Reveal>
           <div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3 border border-border">
             {PROGRAMS.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80} className="bg-background p-10">
+              <Reveal
+                key={p.title}
+                delay={i * 80}
+                className="bg-background p-10 group hover:bg-secondary/20 transition-colors"
+              >
                 <h3 className="font-serif text-2xl">{p.title}</h3>
                 <p className="mt-4 text-foreground/70 leading-relaxed">{p.body}</p>
               </Reveal>
@@ -61,10 +91,15 @@ function ArtSpacePage() {
         </div>
       </section>
 
-      <section className="container-editorial py-28 md:py-36 grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+      <section className="container-editorial py-28 md:py-36 grid md:grid-cols-12 gap-10 md:gap-16 items-center bg-grain">
         <Reveal className="md:col-span-6">
-          <div className="aspect-[4/5] overflow-hidden rounded-sm">
-            <img src={IMAGES.ART_SPACE_EVENTS.src} srcSet={IMAGES.ART_SPACE_EVENTS.srcSet} sizes="(max-width: 768px) 100vw, 50vw" alt="Live Event" loading="lazy" className="h-full w-full object-cover" />
+          <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
+            <img
+              src={IMAGES.ART_SPACE_EVENTS.src}
+              alt="Live Event"
+              loading="lazy"
+              className="h-full w-full object-cover img-mask-in"
+            />
           </div>
         </Reveal>
         <Reveal delay={150} className="md:col-span-6">
@@ -73,12 +108,12 @@ function ArtSpacePage() {
             Bring your work to the creek.
           </h2>
           <p className="mt-6 text-foreground/80 leading-relaxed text-lg">
-            We welcome proposals from artists, curators, collectives, and partners.
-            Tell us what you'd like to make and how the Art Space can support it.
+            We welcome proposals from artists, curators, collectives, and partners. Tell us what
+            you'd like to make and how the Art Space can support it.
           </p>
           <a
             href={`mailto:${SITE.email}?subject=Project Proposal`}
-            className="mt-9 inline-flex items-center rounded-full bg-foreground px-7 py-4 text-xs uppercase tracking-[0.22em] text-background hover:bg-primary transition-colors duration-500"
+            className="mt-9 inline-flex items-center rounded-full bg-foreground px-7 py-4 text-xs uppercase tracking-[0.22em] text-background hover:bg-primary transition-colors duration-500 shadow-lg"
           >
             Submit a proposal
           </a>

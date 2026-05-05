@@ -3,7 +3,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { useState } from "react";
 import { MapPin, Mail, Instagram, Facebook, ArrowUpRight } from "lucide-react";
-import heroImg from "../assets/images/hero-architecture.webp";
+import { IMAGES } from "@/utils/imageConstants";
 import { SITE, mapEmbedSrc, mapDirectionsUrl } from "@/lib/site";
 
 export default ContactPage;
@@ -55,9 +55,9 @@ function ContactPage() {
 
     // Construct mailto link
     const mailtoLink = `mailto:${SITE.email}?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(
-      `Name: ${data.firstName} ${data.lastName}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+      `Name: ${data.firstName} ${data.lastName}\nEmail: ${data.email}\n\nMessage:\n${data.message}`,
     )}`;
-    
+
     window.location.href = mailtoLink;
     e.currentTarget.reset();
   };
@@ -68,10 +68,10 @@ function ContactPage() {
         eyebrow="Contact"
         title="Let’s Begin a Conversation."
         description="Whether it’s a residency inquiry, a project proposal, or a general question — we value every message and look forward to hearing from you."
-        image={heroImg}
+        image={IMAGES.HERO_SUNSET.src}
       />
 
-      <section className="container-editorial py-24 md:py-32 grid md:grid-cols-12 gap-12 md:gap-20">
+      <section className="container-editorial py-24 md:py-32 grid md:grid-cols-12 gap-12 md:gap-20 bg-grain">
         <Reveal className="md:col-span-5 space-y-10">
           <div>
             <p className="eyebrow">Visit</p>
@@ -81,9 +81,14 @@ function ContactPage() {
               rel="noopener noreferrer"
               className="mt-4 flex items-start gap-3 group"
             >
-              <MapPin size={20} className="mt-1 text-primary shrink-0 group-hover:scale-110 transition-transform" />
+              <MapPin
+                size={20}
+                className="mt-1 text-primary shrink-0 group-hover:scale-110 transition-transform"
+              />
               <span className="font-serif text-2xl leading-snug group-hover:text-primary transition-colors">
-                {SITE.address.street}<br />{SITE.address.locality}, {SITE.address.country}
+                {SITE.address.street}
+                <br />
+                {SITE.address.locality}, {SITE.address.country}
               </span>
             </a>
             <p className="mt-4 text-sm text-muted-foreground italic max-w-sm">
@@ -140,9 +145,16 @@ function ContactPage() {
               <Field label="Last name" name="lastName" required />
             </div>
             <Field label="Email" name="email" type="email" required />
-            <Field label="Subject" name="subject" required placeholder="Residency · Proposal · Visit" />
+            <Field
+              label="Subject"
+              name="subject"
+              required
+              placeholder="Residency · Proposal · Visit"
+            />
             <div>
-              <label className="eyebrow block mb-3" htmlFor="message">Message</label>
+              <label className="eyebrow block mb-3" htmlFor="message">
+                Message
+              </label>
               <textarea
                 id="message"
                 name="message"
@@ -154,9 +166,7 @@ function ContactPage() {
               />
             </div>
 
-            {status === "error" && error && (
-              <p className="text-sm text-destructive">{error}</p>
-            )}
+            {status === "error" && error && <p className="text-sm text-destructive">{error}</p>}
             {status === "ok" && (
               <p className="text-sm text-mangrove">Thank you — we'll be in touch soon.</p>
             )}
@@ -166,7 +176,10 @@ function ContactPage() {
               className="group inline-flex items-center gap-2 rounded-full bg-foreground px-8 py-4 text-xs uppercase tracking-[0.22em] text-background hover:bg-primary transition-all duration-500 hover:-translate-y-0.5"
             >
               Send message
-              <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight
+                size={14}
+                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+              />
             </button>
           </form>
         </Reveal>
@@ -219,7 +232,9 @@ function Field({
 }) {
   return (
     <div>
-      <label className="eyebrow block mb-3" htmlFor={name}>{label}</label>
+      <label className="eyebrow block mb-3" htmlFor={name}>
+        {label}
+      </label>
       <input
         id={name}
         name={name}

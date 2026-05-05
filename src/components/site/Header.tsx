@@ -28,10 +28,16 @@ export function Header() {
       <header className="fixed inset-x-0 top-0 z-50 transition-all duration-300 px-4 sm:px-6 md:px-8 mt-4 sm:mt-6">
         <div
           className={`mx-auto max-w-7xl flex items-center justify-between px-5 md:px-8 transition-all duration-300 rounded-[16px] border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ${
-            scrolled ? "bg-[#0f0f0f]/75 backdrop-blur-md py-2.5" : "bg-[#0f0f0f]/55 backdrop-blur-md py-4"
+            scrolled
+              ? "bg-[#0f0f0f]/75 backdrop-blur-md py-2.5"
+              : "bg-[#0f0f0f]/55 backdrop-blur-md py-4"
           }`}
         >
-          <Link to="/" className="group flex items-baseline gap-2 z-50 relative" onClick={() => setOpen(false)}>
+          <Link
+            to="/"
+            className="group flex items-baseline gap-2 z-50 relative"
+            onClick={() => setOpen(false)}
+          >
             <span className="font-serif text-2xl tracking-wide text-white">The Terrace</span>
             <span className="eyebrow hidden sm:inline text-white/80">Kilifi</span>
           </Link>
@@ -115,16 +121,29 @@ export function Header() {
           </a>
 
           <div className="flex gap-4 mt-4">
-            <a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-              className="p-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-[#0f0f0f] transition-all">
+            <a
+              href={SITE.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="p-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-[#0f0f0f] transition-all"
+            >
               <Instagram size={18} />
             </a>
-            <a href={SITE.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-              className="p-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-[#0f0f0f] transition-all">
+            <a
+              href={SITE.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="p-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-[#0f0f0f] transition-all"
+            >
               <Facebook size={18} />
             </a>
-            <a href={`mailto:${SITE.email}`} aria-label="Email"
-              className="p-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-[#0f0f0f] transition-all">
+            <a
+              href={`mailto:${SITE.email}`}
+              aria-label="Email"
+              className="p-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-[#0f0f0f] transition-all"
+            >
               <Mail size={18} />
             </a>
           </div>

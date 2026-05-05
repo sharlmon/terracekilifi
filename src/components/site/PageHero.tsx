@@ -7,7 +7,14 @@ interface PageHeroProps {
   loading?: "eager" | "lazy";
 }
 
-export function PageHero({ eyebrow, title, description, image, srcSet, loading = "eager" }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  title,
+  description,
+  image,
+  srcSet,
+  loading = "eager",
+}: PageHeroProps) {
   return (
     <section className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
       <img

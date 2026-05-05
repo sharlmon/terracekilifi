@@ -1,23 +1,36 @@
 import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import mangroveImg from "../assets/images/garden-sanctuary.webp";
-import weaveImg from "../assets/images/architectural-detail.webp";
-import artImg from "../assets/images/communal-garden-swings.webp";
+import { IMAGES } from "@/utils/imageConstants";
 
 export default AboutPage;
 
 const TEAM = [
-  { name: "Artistic Direction", role: "Curatorial vision and programming", img: artImg },
-  { name: "Residency Team", role: "Hosting, mentorship and care", img: weaveImg },
-  { name: "Community Partners", role: "Neighbours, collaborators, friends", img: mangroveImg },
+  {
+    name: "Artistic Direction",
+    role: "Curatorial vision and programming",
+    img: IMAGES.ART_SPACE_PILLAR.src,
+  },
+  {
+    name: "Residency Team",
+    role: "Hosting, mentorship and care",
+    img: IMAGES.FACILITY_SUNDECK.src,
+  },
+  {
+    name: "Community Partners",
+    role: "Neighbours, collaborators, friends",
+    img: IMAGES.RESIDENCY_PILLAR.src,
+  },
 ];
 
 const VALUES = [
   { title: "Creative but grounded", body: "Bold ideas held by daily rituals and place." },
   { title: "Elegant but welcoming", body: "Refined spaces that remain open and generous." },
   { title: "Experimental but accessible", body: "Risk-taking work that invites the public in." },
-  { title: "Local and international", body: "Deeply rooted in Kilifi, in conversation with the world." },
+  {
+    title: "Local and international",
+    body: "Deeply rooted in Kilifi, in conversation with the world.",
+  },
 ];
 
 function AboutPage() {
@@ -27,26 +40,28 @@ function AboutPage() {
         eyebrow="About"
         title="An artist-led house on Kilifi Creek."
         description="The Terrace was founded as an independent platform for art, community and exchange — created by artists, for artists, in the heart of coastal Kenya."
-        image={mangroveImg}
+        image={IMAGES.RESIDENCY_PILLAR.src}
       />
 
-      <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-12">
+      <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-12 bg-grain">
         <Reveal className="md:col-span-5">
           <p className="eyebrow">Our story</p>
           <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
             Built slowly, by hand, on the creek.
           </h2>
         </Reveal>
-        <Reveal delay={150} className="md:col-span-6 md:col-start-7 space-y-5 text-lg leading-relaxed text-foreground/80">
+        <Reveal
+          delay={150}
+          className="md:col-span-6 md:col-start-7 space-y-5 text-lg leading-relaxed text-foreground/80"
+        >
           <p>
-            The Terrace began as a question: what could an arts space look like if it
-            was shaped entirely by the people making the work? The answer became a
-            small ecosystem — an art space, a residency, an exchange — held together
-            by the rhythms of Kilifi Creek.
+            The Terrace began as a question: what could an arts space look like if it was shaped
+            entirely by the people making the work? The answer became a small ecosystem — an art
+            space, a residency, an exchange — held together by the rhythms of Kilifi Creek.
           </p>
           <p>
-            We are independent and artist-led. We commission, host, exhibit, and
-            collaborate. We move at the pace of the tide.
+            We are independent and artist-led. We commission, host, exhibit, and collaborate. We
+            move at the pace of the tide.
           </p>
         </Reveal>
       </section>
@@ -80,8 +95,13 @@ function AboutPage() {
         <div className="mt-16 grid gap-10 md:grid-cols-3">
           {TEAM.map((t, i) => (
             <Reveal key={t.name} delay={i * 120}>
-              <div className="aspect-[4/5] overflow-hidden rounded-sm bg-muted">
-                <img src={t.img} alt="" loading="lazy" className="h-full w-full object-cover" />
+              <div className="aspect-[4/5] overflow-hidden rounded-sm bg-muted shadow-elegant">
+                <img
+                  src={t.img}
+                  alt=""
+                  loading="lazy"
+                  className="h-full w-full object-cover img-mask-in"
+                />
               </div>
               <h3 className="mt-6 font-serif text-2xl">{t.name}</h3>
               <p className="mt-2 text-foreground/65 text-sm">{t.role}</p>

@@ -1,14 +1,14 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from "react-router-dom";
 import { Header } from "./components/site/Header";
 import { Footer } from "./components/site/Footer";
 
 // Pages
-import HomePage from './pages/index';
-import AboutPage from './pages/about';
-import ArtSpacePage from './pages/art-space';
-import ResidencyPage from './pages/residency';
-import ExchangePage from './pages/exchange';
-import ContactPage from './pages/contact';
+import HomePage from "./pages/index";
+import AboutPage from "./pages/about";
+import ArtSpacePage from "./pages/art-space";
+import ResidencyPage from "./pages/residency";
+import ExchangePage from "./pages/exchange";
+import ContactPage from "./pages/contact";
 
 function NotFoundComponent() {
   return (
@@ -37,15 +37,13 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
-        {children}
-      </main>
+      <main className="min-h-screen">{children}</main>
       <Footer />
-      
+
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-6 left-0 right-0 z-40 px-6 md:hidden">
-        <Link 
-          to="/contact" 
+        <Link
+          to="/contact"
           className="flex items-center justify-center gap-3 w-full bg-foreground text-background py-4 px-6 rounded-full shadow-2xl font-medium uppercase tracking-widest text-xs animate-in fade-in slide-in-from-bottom-4 duration-1000"
         >
           Collaborate With Us

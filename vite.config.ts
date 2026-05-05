@@ -5,7 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  base: "/terracekilifi/",
   plugins: [react(), tailwindcss(), tsconfigPaths()],
   server: {
     port: 8080,

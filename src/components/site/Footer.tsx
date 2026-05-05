@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import { SITE, mapDirectionsUrl } from "@/lib/site";
-import { IMAGES } from "@/utils/imageConstants";
+import { Reveal } from "./Reveal";
 
 export function Footer() {
   return (
     <footer className="relative bg-charcoal text-ivory mt-32">
       <div className="container-editorial py-20 grid gap-14 md:grid-cols-12">
-        <div className="md:col-span-5 space-y-6">
+        <Reveal className="md:col-span-5 space-y-6">
           <div>
             <p className="eyebrow text-ivory/60">Kilifi · Kenya</p>
             <h3 className="font-serif text-4xl mt-3 leading-[1.05]">
@@ -32,20 +32,40 @@ export function Footer() {
               Subscribe
             </button>
           </form>
-        </div>
+        </Reveal>
 
-        <div className="md:col-span-3 space-y-4 text-sm">
+        <Reveal delay={100} className="md:col-span-3 space-y-4 text-sm">
           <p className="eyebrow text-ivory/60">Explore</p>
           <ul className="space-y-3">
-            <li><Link to="/art-space" className="link-underline">Art Space</Link></li>
-            <li><Link to="/residency" className="link-underline">Residency</Link></li>
-            <li><Link to="/exchange" className="link-underline">Artists' Exchange</Link></li>
-            <li><Link to="/about" className="link-underline">About</Link></li>
-            <li><Link to="/contact" className="link-underline">Contact</Link></li>
+            <li>
+              <Link to="/art-space" className="link-underline">
+                Art Space
+              </Link>
+            </li>
+            <li>
+              <Link to="/residency" className="link-underline">
+                Residency
+              </Link>
+            </li>
+            <li>
+              <Link to="/exchange" className="link-underline">
+                Artists' Exchange
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="link-underline">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="link-underline">
+                Contact
+              </Link>
+            </li>
           </ul>
-        </div>
+        </Reveal>
 
-        <div className="md:col-span-4 space-y-5 text-sm">
+        <Reveal delay={200} className="md:col-span-4 space-y-5 text-sm">
           <p className="eyebrow text-ivory/60">Visit & Connect</p>
           <a
             href={mapDirectionsUrl}
@@ -53,9 +73,13 @@ export function Footer() {
             rel="noopener noreferrer"
             className="flex items-start gap-3 text-ivory/80 hover:text-ivory transition-colors group"
           >
-            <MapPin size={16} className="mt-1 shrink-0 text-clay group-hover:scale-110 transition-transform" />
+            <MapPin
+              size={16}
+              className="mt-1 shrink-0 text-clay group-hover:scale-110 transition-transform"
+            />
             <span className="leading-relaxed">
-              {SITE.address.street}<br />
+              {SITE.address.street}
+              <br />
               {SITE.address.locality}, {SITE.address.country}
             </span>
           </a>
@@ -93,7 +117,7 @@ export function Footer() {
               <Mail size={16} />
             </a>
           </div>
-        </div>
+        </Reveal>
       </div>
 
       <div className="border-t border-ivory/10">

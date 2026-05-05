@@ -17,8 +17,6 @@ export const SITE = {
   },
 } as const;
 
-export const mapEmbedSrc =
-  `https://www.google.com/maps?q=${encodeURIComponent("Bandari Road, Mnarani, Kilifi, Kenya")}&z=15&output=embed`;
+export const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent("Bandari Road, Mnarani, Kilifi, Kenya")}&z=15&output=embed`;
 
-export const mapDirectionsUrl =
-  `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent("Bandari Road, Mnarani, Kilifi, Kenya")}`;
+export const mapDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent("Bandari Road, Mnarani, Kilifi, Kenya")}`;

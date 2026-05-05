@@ -25,7 +25,6 @@ const PILLARS = [
     title: "A bridge between cultures",
     body: "Cross-cultural dialogue, knowledge exchange and collaborative creation across disciplines.",
     image: IMAGES.EXCHANGE_PILLAR.src,
-    srcSet: IMAGES.EXCHANGE_PILLAR.srcSet,
     href: "/exchange" as const,
   },
 ];
@@ -59,7 +58,7 @@ function HomePage() {
         <img
           src={IMAGES.HERO_SUNSET.src}
           alt="Mangroves at sunrise on Kilifi Creek"
-          className="absolute inset-0 h-full w-full object-cover ken-burns"
+          className="absolute inset-0 h-full w-full object-cover ken-burns img-mask-in"
           loading="eager"
           fetchPriority="high"
         />
@@ -90,7 +89,7 @@ function HomePage() {
       </section>
 
       {/* INTRO / STORY */}
-      <section id="intro" className="container-editorial py-28 md:py-40">
+      <section id="intro" className="relative container-editorial py-28 md:py-40 bg-grain">
         <div className="grid md:grid-cols-12 gap-12 md:gap-20 items-start">
           <Reveal className="md:col-span-5">
             <p className="eyebrow">A creekside ethos</p>
@@ -98,12 +97,22 @@ function HomePage() {
               Independent. Artist-led. Rooted in place.
             </h2>
           </Reveal>
-          <Reveal delay={150} className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80">
+          <Reveal
+            delay={150}
+            className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80"
+          >
             <p>
-              The Terrace is an artist-led, independent arts space and residency created to provide a focused environment for artists to reflect, create and grow. Rooted on Kilifi Creek in coastal Kenya, we provide a sanctuary where artists can engage in deep, meaningful work.
+              The Terrace is an artist-led, independent arts space and residency created to provide
+              a focused environment for artists to reflect, create and grow. Rooted on Kilifi Creek
+              in coastal Kenya, we provide a sanctuary where artists can engage in deep, meaningful
+              work.
             </p>
             <p>
-              Three interconnected initiatives — The Terrace Art Space, The Terrace Residency, and The Terrace Artists' Exchange — form a single ecosystem where local and international voices meet, collaborate, and create. We operate through the Sawazisha (Equalize) approach, which guides our commitment to equitable artistic practice and community engagement.
+              Three interconnected initiatives — The Terrace Art Space, The Terrace Residency, and
+              The Terrace Artists' Exchange — form a single ecosystem where local and international
+              voices meet, collaborate, and create. We operate through the Sawazisha (Equalize)
+              approach, which guides our commitment to equitable artistic practice and community
+              engagement.
             </p>
           </Reveal>
         </div>
@@ -122,28 +131,23 @@ function HomePage() {
           <div className="mt-20 grid gap-10 md:grid-cols-3">
             {PILLARS.map((p, i) => (
               <Reveal key={p.title} delay={i * 120}>
-                <Link
-                  to={p.href}
-                  className="group block"
-                >
+                <Link to={p.href} className="group block">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-muted">
                     <img
                       src={p.image}
-                      srcSet={p.srcSet}
-                      sizes="(max-width: 768px) 100vw, 33vw"
                       alt={p.title}
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)] group-hover:scale-[1.06]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
-                    <div className="absolute top-5 left-5 text-ivory eyebrow opacity-90">{p.label}</div>
+                    <div className="absolute top-5 left-5 text-ivory eyebrow opacity-90">
+                      {p.label}
+                    </div>
                     <div className="absolute bottom-5 right-5 rounded-full bg-ivory/95 p-3 text-charcoal opacity-0 -translate-y-1 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
                       <ArrowUpRight size={16} />
                     </div>
                   </div>
-                  <h3 className="mt-7 font-serif text-2xl md:text-3xl leading-tight">
-                    {p.title}
-                  </h3>
+                  <h3 className="mt-7 font-serif text-2xl md:text-3xl leading-tight">{p.title}</h3>
                   <p className="mt-3 text-foreground/70 leading-relaxed">{p.body}</p>
                 </Link>
               </Reveal>
@@ -153,7 +157,7 @@ function HomePage() {
       </section>
 
       {/* EDITORIAL SPLIT */}
-      <section id="place" className="container-editorial py-28 md:py-40">
+      <section id="place" className="container-editorial py-28 md:py-40 bg-grain">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
           <Reveal className="md:col-span-6 order-2 md:order-1">
             <p className="eyebrow">The place</p>
@@ -162,13 +166,13 @@ function HomePage() {
             </h2>
             <div className="mt-7 space-y-5 text-foreground/80 leading-relaxed">
               <p>
-                Kilifi Creek is a slow, generous landscape — silver water at dawn,
-                mangrove forests stitched with dhows, the call of birds at dusk. It
-                shapes the way we work and the way we host.
+                Kilifi Creek is a slow, generous landscape — silver water at dawn, mangrove forests
+                stitched with dhows, the call of birds at dusk. It shapes the way we work and the
+                way we host.
               </p>
               <p>
-                Our spaces are designed for conversation and quiet alike: open studios,
-                a screening room, a music studio, a kitchen that becomes a gathering place.
+                Our spaces are designed for conversation and quiet alike: open studios, a screening
+                room, a music studio, a kitchen that becomes a gathering place.
               </p>
             </div>
             <Link
@@ -182,10 +186,20 @@ function HomePage() {
           <Reveal delay={200} className="md:col-span-6 order-1 md:order-2">
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
-                <img src={IMAGES.FACILITY_MANGROVE.src} alt="Mangrove roots in still water" className="h-full w-full object-cover" loading="lazy" />
+                <img
+                  src={IMAGES.FACILITY_MANGROVE.src}
+                  alt="Mangrove roots in still water"
+                  className="h-full w-full object-cover img-mask-in"
+                  loading="lazy"
+                />
               </div>
               <div className="absolute -bottom-8 -left-8 w-40 aspect-square overflow-hidden rounded-sm border-8 border-background hidden md:block float-slow shadow-xl">
-                <img src={IMAGES.FACILITY_SUNDECK.src} srcSet={IMAGES.FACILITY_SUNDECK.srcSet} sizes="200px" alt="Sundeck" className="h-full w-full object-cover" loading="lazy" />
+                <img
+                  src={IMAGES.FACILITY_SUNDECK.src}
+                  alt="Sundeck"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </Reveal>
@@ -200,14 +214,20 @@ function HomePage() {
           </Reveal>
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {TESTIMONIALS.map((t, i) => (
-              <Reveal key={t.name} delay={i * 150} className="bg-ivory/5 p-8 rounded-lg border border-ivory/10 hover:bg-ivory/10 transition-colors duration-500">
+              <Reveal
+                key={t.name}
+                delay={i * 150}
+                className="bg-ivory/5 p-8 rounded-lg border border-ivory/10 hover:bg-ivory/10 transition-colors duration-500"
+              >
                 <Quote className="text-clay mb-6 opacity-40" size={24} />
                 <blockquote className="font-serif text-xl md:text-2xl leading-[1.3] text-ivory/95 text-pretty italic">
                   "{t.quote}"
                 </blockquote>
                 <footer className="mt-8 pt-6 border-t border-ivory/10">
                   <p className="text-sm font-medium tracking-wide">{t.name}</p>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-ivory/40 mt-1">{t.role}</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-ivory/40 mt-1">
+                    {t.role}
+                  </p>
                 </footer>
               </Reveal>
             ))}
@@ -216,7 +236,7 @@ function HomePage() {
       </section>
 
       {/* PROGRAMS PREVIEW */}
-      <section id="programs" className="container-editorial py-28 md:py-36">
+      <section id="programs" className="container-editorial py-28 md:py-36 bg-grain">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <Reveal>
             <p className="eyebrow">Programmes & opportunities</p>
@@ -233,9 +253,21 @@ function HomePage() {
 
         <div className="grid gap-px bg-border md:grid-cols-3 border border-border">
           {[
-            { tag: "Open call", title: "Professional Residency · Spring 2026", body: "8 fellowships for mid-career artists across disciplines. Stays from one week to three months." },
-            { tag: "Now accepting", title: "Emerging Residency · Cohort 04", body: "Mentorship, studio time, and community participation for early-career Kenyan artists." },
-            { tag: "Proposal", title: "Exhibitions & Public Programmes", body: "Curators, performers, and collectives invited to propose exhibitions and live events." },
+            {
+              tag: "Open call",
+              title: "Professional Residency · Spring 2026",
+              body: "8 fellowships for mid-career artists across disciplines. Stays from one week to three months.",
+            },
+            {
+              tag: "Now accepting",
+              title: "Emerging Residency · Cohort 04",
+              body: "Mentorship, studio time, and community participation for early-career Kenyan artists.",
+            },
+            {
+              tag: "Proposal",
+              title: "Exhibitions & Public Programmes",
+              body: "Curators, performers, and collectives invited to propose exhibitions and live events.",
+            },
           ].map((p, i) => (
             <Reveal key={p.title} delay={i * 120} className="bg-background p-10 group">
               <p className="eyebrow text-primary">{p.tag}</p>
@@ -251,7 +283,12 @@ function HomePage() {
 
       {/* CTA */}
       <section id="cta" className="relative py-32 md:py-44 overflow-hidden">
-        <img src={IMAGES.HERO_SUNSET.src} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+        <img
+          src={IMAGES.HERO_SUNSET.src}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover img-mask-in"
+          loading="lazy"
+        />
         <div className="absolute inset-0 bg-charcoal/65" />
         <div className="relative container-editorial text-center text-ivory">
           <Reveal>
@@ -264,15 +301,23 @@ function HomePage() {
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-8 text-xl md:text-2xl text-ivory/90 max-w-2xl mx-auto leading-relaxed">
-              We cultivate a space where artists can express themselves freely. Open to all forms of artistic expression — whether painting, performance, film, sound, writing, or interdisciplinary work — we welcome your voice and your vision.
+              We cultivate a space where artists can express themselves freely. Open to all forms of
+              artistic expression — whether painting, performance, film, sound, writing, or
+              interdisciplinary work — we welcome your voice and your vision.
             </p>
           </Reveal>
           <Reveal delay={360}>
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center gap-3 rounded-full bg-ivory px-8 py-4 text-xs uppercase tracking-[0.22em] text-charcoal hover:bg-clay transition-colors duration-500 shadow-lg">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-3 rounded-full bg-ivory px-8 py-4 text-xs uppercase tracking-[0.22em] text-charcoal hover:bg-clay transition-colors duration-500 shadow-lg"
+              >
                 Collaborate With Us <ArrowUpRight size={16} />
               </Link>
-              <Link to="/residency" className="inline-flex items-center gap-3 px-2 py-4 text-xs uppercase tracking-[0.22em] text-ivory link-underline">
+              <Link
+                to="/residency"
+                className="inline-flex items-center gap-3 px-2 py-4 text-xs uppercase tracking-[0.22em] text-ivory link-underline"
+              >
                 Join the Community
               </Link>
             </div>
