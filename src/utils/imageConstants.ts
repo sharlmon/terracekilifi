@@ -1,59 +1,56 @@
-import heroSunset from "../assets/images/hero-architecture.webp";
-import artSpacePillar from "../assets/images/communal-garden-swings.webp";
-import residencyPillar from "../assets/images/garden-sanctuary.webp";
-import exchangePillar from "../assets/images/social-collaboration.webp";
-import facilitySundeck from "../assets/images/architectural-detail.webp";
-import facilityMangrove from "../assets/images/balcony-office-view.webp";
-import residencyPro from "../assets/images/interior-living-space.webp";
-import residencyEmerging from "../assets/images/communal-dining.webp";
-import uiIcon from "../assets/images/ui_icon_014.png";
-import uiFont from "../assets/images/ui_font_001.svg";
+const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 export const IMAGES = {
   // Homepage
   HERO_SUNSET: {
-    src: heroSunset,
+    src: `${BASE_URL}/assets/images/other_156.jpeg`,
   },
   ART_SPACE_PILLAR: {
-    src: artSpacePillar,
+    src: `${BASE_URL}/assets/images/content_052.JPG`,
   },
   RESIDENCY_PILLAR: {
-    src: residencyPillar,
+    src: `${BASE_URL}/assets/images/content_061.JPG`,
   },
   EXCHANGE_PILLAR: {
-    src: exchangePillar,
+    src: `${BASE_URL}/assets/images/content_124.jpg`,
+    srcSet: `${BASE_URL}/assets/images/content_126.jpg 500w, ${BASE_URL}/assets/images/content_121.jpg 1000w, ${BASE_URL}/assets/images/content_124.jpg 2500w`,
   },
   FACILITY_SUNDECK: {
-    src: facilitySundeck,
+    src: `${BASE_URL}/assets/images/content_084.jpg`,
+    srcSet: `${BASE_URL}/assets/images/content_086.jpg 500w, ${BASE_URL}/assets/images/content_081.jpg 1000w, ${BASE_URL}/assets/images/content_084.jpg 2500w`,
   },
   FACILITY_MANGROVE: {
-    src: facilityMangrove,
+    src: `${BASE_URL}/assets/images/other_155.jpeg`,
   },
-
+  
   // Art Space Page
   ART_SPACE_HERO: {
-    src: artSpacePillar,
+    src: `${BASE_URL}/assets/images/content_133.jpg`,
+    srcSet: `${BASE_URL}/assets/images/content_135.jpg 500w, ${BASE_URL}/assets/images/content_130.jpg 1000w, ${BASE_URL}/assets/images/content_133.jpg 2500w`,
   },
   ART_SPACE_EVENTS: {
-    src: residencyEmerging,
+    src: `${BASE_URL}/assets/images/content_149.jpg`,
+    srcSet: `${BASE_URL}/assets/images/content_151.jpg 500w, ${BASE_URL}/assets/images/content_146.jpg 1000w, ${BASE_URL}/assets/images/content_149.jpg 2500w`,
   },
 
   // Residency Page
   RESIDENCY_HERO: {
-    src: residencyPillar,
+    src: `${BASE_URL}/assets/images/content_153.JPG`,
   },
   RESIDENCY_PRO: {
-    src: residencyPro,
+    src: `${BASE_URL}/assets/images/content_092.jpg`,
+    srcSet: `${BASE_URL}/assets/images/content_094.jpg 500w, ${BASE_URL}/assets/images/content_089.jpg 1000w, ${BASE_URL}/assets/images/content_092.jpg 2500w`,
   },
   RESIDENCY_EMERGING: {
-    src: residencyEmerging,
+    src: `${BASE_URL}/assets/images/content_116.jpg`,
+    srcSet: `${BASE_URL}/assets/images/content_118.jpg 500w, ${BASE_URL}/assets/images/content_113.jpg 1000w, ${BASE_URL}/assets/images/content_116.jpg 2500w`,
   },
 
   // UI
   UI_CART: {
-    src: uiIcon,
+    src: `${BASE_URL}/assets/images/ui_icon_014.png`,
   },
   UI_SOCIAL: {
-    src: uiFont,
-  },
+    src: `${BASE_URL}/assets/images/ui_font_001.svg`,
+  }
 } as const;
