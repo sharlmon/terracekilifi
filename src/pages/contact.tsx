@@ -68,8 +68,7 @@ function ContactPage() {
         eyebrow="Contact"
         title="Let’s Begin a Conversation."
         description="Whether it’s a residency inquiry, a project proposal, or a general question — we value every message and look forward to hearing from you."
-        image={IMAGES.HERO_SUNSET.src}
-      />
+        image={IMAGES.HERO_SUNSET.src}        imageAlt="Sunset over Kilifi Creek at The Terrace sanctuary"      />
 
       <section className="container-editorial py-24 md:py-32 grid md:grid-cols-12 gap-12 md:gap-20 bg-grain">
         <Reveal className="md:col-span-5 space-y-10">

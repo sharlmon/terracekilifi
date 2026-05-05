@@ -5,6 +5,7 @@ interface PageHeroProps {
   image: string;
   srcSet?: string;
   loading?: "eager" | "lazy";
+  imageAlt?: string;
 }
 
 export function PageHero({
@@ -14,6 +15,7 @@ export function PageHero({
   image,
   srcSet,
   loading = "eager",
+  imageAlt,
 }: PageHeroProps) {
   return (
     <section className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
@@ -22,7 +24,7 @@ export function PageHero({
         srcSet={srcSet}
         sizes="100vw"
         loading={loading}
-        alt=""
+        alt={imageAlt || eyebrow}
         className="absolute inset-0 h-full w-full object-cover ken-burns"
         fetchPriority={loading === "eager" ? "high" : "auto"}
       />

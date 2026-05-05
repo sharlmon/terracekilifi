@@ -42,6 +42,7 @@ function ExchangePage() {
         title="Cultures, Disciplines, and Communities."
         description="A collaborative space where disciplines converge and communities bridge. We foster meaningful cross-cultural dialogue rooted in authentic Kilifi partnerships."
         image={IMAGES.EXCHANGE_PILLAR.src}
+        imageAlt="Cultural exchange and collaborative art-making space at The Terrace"
       />
 
       <section className="container-editorial py-24 md:py-32 bg-grain">

@@ -41,6 +41,7 @@ function AboutPage() {
         title="An artist-led house on Kilifi Creek."
         description="The Terrace was founded as an independent platform for art, community and exchange — created by artists, for artists, in the heart of coastal Kenya."
         image={IMAGES.RESIDENCY_PILLAR.src}
+        imageAlt="The Terrace artist residency building overlooking Kilifi Creek"
       />
 
       <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-12 bg-grain">

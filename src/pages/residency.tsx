@@ -32,6 +32,7 @@ function ResidencyPage() {
         title="Reflect, Risk, and Listen."
         description="Two distinct residencies — Professional and Emerging — held in a creekside setting designed for deep, generous work and creative growth."
         image={IMAGES.RESIDENCY_HERO.src}
+        imageAlt="Creekside residency buildings nestled in the natural landscape of Kilifi"
       />
 
       <section className="container-editorial py-24 md:py-32 grid md:grid-cols-12 gap-12 bg-grain">
