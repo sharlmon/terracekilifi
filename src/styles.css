@@ -188,7 +188,7 @@
   }
 
   .img-mask-in {
-    clip-path: inset(0 0 100% 0);
+    clip-path: inset(0 0 0% 0);
     animation: mask-down 1.4s cubic-bezier(0.7, 0, 0.2, 1) forwards;
   }
   @keyframes mask-down {

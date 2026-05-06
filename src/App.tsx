@@ -3,7 +3,7 @@ import { Header } from "./components/site/Header";
 import { Footer } from "./components/site/Footer";
 
 // Pages
-import HomePage from "./pages/index";
+import Home from "./pages/index";
 import AboutPage from "./pages/about";
 import ArtSpacePage from "./pages/art-space";
 import ResidencyPage from "./pages/residency";
@@ -57,7 +57,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/art-space" element={<ArtSpacePage />} />
         <Route path="/residency" element={<ResidencyPage />} />
