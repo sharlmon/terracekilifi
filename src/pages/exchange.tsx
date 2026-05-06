@@ -84,7 +84,7 @@ function ExchangePage() {
 
       <section className="relative py-28 md:py-36 overflow-hidden">
         <img
-          src={IMAGES.EXCHANGE_PILLAR.src}
+          src={IMAGES.EXCHANGE_BACKGROUND.src}
           alt=""
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover img-mask-in"

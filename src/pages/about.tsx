@@ -9,17 +9,17 @@ const TEAM = [
   {
     name: "Artistic Direction",
     role: "Curatorial vision and programming",
-    img: IMAGES.ART_SPACE_PILLAR.src,
+    img: IMAGES.TEAM_ARTISTIC_DIRECTION.src,
   },
   {
     name: "Residency Team",
     role: "Hosting, mentorship and care",
-    img: IMAGES.FACILITY_SUNDECK.src,
+    img: IMAGES.TEAM_RESIDENCY.src,
   },
   {
     name: "Community Partners",
     role: "Neighbours, collaborators, friends",
-    img: IMAGES.RESIDENCY_PILLAR.src,
+    img: IMAGES.TEAM_COMMUNITY_PARTNERS.src,
   },
 ];
 
@@ -40,7 +40,7 @@ function AboutPage() {
         eyebrow="About"
         title="An artist-led house on Kilifi Creek."
         description="The Terrace was founded as an independent platform for art, community and exchange — created by artists, for artists, in the heart of coastal Kenya."
-        image={IMAGES.RESIDENCY_PILLAR.src}
+        image={IMAGES.ABOUT_HERO.src}
         imageAlt="The Terrace artist residency building overlooking Kilifi Creek"
       />
 

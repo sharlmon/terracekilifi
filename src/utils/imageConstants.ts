@@ -46,6 +46,28 @@ export const IMAGES = {
     srcSet: `${BASE_URL}/assets/images/content_118.jpg 500w, ${BASE_URL}/assets/images/content_113.jpg 1000w, ${BASE_URL}/assets/images/content_116.jpg 2500w`,
   },
 
+  // About Page - Dedicated
+  ABOUT_HERO: {
+    src: `${BASE_URL}/assets/images/content_061.JPG`,
+  },
+  TEAM_ARTISTIC_DIRECTION: {
+    src: `${BASE_URL}/assets/images/content_066.jpg`,
+    srcSet: `${BASE_URL}/assets/images/content_065.jpg 500w, ${BASE_URL}/assets/images/content_067.jpg 1000w, ${BASE_URL}/assets/images/content_066.jpg 2500w`,
+  },
+  TEAM_RESIDENCY: {
+    src: `${BASE_URL}/assets/images/content_075.jpg`,
+    srcSet: `${BASE_URL}/assets/images/content_074.jpg 500w, ${BASE_URL}/assets/images/content_076.jpg 1000w, ${BASE_URL}/assets/images/content_075.jpg 2500w`,
+  },
+  TEAM_COMMUNITY_PARTNERS: {
+    src: `${BASE_URL}/assets/images/content_070.jpg`,
+    srcSet: `${BASE_URL}/assets/images/content_069.jpg 500w, ${BASE_URL}/assets/images/content_071.jpg 1000w, ${BASE_URL}/assets/images/content_070.jpg 2500w`,
+  },
+
+  // Exchange Page - Dedicated
+  EXCHANGE_BACKGROUND: {
+    src: `${BASE_URL}/assets/images/content_140.jpg`,
+  },
+
   // UI
   UI_CART: {
     src: `${BASE_URL}/assets/images/ui_icon_014.png`,
