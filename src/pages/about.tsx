@@ -1,27 +1,9 @@
-import { Link } from "react-router-dom";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
+import { Team } from "@/components/site/Team";
 import { IMAGES } from "@/utils/imageConstants";
 
 export default AboutPage;
-
-const TEAM = [
-  {
-    name: "Artistic Direction",
-    role: "Curatorial vision and programming",
-    img: IMAGES.TEAM_ARTISTIC_DIRECTION.src,
-  },
-  {
-    name: "Residency Team",
-    role: "Hosting, mentorship and care",
-    img: IMAGES.TEAM_RESIDENCY.src,
-  },
-  {
-    name: "Community Partners",
-    role: "Neighbours, collaborators, friends",
-    img: IMAGES.TEAM_COMMUNITY_PARTNERS.src,
-  },
-];
 
 const VALUES = [
   { title: "Creative but grounded", body: "Bold ideas held by daily rituals and place." },
@@ -40,7 +22,7 @@ function AboutPage() {
         eyebrow="About"
         title="An artist-led house on Kilifi Creek."
         description="The Terrace was founded as an independent platform for art, community and exchange — created by artists, for artists, in the heart of coastal Kenya."
-        image={IMAGES.ABOUT_HERO.src}
+        image={IMAGES.RESIDENCY_PILLAR.src}
         imageAlt="The Terrace artist residency building overlooking Kilifi Creek"
       />
 
@@ -86,30 +68,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="container-editorial py-24 md:py-32">
-        <Reveal>
-          <p className="eyebrow">The team</p>
-          <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] max-w-2xl text-balance">
-            People who hold the space.
-          </h2>
-        </Reveal>
-        <div className="mt-16 grid gap-10 md:grid-cols-3">
-          {TEAM.map((t, i) => (
-            <Reveal key={t.name} delay={i * 120}>
-              <div className="aspect-[4/5] overflow-hidden rounded-sm bg-muted shadow-elegant">
-                <img
-                  src={t.img}
-                  alt=""
-                  loading="lazy"
-                  className="h-full w-full object-cover img-mask-in"
-                />
-              </div>
-              <h3 className="mt-6 font-serif text-2xl">{t.name}</h3>
-              <p className="mt-2 text-foreground/65 text-sm">{t.role}</p>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <Team />
     </>
   );
 }
