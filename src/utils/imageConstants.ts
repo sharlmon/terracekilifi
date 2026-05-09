@@ -45,6 +45,22 @@ export const IMAGES = {
     src: `${BASE_URL}/assets/images/content_116.jpg`,
     srcSet: `${BASE_URL}/assets/images/content_118.jpg 500w, ${BASE_URL}/assets/images/content_113.jpg 1000w, ${BASE_URL}/assets/images/content_116.jpg 2500w`,
   },
+  // Residency Cinematic Series (262A* series)
+  RES_HERO: {
+    src: `${BASE_URL}/assets/images/262A9450.JPG`,
+  },
+  RES_PRO_MAIN: {
+    src: `${BASE_URL}/assets/images/262A9496.JPG`,
+  },
+  RES_EMERGING_MAIN: {
+    src: `${BASE_URL}/assets/images/262A9540.JPG`,
+  },
+  RES_COLLAB: {
+    src: `${BASE_URL}/assets/images/262A9574.JPG`,
+  },
+  RES_TERRACE_WORK: {
+    src: `${BASE_URL}/assets/images/262A9614.JPG`,
+  },
 
   // About Page - Dedicated
   ABOUT_HERO: {
