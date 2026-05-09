@@ -21,6 +21,7 @@ export const IMAGES = {
   },
   FACILITY_MANGROVE: {
     src: `${BASE_URL}/assets/images/other_155.jpeg`,
+    srcSet: `${BASE_URL}/assets/images/other_155_500w.jpg 500w, ${BASE_URL}/assets/images/other_155.jpeg 1000w`,
   },
   
   // Art Space Page
@@ -48,18 +49,23 @@ export const IMAGES = {
   // Residency Cinematic Series (262A* series)
   RES_HERO: {
     src: `${BASE_URL}/assets/images/262A9450.JPG`,
+    srcSet: `${BASE_URL}/assets/images/262A9450_500w.jpg 500w, ${BASE_URL}/assets/images/262A9450_1000w.jpg 1000w, ${BASE_URL}/assets/images/262A9450_2000w.jpg 2000w`,
   },
   RES_PRO_MAIN: {
     src: `${BASE_URL}/assets/images/262A9496.JPG`,
+    srcSet: `${BASE_URL}/assets/images/262A9496_500w.jpg 500w, ${BASE_URL}/assets/images/262A9496_1000w.jpg 1000w`,
   },
   RES_EMERGING_MAIN: {
     src: `${BASE_URL}/assets/images/262A9540.JPG`,
+    srcSet: `${BASE_URL}/assets/images/262A9540_500w.jpg 500w, ${BASE_URL}/assets/images/262A9540_1000w.jpg 1000w`,
   },
   RES_COLLAB: {
     src: `${BASE_URL}/assets/images/262A9574.JPG`,
+    srcSet: `${BASE_URL}/assets/images/262A9574_500w.jpg 500w, ${BASE_URL}/assets/images/262A9574_1000w.jpg 1000w`,
   },
   RES_TERRACE_WORK: {
     src: `${BASE_URL}/assets/images/262A9614.JPG`,
+    srcSet: `${BASE_URL}/assets/images/262A9614_500w.jpg 500w, ${BASE_URL}/assets/images/262A9614_1000w.jpg 1000w`,
   },
 
   // About Page - Dedicated

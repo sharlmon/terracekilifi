@@ -31,6 +31,8 @@ export default function ResidencyPage() {
       >
         <img
           src={IMAGES.RES_HERO.src}
+          srcSet={IMAGES.RES_HERO.srcSet}
+          sizes="100vw"
           alt="Terrace Kilifi residency communal space with open-plan dining and tropical garden"
           className="ken-burns"
           style={{
@@ -42,6 +44,8 @@ export default function ResidencyPage() {
             objectPosition: "center 40%",
           }}
           fetchPriority="high"
+          loading="eager"
+          decoding="sync"
         />
         {/* Dusk gradient overlay */}
         <div
@@ -145,10 +149,13 @@ export default function ResidencyPage() {
               >
                 <img
                   src={IMAGES.RES_PRO_MAIN.src}
+                  srcSet={IMAGES.RES_PRO_MAIN.srcSet}
+                  sizes="(max-width: 768px) 92vw, 45vw"
                   alt="Private bedroom with palm-filtered light and tropical garden view"
                   className="h-full w-full object-cover img-mask-in"
                   style={{ objectPosition: "center 30%" }}
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               {/* Accent strip — landscape pair */}
@@ -158,9 +165,12 @@ export default function ResidencyPage() {
                 >
                   <img
                     src={IMAGES.FACILITY_SUNDECK.src}
+                    srcSet={IMAGES.FACILITY_SUNDECK.srcSet}
+                    sizes="(max-width: 768px) 45vw, 22vw"
                     alt="Terrace sundeck"
                     className="h-full w-full object-cover"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div
@@ -168,9 +178,12 @@ export default function ResidencyPage() {
                 >
                   <img
                     src={IMAGES.FACILITY_MANGROVE.src}
+                    srcSet={IMAGES.FACILITY_MANGROVE.srcSet}
+                    sizes="(max-width: 768px) 45vw, 22vw"
                     alt="Mangrove gardens"
                     className="h-full w-full object-cover"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -236,6 +249,8 @@ export default function ResidencyPage() {
       <div style={{ position: "relative", height: "60vh", overflow: "hidden" }}>
         <img
           src={IMAGES.RES_COLLAB.src}
+          srcSet={IMAGES.RES_COLLAB.srcSet}
+          sizes="100vw"
           alt="Musician playing guitar at the Terrace Kilifi"
           className="ken-burns"
           style={{
@@ -247,6 +262,7 @@ export default function ResidencyPage() {
             objectPosition: "center 55%",
           }}
           loading="lazy"
+          decoding="async"
         />
         <div
           style={{
@@ -348,10 +364,13 @@ export default function ResidencyPage() {
               >
                 <img
                   src={IMAGES.RES_EMERGING_MAIN.src}
+                  srcSet={IMAGES.RES_EMERGING_MAIN.srcSet}
+                  sizes="(max-width: 768px) 92vw, 45vw"
                   alt="Emerging artist working at a laptop in the studio hut"
                   className="h-full w-full object-cover img-mask-in"
                   style={{ objectPosition: "center 20%" }}
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               {/* Accent strip */}
@@ -359,18 +378,24 @@ export default function ResidencyPage() {
                 <div style={{ aspectRatio: "4/3", overflow: "hidden", borderRadius: "2px" }}>
                   <img
                     src={IMAGES.RES_TERRACE_WORK.src}
+                    srcSet={IMAGES.RES_TERRACE_WORK.srcSet}
+                    sizes="(max-width: 768px) 45vw, 22vw"
                     alt="Two creatives collaborating on the terrace"
                     className="h-full w-full object-cover"
                     style={{ objectPosition: "center 30%" }}
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div style={{ aspectRatio: "4/3", overflow: "hidden", borderRadius: "2px" }}>
                   <img
                     src={IMAGES.ART_SPACE_EVENTS.src}
+                    srcSet={IMAGES.ART_SPACE_EVENTS.srcSet}
+                    sizes="(max-width: 768px) 45vw, 22vw"
                     alt="Community gathering at the art space"
                     className="h-full w-full object-cover"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
