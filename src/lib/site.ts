@@ -12,7 +12,7 @@ export const SITE = {
   // Approximate coordinates for Mnarani, Kilifi
   geo: { lat: -3.6418, lng: 39.8499 },
   social: {
-    instagram: "https://www.instagram.com/terracekilifi",
+    instagram: "https://www.instagram.com/theterrace.kilifi?igsh=MWI2M3pvcm80MjF2cA==",
     facebook: "https://www.facebook.com/terracekilifi",
   },
 } as const;
