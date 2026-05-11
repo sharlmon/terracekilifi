@@ -38,8 +38,8 @@ function ArtSpacePage() {
     <>
       <PageHero
         eyebrow="The Art Space"
-        title="Connecting, Inspiring, and Amplifying."
-        description="A non-profit platform celebrating the power of art to gently shift perspectives. Rooted on Kilifi Creek, we draw on 20 years of collaboration to create vibrant cultural experiences."
+        title="Community"
+        description="A multidisciplinary arts residency fostering artistic exploration, community exchange, and creative development on the Kenyan coast."
         image={IMAGES.ART_SPACE_HERO.src}
         imageAlt="Art space gallery at The Terrace with creative exhibitions and performances"
       />

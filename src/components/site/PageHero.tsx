@@ -34,10 +34,10 @@ export function PageHero({
         <p className="uppercase tracking-[0.25em] text-xs md:text-sm text-white/70 font-medium reveal">
           {eyebrow}
         </p>
-        <h1 className="reveal reveal-delay-1 mt-5 font-serif text-5xl md:text-6xl lg:text-[5rem] leading-[1.05] tracking-tight text-balance">
+        <h1 className="reveal reveal-delay-1 mt-5 font-serif text-5xl md:text-6xl lg:text-[5rem] leading-[1.05] tracking-tight text-balance drop-shadow-[0_0_20px_rgba(96,165,250,0.3)]">
           {title}
         </h1>
-        <p className="reveal reveal-delay-2 mt-7 max-w-xl text-base md:text-lg text-white/85 leading-relaxed text-pretty">
+        <p className="reveal reveal-delay-2 mt-7 max-w-xl text-base md:text-lg text-white/85 leading-relaxed text-pretty drop-shadow-[0_0_15px_rgba(96,165,250,0.2)]">
           {description}
         </p>
       </div>
