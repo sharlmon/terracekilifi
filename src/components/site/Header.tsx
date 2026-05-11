@@ -6,8 +6,8 @@ import { IMAGES } from "@/utils/imageConstants";
 
 const NAV = [
   { to: "/art-space", label: "ART SPACE" },
-  { to: "/residency?type=emerging", label: "EMERGING RESIDENCY" },
-  { to: "/residency?type=professional", label: "PROFESSIONAL RESIDENCY" },
+  { to: "/residency/emerging", label: "EMERGING RESIDENCY" },
+  { to: "/residency/professional", label: "PROFESSIONAL RESIDENCY" },
   { to: "/exchange", label: "COLLABORATIVE PROJECTS" },
   { to: "/#team", label: "TEAM" },
   { to: "/contact", label: "CONTACT US" },
