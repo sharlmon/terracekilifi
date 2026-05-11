@@ -32,8 +32,8 @@ export function Header() {
         <div
           className={`mx-auto max-w-7xl flex items-center justify-between px-5 md:px-8 transition-all duration-300 rounded-[16px] border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ${
             scrolled
-              ? "bg-[#0a0a0a] py-2.5"
-              : "bg-[#0a0a0a] py-4"
+              ? "bg-black py-2.5"
+              : "bg-black py-4"
           }`}
         >
           <Link
@@ -51,7 +51,7 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex flex-1 justify-end items-center gap-3 xl:gap-5 ml-8 overflow-x-auto hide-scrollbar">
+          <nav className="hidden lg:flex flex-1 justify-end items-center gap-3 xl:gap-5 ml-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {NAV.map((item) => (
               <NavLink
                 key={item.label}
