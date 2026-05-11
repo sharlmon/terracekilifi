@@ -1,6 +1,10 @@
 const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 export const IMAGES = {
+  // Global
+  LOGO_MAIN: {
+    src: `${BASE_URL}/assets/images/content_128.png`,
+  },
   // Homepage
   HERO_SUNSET: {
     src: `${BASE_URL}/assets/images/other_156.jpeg`,

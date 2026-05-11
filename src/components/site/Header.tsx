@@ -35,11 +35,14 @@ export function Header() {
         >
           <Link
             to="/"
-            className="group flex items-baseline gap-2 z-50 relative"
+            className="group flex items-center z-50 relative"
             onClick={() => setOpen(false)}
           >
-            <span className="font-serif text-2xl tracking-wide text-white">The Terrace</span>
-            <span className="eyebrow hidden sm:inline text-white/80">Kilifi</span>
+            <img 
+              src={IMAGES.LOGO_MAIN.src}
+              alt="The Terrace Kilifi"
+              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
