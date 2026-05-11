@@ -13,13 +13,13 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: "Zippy Kimundu",
     role: "Creative Director",
     bio: "Guiding the creative vision of The Terrace through thoughtful curation, strategic programming, and artistic dialogue. Connecting artists, ideas, and communities across disciplines.",
-    image: IMAGES.TEAM_ARTISTIC_DIRECTION.src,
+    image: IMAGES.TEAM_RESIDENCY.src,
   },
   {
     name: "David Mwenda",
     role: "Program Manager",
     bio: "Creating welcoming spaces for deep creative work. Providing mentorship, community connection, and support for artists at every stage of their practice.",
-    image: IMAGES.TEAM_RESIDENCY.src,
+    image: IMAGES.TEAM_ARTISTIC_DIRECTION.src,
   },
   {
     name: "Dorothy Michieka",
