@@ -57,7 +57,7 @@ function ExchangePage() {
                 We work closely with the local community initiative in Mtongani Kidundu to grow and nurture accessible creative spaces within the area.
               </p>
               <p className="text-lg leading-relaxed text-foreground/80">
-                This partnership is rooted in meaningful exchange for multidisciplinary artists to engage directly with the community, share knowledge and draw inspiration from the local culture.
+                This partnership provides a framework for multidisciplinary artists to engage directly with residents, share knowledge, and draw inspiration from local culture.
               </p>
             </div>
           </Reveal>
@@ -66,13 +66,10 @@ function ExchangePage() {
             className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80"
           >
             <p>
-              Our work is deeply rooted in the community; collaborating closely with local artists and continuously reconnecting to our purpose in Kilifi.
+              In a county marked by significant income inequality, The Terrace was created as a space for connection and opportunity.
             </p>
             <p>
-              In a county marked by significant income inequality, The Terrace was created as an inclusive space for connection, creativity and opportunity.
-            </p>
-            <p>
-              Through our programmes and partnerships, we aim to contribute to a balanced and accessible creative ecosystem, where talent is nurtured and communities can thrive.
+              Through our programmes and partnerships, we aim to contribute to a balanced ecosystem where talent is nurtured, and local communities can thrive.
             </p>
           </Reveal>
         </div>

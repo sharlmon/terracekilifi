@@ -62,16 +62,6 @@ function ArtSpacePage() {
             change in the region.
           </p>
           <p>
-            Through a dynamic and multidisciplinary approach, we create space for creativity to
-            spark conversation, nurture understanding and contribute to a more inclusive and
-            thoughtful cultural landscape.
-          </p>
-          <p>
-            Our work is an open invitation to reimagine who shapes culture, to make room for
-            stories that deserve to be seen and heard and to embrace creativity as a powerful
-            driver of lasting impact.
-          </p>
-          <p>
             Rooted in a desire for deeper community connection and real, tangible change, The
             Terrace builds from over two decades of creative collaboration alongside partners such
             as Afrofilms International and I&apos;ll Tell You My Story. Our mission is to support

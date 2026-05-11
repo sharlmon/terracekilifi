@@ -204,34 +204,16 @@ export default function ResidencyPage() {
               </h2>
               <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80">
                 <p>
-                  The Terrace Professional Residency is an artist-run residency space on the Kenyan coast, created to support time for reflection, creation, experimentation and creative exchange. The program welcomes multi-sectoral and interdisciplinary artists, working either individually or collaboratively.
+                  The Terrace Professional Residency is an artist-run space on the Kenyan coast, welcoming multi-sectoral artists across visual art, writing, film, sound, performance, research, craft, design and socially engaged practices.
                 </p>
                 <p>
-                  The residency sits quietly overlooking the mangrove forests and tidal waters of Kilifi Creek, offering artists a peaceful environment away from urban distractions - a place where ideas can unfold slowly and work can deepen.
+                  Overlooking the mangrove forests and tidal waters of Kilifi Creek, the residency offers a peaceful environment away from urban distractions—a place where ideas unfold slowly, and time is given for reflection and deep work. Daily life is unhurried, with walking, swimming, and quiet focus shaping the creative process.
                 </p>
                 <p>
-                  Founded and operated by African Women Artists, the Terrace is part of a growing independent cultural ecosystem in Kilifi dedicated to nurturing artistic practice while remaining deeply connected to place and community.
+                  Founded by African Women Artists, The Terrace operates with an eco-conscious approach alongside a local mangrove conservation group. It remains deeply connected to the local ecosystem, providing both seclusion and access to Kilifi's vibrant cultural scene.
                 </p>
                 <p>
-                  The Residency works in dialogue with The Terrace Arts Space, our sister venue located near the iconic Kilifi Bridge. Alongside its bar and restaurant, the space hosts performances, exhibitions, screenings, talks, workshops and music production.
-                </p>
-                <p>
-                  The Terrace Residency offers a rare balance of focused solitude and meaningful exchange. Residents develop their work alongside a community of artists and cultural practitioners, with space for informal dialogue, shared meals and organic collaboration.
-                </p>
-                <p>
-                  Many use the time to slow down, reconnect with their practice and pursue ideas that need depth and duration.
-                </p>
-                <p>
-                  The program welcomes cross-disciplinary work spanning visual art, writing, film, sound, performance, research, craft, design and socially engaged practices.
-                </p>
-                <p>
-                  Daily life is unhurried - walking, swimming, and time on The Terrace often shape the creative process.
-                </p>
-                <p>
-                  Located about 35 minutes from Kilifi town, it offers both seclusion and access to a vibrant local cultural scene, with occasional visits for supplies, events, and exchange.
-                </p>
-                <p>
-                  The residency operates with an eco-conscious approach, in collaboration with a local mangrove conservation group, supporting sustainable living alongside dedicated creative work.
+                  Residents develop their work alongside a community of practitioners, balancing focused solitude with meaningful exchange through shared meals and organic collaboration. The Residency also works in dialogue with our sister venue, The Terrace Arts Space, which hosts exhibitions, screenings, and performances.
                 </p>
               </div>
 
@@ -380,16 +362,10 @@ export default function ResidencyPage() {
               </h2>
               <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80">
                 <p>
-                  The Terrace Residency is a creative hub nestled along the scenic Kilifi Creek, designed for artistic exploration, collaboration and community.
+                  The Terrace Emerging Residency is a hub designed for artistic exploration, mentorship, and community. Nestled along Kilifi Creek, it provides accessible infrastructure for local talent.
                 </p>
                 <p>
-                  The space features a co-working studio for creatives, a performance deck, an outdoor screening venue, a sound recording studio and a lively bar and restaurant - a fusion of art, culture and connection.
-                </p>
-                <p>
-                  The space serves as a gathering point for diverse voices and community participation.
-                </p>
-                <p>
-                  With a commitment to inclusivity and innovation, the residency nurtures a dynamic ecosystem where creativity thrives and connections across disciplines and communities are strengthened.
+                  The grounds feature a co-working studio, a performance deck, an outdoor screening venue, a sound recording studio, and a lively bar and restaurant—creating a vibrant fusion of art, culture, and practical collaboration.
                 </p>
               </div>
 
@@ -399,13 +375,10 @@ export default function ResidencyPage() {
                 </p>
                 <div className="mt-3 text-foreground/75 leading-relaxed space-y-4">
                   <p>
-                    With the support of Mastercard&apos;s Sanara Program, The Terrace Residency currently operates a community music studio offering mentorship, technical training and performance opportunities.
+                    With the support of Mastercard&apos;s Sanara Program, The Terrace operates a community music studio offering direct mentorship, technical training, and performance opportunities.
                   </p>
                   <p>
-                    Artists are supported not only in refining their skills but also in accessing markets and building networks for collaboration and growth.
-                  </p>
-                  <p>
-                    These collaborative platforms create a rich ecosystem for artistic experimentation and community-led storytelling.
+                    Artists are supported in refining their skills, accessing markets, and building sustainable networks for growth.
                   </p>
                 </div>
               </div>

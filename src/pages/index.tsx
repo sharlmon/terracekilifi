@@ -107,27 +107,21 @@ function HomePage() {
           >
             <p>
               The Terrace is an artist-led, independent arts space and residency created to provide
-              a focused environment for artists to reflect, create and grow. It offers respite from
-              the everyday challenges of creative careers, supporting meaningful connections and
-              artistic exploration.
+              a focused environment for reflection and creation. It offers respite from
+              the everyday challenges of creative careers, supporting artistic exploration.
             </p>
             <p>
-              Guided by the inclusive Sawazisha (Equalize) approach, The Terrace supports
+              Guided by the Sawazisha (Equalize) approach, we support
               multidisciplinary artists through training, career development, and community-driven
-              projects, including:
+              projects, including Sawazisha Sinema (Film) and Sawazisha Sekta (Music &amp; Fashion).
             </p>
-            <ul className="space-y-1 pl-4 list-none">
-              <li>• Sawazisha Sinema (Film)</li>
-              <li>• Sawazisha Sekta (Music &amp; Fashion)</li>
-            </ul>
             <p>
               Founded to decentralize the arts from major urban centers, The Terrace operates
-              through three interconnected initiatives along Kilifi Creek, aiming to foster cultural
-              dialogue, skill-sharing, and economic opportunity:
+              through three interconnected initiatives along Kilifi Creek:
             </p>
-            <ul className="space-y-1 pl-4 list-none">
+            <ul className="space-y-1 pl-4 list-none text-foreground/90 font-medium">
               <li>• The Terrace Art Space</li>
-              <li>• The Terrace Residency (Professional &amp; Emerging)</li>
+              <li>• The Terrace Residency</li>
               <li>• The Terrace Artists&apos; Exchange</li>
             </ul>
           </Reveal>
@@ -320,10 +314,7 @@ function HomePage() {
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-8 text-xl md:text-2xl text-ivory/90 max-w-2xl mx-auto leading-relaxed">
-              We cultivate a space where artists can express themselves freely, exchange ideas and
-              connect with a wider creative community. Open to all forms of artistic expression, we
-              bring together both emerging and established artists seeking the time, space and
-              support to create and develop &amp; showcase their creative projects.
+              A space to express freely, exchange ideas, and connect. We bring together emerging and established voices seeking the time and support to develop their creative projects.
             </p>
           </Reveal>
           <Reveal delay={360}>
