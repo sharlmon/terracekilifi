@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { Team } from "@/components/site/Team";
 import { IMAGES } from "@/utils/imageConstants";
 
 export default HomePage;
@@ -249,6 +250,9 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* TEAM SECTION */}
+      <Team />
 
       {/* PROGRAMS PREVIEW */}
       <section id="programs" className="container-editorial py-28 md:py-36 bg-grain">
