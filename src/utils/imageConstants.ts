@@ -72,17 +72,14 @@ export const IMAGES = {
   ABOUT_HERO: {
     src: `${BASE_URL}/assets/images/content_061.JPG`,
   },
-  TEAM_ARTISTIC_DIRECTION: {
-    src: `${BASE_URL}/assets/images/content_066.jpg`,
-    srcSet: `${BASE_URL}/assets/images/content_065.jpg 500w, ${BASE_URL}/assets/images/content_067.jpg 1000w, ${BASE_URL}/assets/images/content_066.jpg 2500w`,
+  TEAM_ZIPPY: {
+    src: `${BASE_URL}/assets/images/content_020.jpeg`,
   },
-  TEAM_RESIDENCY: {
-    src: `${BASE_URL}/assets/images/content_075.jpg`,
-    srcSet: `${BASE_URL}/assets/images/content_074.jpg 500w, ${BASE_URL}/assets/images/content_076.jpg 1000w, ${BASE_URL}/assets/images/content_075.jpg 2500w`,
+  TEAM_DAVID: {
+    src: `${BASE_URL}/assets/images/content_043.jpeg`,
   },
-  TEAM_COMMUNITY_PARTNERS: {
-    src: `${BASE_URL}/assets/images/content_070.jpg`,
-    srcSet: `${BASE_URL}/assets/images/content_069.jpg 500w, ${BASE_URL}/assets/images/content_071.jpg 1000w, ${BASE_URL}/assets/images/content_070.jpg 2500w`,
+  TEAM_DOROTHY: {
+    src: `${BASE_URL}/assets/images/content_096.jpeg`,
   },
 
   // Exchange Page - Dedicated
