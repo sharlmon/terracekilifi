@@ -5,8 +5,6 @@ import { SITE } from "@/lib/site";
 import { IMAGES } from "@/utils/imageConstants";
 
 const NAV = [
-  { to: "/", label: "HOMEPAGE" },
-  { to: "/about", label: "ABOUT US" },
   { to: "/art-space", label: "ART SPACE" },
   { to: "/residency?type=emerging", label: "EMERGING RESIDENCY" },
   { to: "/residency?type=professional", label: "PROFESSIONAL RESIDENCY" },
@@ -51,13 +49,13 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex flex-1 justify-end items-center gap-8 xl:gap-14 2xl:gap-20 mx-12 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <nav className="hidden lg:flex flex-1 justify-end items-center gap-6 xl:gap-10 2xl:gap-14 mx-8">
             {NAV.map((item) => (
               <NavLink
                 key={item.label}
                 to={item.to}
                 className={({ isActive }) =>
-                  `relative text-[11px] xl:text-[13px] font-medium tracking-[0.15em] whitespace-nowrap uppercase transition-all duration-500 hover:-translate-y-0.5 hover:text-white drop-shadow-[0_0_8px_rgba(96,165,250,0.3)] ${
+                  `relative text-[10px] xl:text-[12px] font-medium tracking-[0.18em] whitespace-nowrap uppercase transition-all duration-500 hover:-translate-y-0.5 hover:text-white drop-shadow-[0_0_8px_rgba(96,165,250,0.3)] ${
                     isActive ? "text-white" : "text-white/60"
                   }`
                 }
