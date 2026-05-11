@@ -30,7 +30,7 @@ export function Header() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 transition-all duration-300 px-4 sm:px-6 md:px-8 mt-4 sm:mt-6">
         <div
-          className={`mx-auto max-w-7xl flex items-center justify-between px-5 md:px-8 transition-all duration-300 rounded-[16px] border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ${
+          className={`mx-auto max-w-[1800px] flex items-center justify-between px-5 md:px-8 transition-all duration-300 rounded-[16px] border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ${
             scrolled
               ? "bg-black py-2.5"
               : "bg-black py-4"
@@ -51,13 +51,13 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex flex-1 justify-end items-center gap-3 xl:gap-5 ml-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <nav className="hidden lg:flex flex-1 justify-end items-center gap-4 xl:gap-8 ml-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {NAV.map((item) => (
               <NavLink
                 key={item.label}
                 to={item.to}
                 className={({ isActive }) =>
-                  `relative text-[9px] xl:text-[11px] font-semibold tracking-[0.1em] whitespace-nowrap uppercase transition-all duration-300 hover:-translate-y-0.5 hover:text-white ${
+                  `relative text-[10px] xl:text-[12px] font-semibold tracking-[0.1em] whitespace-nowrap uppercase transition-all duration-300 hover:-translate-y-0.5 hover:text-white ${
                     isActive ? "text-white" : "text-white/70"
                   }`
                 }
