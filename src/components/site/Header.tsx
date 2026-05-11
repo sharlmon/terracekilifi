@@ -8,8 +8,8 @@ const NAV = [
   { to: "/", label: "HOMEPAGE" },
   { to: "/about", label: "ABOUT US" },
   { to: "/art-space", label: "ART SPACE" },
-  { to: "/residency?type=emerging", label: "EMERGING RESIDENCY (APPLY)" },
-  { to: "/residency?type=professional", label: "PROFESSIONAL RESIDENCY (APPLY)" },
+  { to: "/residency?type=emerging", label: "EMERGING RESIDENCY" },
+  { to: "/residency?type=professional", label: "PROFESSIONAL RESIDENCY" },
   { to: "/exchange", label: "COLLABORATIVE PROJECTS" },
   { to: "/#team", label: "TEAM" },
   { to: "/contact", label: "CONTACT US" },
@@ -51,13 +51,13 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex flex-1 justify-end items-center gap-6 xl:gap-10 2xl:gap-12 mx-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <nav className="hidden lg:flex flex-1 justify-end items-center gap-8 xl:gap-14 2xl:gap-20 mx-12 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {NAV.map((item) => (
               <NavLink
                 key={item.label}
                 to={item.to}
                 className={({ isActive }) =>
-                  `relative text-[11px] xl:text-[13px] font-medium tracking-[0.15em] whitespace-nowrap uppercase transition-all duration-500 hover:-translate-y-0.5 hover:text-white ${
+                  `relative text-[11px] xl:text-[13px] font-medium tracking-[0.15em] whitespace-nowrap uppercase transition-all duration-500 hover:-translate-y-0.5 hover:text-white drop-shadow-[0_0_8px_rgba(96,165,250,0.3)] ${
                     isActive ? "text-white" : "text-white/60"
                   }`
                 }
@@ -77,7 +77,7 @@ export function Header() {
           <div className="hidden lg:flex items-center ml-4 xl:ml-8">
             <a
               href={`mailto:${SITE.email}?subject=Residency Application`}
-              className="inline-flex justify-center items-center rounded-full bg-[#f5f5f0] px-8 py-3.5 text-[11px] xl:text-xs font-bold uppercase tracking-[0.25em] text-[#0f0f0f] hover:scale-105 hover:bg-white transition-all duration-500"
+              className="inline-flex justify-center items-center rounded-full bg-[#f5f5f0] px-8 py-3.5 text-[11px] xl:text-xs font-bold uppercase tracking-[0.25em] text-[#0f0f0f] hover:scale-105 hover:bg-white transition-all duration-500 shadow-[0_0_15px_rgba(96,165,250,0.4)]"
             >
               Apply
             </a>
