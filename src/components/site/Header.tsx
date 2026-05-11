@@ -29,8 +29,8 @@ export function Header() {
         <div
           className={`mx-auto max-w-7xl flex items-center justify-between px-5 md:px-8 transition-all duration-300 rounded-[16px] border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ${
             scrolled
-              ? "bg-[#0f0f0f]/75 backdrop-blur-md py-2.5"
-              : "bg-[#0f0f0f]/55 backdrop-blur-md py-4"
+              ? "bg-[#0a0a0a] py-2.5"
+              : "bg-[#0a0a0a] py-4"
           }`}
         >
           <Link
@@ -40,9 +40,12 @@ export function Header() {
           >
             <img 
               src={IMAGES.LOGO_MAIN.src}
-              alt="The Terrace Kilifi"
-              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+              alt="The Terrace Logo"
+              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02] mix-blend-screen drop-shadow-[0_0_12px_rgba(96,165,250,0.4)]"
             />
+            <span className="ml-4 hidden sm:block font-sans text-[13px] sm:text-[15px] tracking-[0.15em] font-medium text-white/95 uppercase">
+              The Terrace Kilifi
+            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
