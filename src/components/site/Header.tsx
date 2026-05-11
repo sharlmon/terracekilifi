@@ -5,11 +5,14 @@ import { SITE } from "@/lib/site";
 import { IMAGES } from "@/utils/imageConstants";
 
 const NAV = [
-  { to: "/art-space", label: "Art Space" },
-  { to: "/residency", label: "Residency" },
-  { to: "/exchange", label: "Exchange" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "HOMEPAGE" },
+  { to: "/about", label: "ABOUT US" },
+  { to: "/art-space", label: "ART SPACE" },
+  { to: "/residency?type=emerging", label: "EMERGING RESIDENCY (APPLY)" },
+  { to: "/residency?type=professional", label: "PROFESSIONAL RESIDENCY (APPLY)" },
+  { to: "/exchange", label: "COLLABORATIVE PROJECTS" },
+  { to: "/#team", label: "TEAM" },
+  { to: "/contact", label: "CONTACT US" },
 ] as const;
 
 export function Header() {
@@ -48,14 +51,14 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex flex-1 justify-end items-center gap-3 xl:gap-5 ml-8 overflow-x-auto hide-scrollbar">
             {NAV.map((item) => (
               <NavLink
-                key={item.to}
+                key={item.label}
                 to={item.to}
                 className={({ isActive }) =>
-                  `relative text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:text-white ${
-                    isActive ? "text-white" : "text-white/75"
+                  `relative text-[9px] xl:text-[11px] font-semibold tracking-[0.1em] whitespace-nowrap uppercase transition-all duration-300 hover:-translate-y-0.5 hover:text-white ${
+                    isActive ? "text-white" : "text-white/70"
                   }`
                 }
               >
