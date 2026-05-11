@@ -202,7 +202,7 @@ export default function ResidencyPage() {
               <h2 className="font-serif text-5xl md:text-6xl leading-[1.05] text-balance">
                 A place for focus, exchange and renewal
               </h2>
-              <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80">
+              <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80 max-w-xl">
                 <p>
                   The Terrace Professional Residency is an artist-run space on the Kenyan coast, welcoming multi-sectoral artists across visual art, writing, film, sound, performance, research, craft, design and socially engaged practices.
                 </p>
@@ -236,7 +236,7 @@ export default function ResidencyPage() {
 
               <div className="mt-12 border-t border-border/30 pt-8">
                 <h3 className="font-serif text-2xl text-foreground">Living and Working at the residency</h3>
-                <div className="mt-6 space-y-4 text-foreground/80 leading-relaxed">
+                <div className="mt-6 space-y-4 text-foreground/80 leading-relaxed max-w-xl">
                   <p>
                     Residents stay in private rooms within the Residency Premises, many with views of the creek and mangrove forest.
                   </p>
@@ -269,7 +269,7 @@ export default function ResidencyPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 space-y-4 text-foreground/80 leading-relaxed">
+                <div className="mt-8 space-y-4 text-foreground/80 leading-relaxed max-w-xl">
                   <p>
                     Residents also have access to a free workspace and a music studio at our sister venue, The Terrace Arts Space, where many public cultural programs and performances are hosted.
                   </p>
@@ -360,7 +360,7 @@ export default function ResidencyPage() {
               <h2 className="font-serif text-5xl md:text-6xl leading-[1.05] text-balance">
                 Emerging Residency
               </h2>
-              <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80">
+              <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80 max-w-xl">
                 <p>
                   The Terrace Emerging Residency is a hub designed for artistic exploration, mentorship, and community. Nestled along Kilifi Creek, it provides accessible infrastructure for local talent.
                 </p>

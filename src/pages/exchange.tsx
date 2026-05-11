@@ -45,7 +45,7 @@ function ExchangePage() {
         imageAlt="Cultural exchange and collaborative art-making space at The Terrace"
       />
 
-      <section className="container-editorial py-24 md:py-32 bg-grain">
+      <section className="container-editorial py-28 md:py-40 bg-grain">
         <div className="grid md:grid-cols-12 gap-12">
           <Reveal className="md:col-span-5">
             <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -63,7 +63,7 @@ function ExchangePage() {
           </Reveal>
           <Reveal
             delay={150}
-            className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80"
+            className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80 max-w-xl"
           >
             <p>
               In a county marked by significant income inequality, The Terrace was created as a space for connection and opportunity.

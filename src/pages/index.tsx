@@ -129,7 +129,7 @@ function HomePage() {
       </section>
 
       {/* PILLARS */}
-      <section id="pillars" className="bg-secondary/40 py-28 md:py-36">
+      <section id="pillars" className="bg-secondary/40 py-28 md:py-40">
         <div className="container-editorial">
           <Reveal>
             <p className="eyebrow">Three pillars</p>
@@ -174,7 +174,7 @@ function HomePage() {
             <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
               Where the mangroves meet the morning tide.
             </h2>
-            <div className="mt-7 space-y-5 text-foreground/80 leading-relaxed">
+            <div className="mt-7 space-y-5 text-foreground/80 leading-relaxed max-w-xl">
               <p>
                 Kilifi Creek is a slow, generous landscape — silver water at dawn, mangrove forests
                 stitched with dhows, the call of birds at dusk. It shapes the way we work and the
@@ -217,7 +217,7 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section id="testimonials" className="bg-charcoal text-ivory py-28 md:py-36">
+      <section id="testimonials" className="bg-charcoal text-ivory py-28 md:py-40">
         <div className="container-editorial">
           <Reveal>
             <Quote className="text-clay" size={36} />
@@ -249,7 +249,7 @@ function HomePage() {
       <Team />
 
       {/* PROGRAMS PREVIEW */}
-      <section id="programs" className="container-editorial py-28 md:py-36 bg-grain">
+      <section id="programs" className="container-editorial py-28 md:py-40 bg-grain">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <Reveal>
             <p className="eyebrow">Programmes & opportunities</p>

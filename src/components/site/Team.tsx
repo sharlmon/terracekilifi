@@ -31,7 +31,7 @@ const TEAM_MEMBERS: TeamMember[] = [
 
 export function Team() {
   return (
-    <section className="container-editorial py-24 md:py-32">
+    <section className="container-editorial py-28 md:py-40">
       <Reveal>
         <p className="eyebrow">The Team</p>
         <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] max-w-3xl text-balance">

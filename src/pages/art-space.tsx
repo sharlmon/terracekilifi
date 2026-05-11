@@ -44,7 +44,7 @@ function ArtSpacePage() {
         imageAlt="Art space gallery at The Terrace with creative exhibitions and performances"
       />
 
-      <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-12 bg-grain">
+      <section className="container-editorial py-28 md:py-40 grid md:grid-cols-12 gap-12 bg-grain">
         <Reveal className="md:col-span-5">
           <p className="eyebrow">Our approach</p>
           <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -53,7 +53,7 @@ function ArtSpacePage() {
         </Reveal>
         <Reveal
           delay={150}
-          className="md:col-span-6 md:col-start-7 space-y-5 text-lg leading-relaxed text-foreground/80"
+          className="md:col-span-6 md:col-start-7 space-y-5 text-lg leading-relaxed text-foreground/80 max-w-xl"
         >
           <p>
             The Terrace Art Space is a non-profit platform that celebrates the power of art to
@@ -71,7 +71,7 @@ function ArtSpacePage() {
         </Reveal>
       </section>
 
-      <section className="bg-secondary/40 py-24 md:py-32">
+      <section className="bg-secondary/40 py-28 md:py-40">
         <div className="container-editorial">
           <Reveal>
             <p className="eyebrow">Programmes</p>
