@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import { Team } from "@/components/site/Team";
 import { IMAGES } from "@/utils/imageConstants";
 
 export default HomePage;
@@ -245,8 +244,23 @@ function HomePage() {
         </div>
       </section>
 
-      {/* TEAM SECTION */}
-      <Team />
+      {/* CINEMATIC TEAM TEASER */}
+      <section className="bg-black py-32 md:py-48 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-full bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="container-editorial text-center relative z-10">
+          <Reveal>
+            <h2 className="font-serif text-4xl md:text-6xl text-white mb-12 drop-shadow-[0_0_20px_rgba(96,165,250,0.25)]">
+              People who hold the space.
+            </h2>
+            <Link 
+              to="/team"
+              className="inline-flex items-center justify-center rounded-full bg-white text-black px-12 py-5 text-xs font-bold uppercase tracking-[0.25em] hover:scale-105 hover:bg-primary hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(96,165,250,0.4)]"
+            >
+              Meet the Collective
+            </Link>
+          </Reveal>
+        </div>
+      </section>
 
       {/* PROGRAMS PREVIEW */}
       <section id="programs" className="container-editorial py-28 md:py-40 bg-grain">

@@ -5,6 +5,7 @@ import { Footer } from "./components/site/Footer";
 // Pages
 import Home from "./pages/index";
 import AboutPage from "./pages/about";
+import TeamPage from "./pages/TeamPage";
 import ArtSpacePage from "./pages/art-space";
 import EmergingResidency from "./pages/EmergingResidency";
 import ProfessionalResidency from "./pages/ProfessionalResidency";
@@ -61,6 +62,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/art-space" element={<ArtSpacePage />} />
+        <Route path="/team" element={<TeamPage />} />
         <Route path="/residency/emerging" element={<EmergingResidency />} />
         <Route path="/residency/professional" element={<ProfessionalResidency />} />
         <Route path="/exchange" element={<ExchangePage />} />
