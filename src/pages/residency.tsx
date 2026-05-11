@@ -205,7 +205,7 @@ export default function ResidencyPage() {
                 </p>
               </div>
               <h2 className="font-serif text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] text-balance mb-12 drop-shadow-[0_0_30px_rgba(96,165,250,0.3)]">
-                A place for focus, exchange and renewal
+                Professional Residency: Uninterrupted Mastery
               </h2>
               <div className="space-y-8 text-xl md:text-2xl leading-relaxed text-foreground/90 max-w-2xl font-light">
                 <p>
@@ -474,9 +474,10 @@ export default function ResidencyPage() {
         </div>
       </div>
 
-      {/* Emerging Residency */}
-      <section className="py-24 md:py-40 bg-grain">
-        <div className="container-editorial grid md:grid-cols-12 gap-16 items-start">
+      {/* Emerging Residency - Vibrant Collaborative Hub */}
+      <section className="py-24 md:py-40 bg-secondary/15 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-accent/5 blur-[120px] rounded-full" />
+        <div className="container-editorial grid md:grid-cols-12 gap-16 items-start relative z-10">
 
           {/* Left — content */}
           <Reveal className="md:col-span-6 order-2 md:order-1">
@@ -487,8 +488,8 @@ export default function ResidencyPage() {
                   Emerging Residency
                 </p>
               </div>
-              <h2 className="font-serif text-5xl md:text-6xl leading-[1.05] text-balance">
-                Emerging Residency
+              <h2 className="font-serif text-5xl md:text-6xl leading-[1.05] text-balance drop-shadow-[0_0_20px_rgba(96,165,250,0.25)]">
+                Emerging Residency: Cultivate Your Voice
               </h2>
               <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80 max-w-xl">
                 <p>
