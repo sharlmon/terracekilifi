@@ -574,32 +574,28 @@ export default function ResidencyPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="bg-foreground text-background py-24 md:py-32">
+      {/* Call to Action - Rolling Applications */}
+      <section className="bg-foreground text-background py-32 md:py-48 border-t border-white/5">
         <div className="container-editorial text-center">
           <Reveal>
-            <p className="eyebrow text-background/70">Next steps</p>
-            <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
-              Ready to deepen your practice?
+            <p className="eyebrow text-background/50 mb-8">Next steps</p>
+            <h2 className="font-serif text-4xl md:text-6xl leading-[1.1] text-balance mb-8">
+              Ready to pursue your ideas?
             </h2>
-            <p className="mt-6 text-lg text-background/80 leading-relaxed max-w-2xl mx-auto">
-              Whether you're seeking professional retreat space or mentorship and community, The
-              Terrace is here to support your creative work.
+            <p className="text-xl md:text-2xl text-background/70 font-light max-w-2xl mx-auto mb-16">
+              Applications are open on a rolling basis
             </p>
           </Reveal>
-          <Reveal delay={150} className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Reveal delay={200} className="flex flex-col items-center">
             <a
-              href={`mailto:${SITE.email}?subject=Residency Inquiry`}
-              className="inline-flex items-center gap-2 rounded-full bg-background text-foreground px-8 py-4 text-xs uppercase tracking-[0.22em] hover:bg-secondary transition-colors duration-500 shadow-lg"
+              href={`mailto:${SITE.email}?subject=Residency Application`}
+              className="inline-flex items-center justify-center rounded-full bg-background text-foreground px-12 py-5 text-xs font-bold uppercase tracking-[0.25em] hover:scale-105 hover:bg-white transition-all duration-500 shadow-[0_0_20px_rgba(96,165,250,0.4)]"
             >
-              Get In Touch
+              Apply
             </a>
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 rounded-full border border-background/30 text-background px-8 py-4 text-xs uppercase tracking-[0.22em] hover:bg-background/10 transition-colors duration-500"
-            >
-              Back Home
-            </Link>
+            <p className="mt-12 text-[10px] uppercase tracking-[0.3em] text-background/30">
+              Antigravity Stasis Enabled
+            </p>
           </Reveal>
         </div>
       </section>
