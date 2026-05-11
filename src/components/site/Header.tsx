@@ -28,12 +28,12 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 transition-all duration-300 px-4 sm:px-6 md:px-8 mt-4 sm:mt-6">
+      <header className="fixed inset-x-0 top-0 z-50 transition-all duration-500 px-4 sm:px-6 md:px-8 mt-4 sm:mt-6">
         <div
-          className={`mx-auto max-w-[1800px] flex items-center justify-between px-5 md:px-8 transition-all duration-300 rounded-[16px] border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ${
+          className={`mx-auto max-w-[1800px] flex items-center justify-between px-6 md:px-10 transition-all duration-500 rounded-[16px] border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ${
             scrolled
-              ? "bg-black py-2.5"
-              : "bg-black py-4"
+              ? "bg-black py-3.5"
+              : "bg-black py-5"
           }`}
         >
           <Link
@@ -44,21 +44,21 @@ export function Header() {
             <img 
               src={IMAGES.LOGO_MAIN.src}
               alt="The Terrace Logo"
-              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02] mix-blend-screen drop-shadow-[0_0_12px_rgba(96,165,250,0.4)]"
+              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-700 group-hover:scale-[1.03] mix-blend-screen drop-shadow-[0_0_12px_rgba(96,165,250,0.4)]"
             />
-            <span className="ml-4 hidden sm:block font-sans text-[13px] sm:text-[15px] tracking-[0.15em] font-medium text-white/95 uppercase">
+            <span className="ml-5 hidden sm:block font-sans text-[14px] sm:text-[16px] tracking-[0.2em] font-medium text-white/95 uppercase">
               The Terrace Kilifi
             </span>
           </Link>
 
-          <nav className="hidden lg:flex flex-1 justify-end items-center gap-4 xl:gap-8 ml-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <nav className="hidden lg:flex flex-1 justify-end items-center gap-6 xl:gap-10 2xl:gap-12 mx-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {NAV.map((item) => (
               <NavLink
                 key={item.label}
                 to={item.to}
                 className={({ isActive }) =>
-                  `relative text-[10px] xl:text-[12px] font-semibold tracking-[0.1em] whitespace-nowrap uppercase transition-all duration-300 hover:-translate-y-0.5 hover:text-white ${
-                    isActive ? "text-white" : "text-white/70"
+                  `relative text-[11px] xl:text-[13px] font-medium tracking-[0.15em] whitespace-nowrap uppercase transition-all duration-500 hover:-translate-y-0.5 hover:text-white ${
+                    isActive ? "text-white" : "text-white/60"
                   }`
                 }
               >
@@ -74,10 +74,10 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center ml-4">
+          <div className="hidden lg:flex items-center ml-4 xl:ml-8">
             <a
               href={`mailto:${SITE.email}?subject=Residency Application`}
-              className="inline-flex justify-center items-center rounded-full bg-[#f5f5f0] px-6 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0f0f0f] hover:scale-105 transition-transform duration-300"
+              className="inline-flex justify-center items-center rounded-full bg-[#f5f5f0] px-8 py-3.5 text-[11px] xl:text-xs font-bold uppercase tracking-[0.25em] text-[#0f0f0f] hover:scale-105 hover:bg-white transition-all duration-500"
             >
               Apply
             </a>
