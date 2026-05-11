@@ -48,21 +48,31 @@ function ExchangePage() {
       <section className="container-editorial py-24 md:py-32 bg-grain">
         <div className="grid md:grid-cols-12 gap-12">
           <Reveal className="md:col-span-5">
-            <p className="eyebrow">Bridging Cultures</p>
-            <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
-              Exchange rooted in place, open to the world.
+            <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
+              Bridging Cultures
             </h2>
+            <div className="mt-12 space-y-6">
+              <p className="eyebrow">For Artistic Collaborations</p>
+              <p className="text-lg leading-relaxed text-foreground/80">
+                We work closely with the local community initiative in Mtongani Kidundu to grow and nurture accessible creative spaces within the area.
+              </p>
+              <p className="text-lg leading-relaxed text-foreground/80">
+                This partnership is rooted in meaningful exchange for multidisciplinary artists to engage directly with the community, share knowledge and draw inspiration from the local culture.
+              </p>
+            </div>
           </Reveal>
           <Reveal
             delay={150}
-            className="md:col-span-6 md:col-start-7 text-lg leading-relaxed text-foreground/80"
+            className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80"
           >
             <p>
-              Our exchange programmes are grounded in Kilifi and rooted in authentic partnership.
-              Through collaboration with the Mtongani Kidundu community initiative and artists
-              across the region, we create space for genuine cross-cultural dialogue. We believe
-              that meaningful exchange takes time — slow conversations, shared creation, and
-              projects that emerge from trust and mutual respect.
+              Our work is deeply rooted in the community; collaborating closely with local artists and continuously reconnecting to our purpose in Kilifi.
+            </p>
+            <p>
+              In a county marked by significant income inequality, The Terrace was created as an inclusive space for connection, creativity and opportunity.
+            </p>
+            <p>
+              Through our programmes and partnerships, we aim to contribute to a balanced and accessible creative ecosystem, where talent is nurtured and communities can thrive.
             </p>
           </Reveal>
         </div>

@@ -200,38 +200,102 @@ export default function ResidencyPage() {
                 </p>
               </div>
               <h2 className="font-serif text-5xl md:text-6xl leading-[1.05] text-balance">
-                Deep work. Open horizons.
+                A place for focus, exchange and renewal
               </h2>
-              <p className="mt-8 text-lg leading-relaxed text-foreground/80">
-                The Terrace Professional Residency is an artist-run residency space founded and
-                operated by African Women Artists. A quiet container for ambitious projects —
-                interdisciplinary, intentional, and rooted in place.
-              </p>
-              <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-                For mid-career and established artists across disciplines seeking time for deep
-                creative reflection and experimentation. We provide the silence and the space; you
-                provide the vision.
-              </p>
-
-              <div className="mt-10 p-8 bg-background/50 backdrop-blur-sm rounded-lg border border-border/50">
-                <p className="uppercase text-xs tracking-widest text-primary font-semibold">
-                  Duration
+              <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80">
+                <p>
+                  The Terrace Professional Residency is an artist-run residency space on the Kenyan coast, created to support time for reflection, creation, experimentation and creative exchange. The program welcomes multi-sectoral and interdisciplinary artists, working either individually or collaboratively.
                 </p>
-                <p className="mt-3 text-foreground/75 leading-relaxed">
-                  Stays are flexible and tailored to your creative needs — from one week to three
-                  months. We work with each artist to design a residency that supports their
-                  practice.
+                <p>
+                  The residency sits quietly overlooking the mangrove forests and tidal waters of Kilifi Creek, offering artists a peaceful environment away from urban distractions - a place where ideas can unfold slowly and work can deepen.
+                </p>
+                <p>
+                  Founded and operated by African Women Artists, the Terrace is part of a growing independent cultural ecosystem in Kilifi dedicated to nurturing artistic practice while remaining deeply connected to place and community.
+                </p>
+                <p>
+                  The Residency works in dialogue with The Terrace Arts Space, our sister venue located near the iconic Kilifi Bridge. Alongside its bar and restaurant, the space hosts performances, exhibitions, screenings, talks, workshops and music production.
+                </p>
+                <p>
+                  The Terrace Residency offers a rare balance of focused solitude and meaningful exchange. Residents develop their work alongside a community of artists and cultural practitioners, with space for informal dialogue, shared meals and organic collaboration.
+                </p>
+                <p>
+                  Many use the time to slow down, reconnect with their practice and pursue ideas that need depth and duration.
+                </p>
+                <p>
+                  The program welcomes cross-disciplinary work spanning visual art, writing, film, sound, performance, research, craft, design and socially engaged practices.
+                </p>
+                <p>
+                  Daily life is unhurried - walking, swimming, and time on The Terrace often shape the creative process.
+                </p>
+                <p>
+                  Located about 35 minutes from Kilifi town, it offers both seclusion and access to a vibrant local cultural scene, with occasional visits for supplies, events, and exchange.
+                </p>
+                <p>
+                  The residency operates with an eco-conscious approach, in collaboration with a local mangrove conservation group, supporting sustainable living alongside dedicated creative work.
                 </p>
               </div>
 
-              <ul className="mt-12 space-y-3 border-t border-border/30 pt-8">
-                {PROFESSIONAL.map((item) => (
-                  <li key={item} className="flex gap-4 text-foreground/85 text-sm md:text-base">
-                    <Check size={20} className="mt-0.5 text-primary shrink-0 flex-shrink-0" />
-                    <span className="leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-10 p-8 bg-background/50 backdrop-blur-sm rounded-lg border border-border/50">
+                <p className="uppercase text-xs tracking-widest text-primary font-semibold">
+                  Duration of residency
+                </p>
+                <div className="mt-3 text-foreground/75 leading-relaxed space-y-4">
+                  <p>
+                    Residencies typically range from one week deep dive - up to 3 months.
+                  </p>
+                  <p>
+                    While shorter stays are possible, we recommend 4–8 weeks or longer, allowing artists time to settle into the environment and develop their work without rush.
+                  </p>
+                  <p>
+                    We also tailor residencies for groups of collaborators working on a specific project that requires a quick turnaround - usually structured as an intensive one-week work session.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-12 border-t border-border/30 pt-8">
+                <h3 className="font-serif text-2xl text-foreground">Living and Working at the residency</h3>
+                <div className="mt-6 space-y-4 text-foreground/80 leading-relaxed">
+                  <p>
+                    Residents stay in private rooms within the Residency Premises, many with views of the creek and mangrove forest.
+                  </p>
+                  <p>
+                    The residency hosts a small number of artists at a time, creating a calm and supportive living environment.
+                  </p>
+                  <p>
+                    It offers flexible creative workspaces suited to a wide range of artistic practices.
+                  </p>
+                </div>
+                
+                <div className="mt-8 grid sm:grid-cols-2 gap-8 text-sm md:text-base text-foreground/85">
+                  <div>
+                    <p className="font-semibold text-foreground mb-3 flex items-center gap-2"><Check size={16} className="text-primary" /> 5 Private bedrooms:</p>
+                    <ul className="space-y-2 pl-6 list-disc marker:text-primary/50">
+                      <li>2 upstairs (1 shared bathroom)</li>
+                      <li>2 downstairs (1 shared bathroom)</li>
+                      <li>1 outside room (self-contained)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground mb-3 flex items-center gap-2"><Check size={16} className="text-primary" /> Shared Spaces:</p>
+                    <ul className="space-y-2 pl-6 list-disc marker:text-primary/50">
+                      <li>Outdoor kitchen and communal dining area</li>
+                      <li>Quiet indoor and outdoor nooks for reading and reflection</li>
+                      <li>Rooftop, terraces and shaded outdoor areas</li>
+                      <li>Traditional hut ideal for an edit or design suite setup</li>
+                      <li>Informal meeting and collaboration areas</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-8 space-y-4 text-foreground/80 leading-relaxed">
+                  <p>
+                    Residents also have access to a free workspace and a music studio at our sister venue, The Terrace Arts Space, where many public cultural programs and performances are hosted.
+                  </p>
+                  <p>
+                    The residency is particularly well suited to interdisciplinary artists and hybrid practices.
+                  </p>
+                </div>
+              </div>
 
               <a
                 href={`mailto:${SITE.email}?subject=Professional Residency Application`}
@@ -312,37 +376,39 @@ export default function ResidencyPage() {
                 </p>
               </div>
               <h2 className="font-serif text-5xl md:text-6xl leading-[1.05] text-balance">
-                Mentorship, momentum, community.
+                Emerging Residency
               </h2>
-              <p className="mt-8 text-lg leading-relaxed text-foreground/80">
-                The Terrace Residency is a creative hub for emerging artists — featuring a
-                co-working studio, performance deck, and sound recording studio.
-              </p>
-              <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-                For early-career artists, particularly from coastal Kenya and the wider region. The
-                Emerging Residency pairs studio time with mentorship, mentorship with community,
-                and community with the skills to sustain a practice.
-              </p>
+              <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80">
+                <p>
+                  The Terrace Residency is a creative hub nestled along the scenic Kilifi Creek, designed for artistic exploration, collaboration and community.
+                </p>
+                <p>
+                  The space features a co-working studio for creatives, a performance deck, an outdoor screening venue, a sound recording studio and a lively bar and restaurant - a fusion of art, culture and connection.
+                </p>
+                <p>
+                  The space serves as a gathering point for diverse voices and community participation.
+                </p>
+                <p>
+                  With a commitment to inclusivity and innovation, the residency nurtures a dynamic ecosystem where creativity thrives and connections across disciplines and communities are strengthened.
+                </p>
+              </div>
 
               <div className="mt-10 p-8 bg-background/50 backdrop-blur-sm rounded-lg border border-border/50">
                 <p className="uppercase text-xs tracking-widest text-accent font-semibold">
                   Sanara Program
                 </p>
-                <p className="mt-3 text-foreground/75 leading-relaxed">
-                  The Terrace hosts Mastercard's Sanara Program, a community music studio and
-                  mentorship initiative providing emerging musicians and audio producers access to
-                  professional recording equipment and training.
-                </p>
+                <div className="mt-3 text-foreground/75 leading-relaxed space-y-4">
+                  <p>
+                    With the support of Mastercard&apos;s Sanara Program, The Terrace Residency currently operates a community music studio offering mentorship, technical training and performance opportunities.
+                  </p>
+                  <p>
+                    Artists are supported not only in refining their skills but also in accessing markets and building networks for collaboration and growth.
+                  </p>
+                  <p>
+                    These collaborative platforms create a rich ecosystem for artistic experimentation and community-led storytelling.
+                  </p>
+                </div>
               </div>
-
-              <ul className="mt-12 space-y-3 border-t border-border/30 pt-8">
-                {EMERGING.map((item) => (
-                  <li key={item} className="flex gap-4 text-foreground/85 text-sm md:text-base">
-                    <Check size={20} className="mt-0.5 text-accent shrink-0 flex-shrink-0" />
-                    <span className="leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
 
               <a
                 href={`mailto:${SITE.email}?subject=Emerging Residency Application`}

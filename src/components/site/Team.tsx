@@ -10,20 +10,20 @@ interface TeamMember {
 
 const TEAM_MEMBERS: TeamMember[] = [
   {
-    name: "Artistic Direction",
-    role: "Curatorial Vision & Programming",
+    name: "Zippy Kimundu",
+    role: "Creative Director",
     bio: "Guiding the creative vision of The Terrace through thoughtful curation, strategic programming, and artistic dialogue. Connecting artists, ideas, and communities across disciplines.",
     image: IMAGES.TEAM_ARTISTIC_DIRECTION.src,
   },
   {
-    name: "Residency Team",
-    role: "Hosting, Mentorship & Care",
+    name: "David Mwenda",
+    role: "Program Manager",
     bio: "Creating welcoming spaces for deep creative work. Providing mentorship, community connection, and support for artists at every stage of their practice.",
     image: IMAGES.TEAM_RESIDENCY.src,
   },
   {
-    name: "Community Partners",
-    role: "Neighbours, Collaborators & Friends",
+    name: "Dorothy Michieka",
+    role: "Program Curator",
     bio: "Building relationships with Kilifi's creative community, cultural organizations, and local partners. Fostering collaboration and mutual exchange.",
     image: IMAGES.TEAM_COMMUNITY_PARTNERS.src,
   },

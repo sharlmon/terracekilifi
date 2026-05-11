@@ -57,15 +57,26 @@ function ArtSpacePage() {
         >
           <p>
             The Terrace Art Space is a non-profit platform that celebrates the power of art to
-            connect, inspire and gently shift perspectives. We host exhibitions and live programmes
-            that prioritise depth over spectacle, and that hold room for the voices of the coast
-            alongside artists from across the world.
+            connect, inspire and gently shift perspectives. At its heart are the voices and lived
+            experiences of the Kilifi people as vital contributors shaping culture and driving
+            change in the region.
           </p>
           <p>
-            Whether you're attending a screening, joining a workshop, or proposing a project, you
-            become part of a creative community that values experiment, conversation and care.
-            Grounded in our partnership traditions and 20 years of collaborative practice, we
-            believe art is a tool for transformation.
+            Through a dynamic and multidisciplinary approach, we create space for creativity to
+            spark conversation, nurture understanding and contribute to a more inclusive and
+            thoughtful cultural landscape.
+          </p>
+          <p>
+            Our work is an open invitation to reimagine who shapes culture, to make room for
+            stories that deserve to be seen and heard and to embrace creativity as a powerful
+            driver of lasting impact.
+          </p>
+          <p>
+            Rooted in a desire for deeper community connection and real, tangible change, The
+            Terrace builds from over two decades of creative collaboration alongside partners such
+            as Afrofilms International and I&apos;ll Tell You My Story. Our mission is to support
+            artists and communities in turning creative expression into meaningful, sustainable
+            impact.
           </p>
         </Reveal>
       </section>
