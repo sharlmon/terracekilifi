@@ -1,3 +1,8 @@
+import artBandBw from './IMAGES.ART_BAND_BW.jpg';
+import artCrowd from './IMAGES.ART_CROWD.jpg';
+import artSingers from './IMAGES.ART_SINGERS.jpg';
+import artSoloSinger from './IMAGES.ART_SOLO_SINGER.jpg';
+
 const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 export const IMAGES = {
@@ -97,5 +102,14 @@ export const IMAGES = {
   },
   UI_SOCIAL: {
     src: `${BASE_URL}/assets/images/ui_font_001.svg`,
-  }
+  },
+
+  // Newly Added Images
+  CONTENT_112: {
+    src: `${BASE_URL}/assets/images/content_112.jpg`,
+  },
+  ART_BAND_BW: { src: artBandBw },
+  ART_CROWD: { src: artCrowd },
+  ART_SINGERS: { src: artSingers },
+  ART_SOLO_SINGER: { src: artSoloSinger },
 } as const;

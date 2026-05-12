@@ -21,11 +21,11 @@ const PILLARS = [
     href: "/residency" as const,
   },
   {
-    label: "03 — Artists' Exchange",
+    label: "03 — Collaborative Projects",
     title: "A bridge between cultures",
     body: "Cross-cultural dialogue, knowledge exchange and collaborative creation across disciplines.",
     image: IMAGES.EXCHANGE_PILLAR.src,
-    href: "/exchange" as const,
+    href: "/collaborative-projects" as const,
   },
 ];
 
@@ -67,26 +67,17 @@ function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.65)] to-[rgba(0,0,0,0.1)]" />
 
-        <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-20 text-white max-w-[760px]">
-          <p className="uppercase tracking-[0.25em] text-xs md:text-sm text-white/70 font-medium reveal">
-            Artist-led sanctuary
-          </p>
-          <h1 className="reveal reveal-delay-1 mt-5 font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
-            On the East African Coast
-          </h1>
-          <div className="reveal reveal-delay-2 mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
-            <Link
-              to="/residency"
-              className="inline-flex justify-center items-center rounded-full bg-[#f5f5f0] text-charcoal px-8 py-3.5 text-xs font-bold uppercase tracking-[0.2em] hover:scale-105 transition-transform duration-300 shadow-xl"
-            >
-              Apply for Residency
-            </Link>
-            <Link
-              to="/art-space"
-              className="inline-flex justify-center items-center rounded-full border border-white/40 bg-white/5 text-white backdrop-blur-sm px-8 py-3.5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-charcoal hover:border-white transition-all duration-300"
-            >
-              Explore the art space
-            </Link>
+        <div className="relative z-10 h-full flex items-start justify-center px-6 md:px-20 text-white pt-32 md:pt-40">
+          <div className="text-center max-w-3xl">
+            <p className="uppercase tracking-widest text-xs text-white/70 font-medium reveal">
+              The Terrace Kilifi
+            </p>
+            <h1 className="reveal reveal-delay-1 mt-6 font-serif text-4xl md:text-5xl lg:text-5xl leading-[1.1] tracking-tight">
+              An Artist-led Sanctuary on the East African Coast
+            </h1>
+            <p className="reveal reveal-delay-2 mt-8 uppercase tracking-widest text-xs font-bold text-white">
+              ART. SPACE. COMMUNITY.
+            </p>
           </div>
         </div>
       </section>
@@ -95,9 +86,9 @@ function HomePage() {
       <section id="intro" className="relative container-editorial py-28 md:py-40 bg-grain">
         <div className="grid md:grid-cols-12 gap-12 md:gap-20 items-start">
           <Reveal className="md:col-span-5">
-            <p className="eyebrow">A creekside ethos</p>
+            <p className="eyebrow">The Terrace Kilifi</p>
             <h2 className="mt-6 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
-              Independent. Artist-led. Rooted in place.
+              Nestled along the Creek.
             </h2>
           </Reveal>
           <Reveal
@@ -121,7 +112,7 @@ function HomePage() {
             <ul className="space-y-1 pl-4 list-none text-foreground/90 font-medium">
               <li>• The Terrace Art Space</li>
               <li>• The Terrace Residency</li>
-              <li>• The Terrace Artists&apos; Exchange</li>
+              <li>• Collaborative Projects</li>
             </ul>
           </Reveal>
         </div>

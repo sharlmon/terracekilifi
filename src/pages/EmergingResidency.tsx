@@ -34,10 +34,13 @@ export default function EmergingResidency() {
               </h2>
               <div className="space-y-6 text-lg leading-relaxed text-foreground/80">
                 <p>
-                  The Terrace Emerging Residency is a hub designed for artistic exploration, mentorship, and community. Nestled along Kilifi Creek, it provides accessible infrastructure for local talent.
+                  The Terrace Residency is a creative hub nestled along the scenic Kilifi Creek, designed for artistic exploration, collaboration and community. The emerging residency is focused on upcoming artists and offers free trainings, workshops, and masterclasses.
                 </p>
                 <p>
-                  The grounds feature a co-working studio, a performance deck, an outdoor screening venue, a sound recording studio, and a lively bar and restaurant—creating a vibrant fusion of art, culture, and practical collaboration.
+                  The space features a co-working studio for creatives, a performance deck, an outdoor screening venue, a sound recording studio and a lively bar and restaurant — a fusion of art, culture and connection.
+                </p>
+                <p>
+                  Serving as a gathering point for diverse voices and community participation. With a commitment to inclusivity and innovation, the residency nurtures a dynamic ecosystem where creativity thrives and connections across disciplines and communities are strengthened.
                 </p>
               </div>
 
@@ -47,37 +50,29 @@ export default function EmergingResidency() {
                 </p>
                 <div className="text-foreground/75 leading-relaxed space-y-4">
                   <p>
-                    With the support of Mastercard&apos;s Sanara Program, The Terrace operates a community music studio offering direct mentorship, technical training, and performance opportunities.
+                    With the support of Mastercard&apos;s Sanara Program, we operate a community music studio offering mentorship, technical training, and performance opportunities.
                   </p>
                   <p>
-                    Artists are supported in refining their skills, accessing markets, and building sustainable networks for growth.
+                    Artists are supported not only in refining their skills but also in accessing markets and building networks for collaboration and growth. These collaborative platforms create a rich ecosystem for artistic experimentation and community-led storytelling.
                   </p>
                 </div>
               </div>
             </Reveal>
 
+            {/* Empty Visual Placeholders for Zippy's Photos */}
             <Reveal delay={200} className="md:col-span-6">
                <div className="grid grid-cols-2 gap-4">
-                  <div className="col-span-2 aspect-video overflow-hidden rounded-sm shadow-elegant">
-                    <img 
-                      src={IMAGES.RES_EMERGING_MAIN.src} 
-                      alt="Collaborative work" 
-                      className="h-full w-full object-cover"
-                    />
+                  {/* Top Wide Placeholder */}
+                  <div className="col-span-2 aspect-video rounded-sm shadow-elegant bg-foreground/5 border-2 border-dashed border-foreground/20 flex items-center justify-center transition-colors hover:bg-foreground/10">
+                    <span className="text-5xl text-foreground/30 font-light select-none">&times;</span>
                   </div>
-                  <div className="aspect-square overflow-hidden rounded-sm shadow-soft">
-                    <img 
-                      src={IMAGES.RES_TERRACE_WORK.src} 
-                      alt="Mentorship" 
-                      className="h-full w-full object-cover"
-                    />
+                  {/* Bottom Left Square Placeholder */}
+                  <div className="aspect-square rounded-sm shadow-soft bg-foreground/5 border-2 border-dashed border-foreground/20 flex items-center justify-center transition-colors hover:bg-foreground/10">
+                    <span className="text-4xl text-foreground/30 font-light select-none">&times;</span>
                   </div>
-                  <div className="aspect-square overflow-hidden rounded-sm shadow-soft">
-                    <img 
-                      src={IMAGES.ART_SPACE_EVENTS.src} 
-                      alt="Community gathering" 
-                      className="h-full w-full object-cover"
-                    />
+                  {/* Bottom Right Square Placeholder */}
+                  <div className="aspect-square rounded-sm shadow-soft bg-foreground/5 border-2 border-dashed border-foreground/20 flex items-center justify-center transition-colors hover:bg-foreground/10">
+                    <span className="text-4xl text-foreground/30 font-light select-none">&times;</span>
                   </div>
                </div>
             </Reveal>

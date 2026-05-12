@@ -41,21 +41,15 @@ export default function ProfessionalResidency() {
                 </p>
               </div>
             </Reveal>
-            <Reveal delay={200} className="md:col-span-5 relative">
-              <div className="aspect-[3/4] overflow-hidden rounded-sm shadow-elegant">
+            
+            {/* Single Image replacing the layered ones */}
+            <Reveal delay={200} className="md:col-span-5">
+              <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
                 <img
-                  src={IMAGES.RES_PRO_MAIN.src}
-                  srcSet={IMAGES.RES_PRO_MAIN.srcSet}
-                  alt="Artist residence view"
+                  src={IMAGES.CONTENT_112.src}
+                  alt="Artist performing"
                   className="h-full w-full object-cover img-mask-in"
                   loading="lazy"
-                />
-              </div>
-              <div className="absolute -bottom-10 -left-10 w-48 aspect-square overflow-hidden rounded-sm border-8 border-background hidden lg:block shadow-2xl float-slow">
-                <img
-                  src={IMAGES.FACILITY_MANGROVE.src}
-                  alt="Mangrove detail"
-                  className="h-full w-full object-cover"
                 />
               </div>
             </Reveal>
@@ -66,9 +60,8 @@ export default function ProfessionalResidency() {
             <Reveal className="md:col-span-5 order-2 md:order-1">
               <div className="aspect-square overflow-hidden rounded-sm shadow-elegant">
                 <img
-                  src={IMAGES.RES_TERRACE_WORK.src}
-                  srcSet={IMAGES.RES_TERRACE_WORK.srcSet}
-                  alt="Creative work on the terrace"
+                  src={IMAGES.ART_BAND_BW.src}
+                  alt="Artists working in the space"
                   className="h-full w-full object-cover img-mask-in"
                   loading="lazy"
                 />
@@ -155,14 +148,14 @@ export default function ProfessionalResidency() {
                     The Atmosphere
                   </p>
                   <p className="text-lg text-foreground/80 leading-relaxed">
-                    Residents stay in private rooms within the Residency Premises, many with views
+                    At subsidised rates, residents stay in private rooms within the Residency Premises, many with views
                     of the creek and mangrove forest. The residency hosts a small number of artists
                     at a time, creating a calm and supportive living environment.
                   </p>
                 </div>
                 <ul className="space-y-4">
                   {[
-                    "5 Private bedrooms with ensuite facilities",
+                    "5 Private bedrooms",
                     "Quiet indoor and outdoor nooks for reading",
                     "Rooftop, terraces and shaded outdoor areas",
                     "Informal meeting and collaboration areas",

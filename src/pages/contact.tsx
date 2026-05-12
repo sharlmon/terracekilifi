@@ -68,7 +68,9 @@ function ContactPage() {
         eyebrow="Contact"
         title="Let’s Begin a Conversation."
         description="Whether it’s a residency inquiry, a project proposal, or a general question — we value every message and look forward to hearing from you."
-        image={IMAGES.HERO_SUNSET.src}        imageAlt="Sunset over Kilifi Creek at The Terrace sanctuary"      />
+        image={IMAGES.HERO_SUNSET.src}        
+        imageAlt="Sunset over Kilifi Creek at The Terrace sanctuary"      
+      />
 
       <section className="container-editorial py-24 md:py-32 grid md:grid-cols-12 gap-12 md:gap-20 bg-grain">
         <Reveal className="md:col-span-5 space-y-10">
@@ -181,6 +183,53 @@ function ContactPage() {
               />
             </button>
           </form>
+        </Reveal>
+      </section>
+
+      {/* Collaborations / Partners Section */}
+      <section className="container-editorial pb-24 md:pb-32">
+        <Reveal>
+          <div className="border-t border-border pt-16 md:pt-24">
+            <p className="eyebrow mb-8">Collaborations</p>
+            <div className="grid md:grid-cols-2 gap-12 md:gap-20">
+              <div>
+                <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6 text-balance">
+                  A growing network of creative partners.
+                </h2>
+                <p className="text-foreground/80 leading-relaxed max-w-md">
+                  We believe in the power of collective action. Our work is made possible and enriched by our ongoing partnerships with visionary organizations and festivals in the region.
+                </p>
+              </div>
+              <div className="flex flex-col gap-6 justify-center">
+                <a 
+                  href="https://afrofilmsinternational.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="group flex items-center justify-between border-b border-border pb-6 hover:border-foreground transition-colors"
+                >
+                  <span className="font-serif text-2xl md:text-3xl text-foreground/80 group-hover:text-foreground transition-colors">
+                    Afrofilms International
+                  </span>
+                  <div className="p-3 rounded-full border border-transparent group-hover:border-border transition-colors">
+                    <ArrowUpRight size={20} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+                  </div>
+                </a>
+                <a 
+                  href="https://kilificreekfestival.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="group flex items-center justify-between border-b border-border pb-6 hover:border-foreground transition-colors"
+                >
+                  <span className="font-serif text-2xl md:text-3xl text-foreground/80 group-hover:text-foreground transition-colors">
+                    Kilifi Creek Festival
+                  </span>
+                  <div className="p-3 rounded-full border border-transparent group-hover:border-border transition-colors">
+                    <ArrowUpRight size={20} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </Reveal>
       </section>
 

@@ -44,9 +44,6 @@ export function Header() {
               alt="The Terrace Logo"
               className="h-10 sm:h-12 w-auto object-contain transition-transform duration-700 group-hover:scale-[1.03] mix-blend-screen drop-shadow-[0_0_12px_rgba(96,165,250,0.4)]"
             />
-            <span className="ml-5 hidden sm:block font-sans text-[14px] sm:text-[16px] tracking-[0.2em] font-medium text-white/95 uppercase">
-              The Terrace Kilifi
-            </span>
           </Link>
 
           <nav className="hidden lg:flex flex-1 justify-end items-center gap-6 xl:gap-10 2xl:gap-14 mx-8">
@@ -56,7 +53,7 @@ export function Header() {
                 to={item.to}
                 className={({ isActive }) =>
                   `relative text-[10px] xl:text-[12px] font-medium tracking-[0.18em] whitespace-nowrap uppercase transition-all duration-500 hover:-translate-y-0.5 hover:text-white drop-shadow-[0_0_8px_rgba(96,165,250,0.3)] ${
-                    isActive ? "text-white" : "text-white/60"
+                    isActive ? "text-white" : "text-white/80"
                   }`
                 }
               >
