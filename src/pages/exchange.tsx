@@ -45,31 +45,24 @@ function ExchangePage() {
         imageAlt="Cultural exchange and collaborative art-making space at The Terrace"
       />
 
-      <section className="container-editorial py-28 md:py-40 bg-grain">
+      <section className="container-editorial py-24 md:py-32 bg-grain">
         <div className="grid md:grid-cols-12 gap-12">
           <Reveal className="md:col-span-5">
-            <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
-              Bridging Cultures
+            <p className="eyebrow">Bridging Cultures</p>
+            <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
+              Exchange rooted in place, open to the world.
             </h2>
-            <div className="mt-12 space-y-6">
-              <p className="eyebrow">For Artistic Collaborations</p>
-              <p className="text-lg leading-relaxed text-foreground/80">
-                We work closely with the local community initiative in Mtongani Kidundu to grow and nurture accessible creative spaces within the area.
-              </p>
-              <p className="text-lg leading-relaxed text-foreground/80">
-                This partnership provides a framework for multidisciplinary artists to engage directly with residents, share knowledge, and draw inspiration from local culture.
-              </p>
-            </div>
           </Reveal>
           <Reveal
             delay={150}
-            className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80 max-w-xl"
+            className="md:col-span-6 md:col-start-7 text-lg leading-relaxed text-foreground/80"
           >
             <p>
-              In a county marked by significant income inequality, The Terrace was created as a space for connection and opportunity.
-            </p>
-            <p>
-              Through our programmes and partnerships, we aim to contribute to a balanced ecosystem where talent is nurtured, and local communities can thrive.
+              Our exchange programmes are grounded in Kilifi and rooted in authentic partnership.
+              Through collaboration with the Mtongani Kidundu community initiative and artists
+              across the region, we create space for genuine cross-cultural dialogue. We believe
+              that meaningful exchange takes time — slow conversations, shared creation, and
+              projects that emerge from trust and mutual respect.
             </p>
           </Reveal>
         </div>
@@ -93,7 +86,8 @@ function ExchangePage() {
         <img
           src={IMAGES.EXCHANGE_PILLAR.src}
           alt=""
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
           className="absolute inset-0 h-full w-full object-cover img-mask-in"
         />
         <div className="absolute inset-0 bg-charcoal/70" />

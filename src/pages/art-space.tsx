@@ -26,7 +26,8 @@ function ArtSpacePage() {
             <img
               src={IMAGES.ART_SOLO_SINGER.src}
               alt="Solo performance at The Terrace"
-              loading="lazy"
+              loading="eager"
+              fetchpriority="high"
               className="h-full w-full object-cover img-mask-in"
             />
           </div>
@@ -52,7 +53,7 @@ function ArtSpacePage() {
         </Reveal>
       </section>
 
-      {/* NEW "WHAT'S AVAILABLE" SECTION (Replaced the 6-grid per Zippy's feedback) */}
+      {/* FACILITIES SECTION - Cleaned up and stripped of redundancy */}
       <section className="bg-secondary/40 py-24 md:py-36">
         <div className="container-editorial grid md:grid-cols-12 gap-10 md:gap-16 items-center">
           
@@ -62,29 +63,22 @@ function ArtSpacePage() {
               <img
                 src={IMAGES.ART_SPACE_EVENTS.src}
                 alt="Community event and screening"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 className="h-full w-full object-cover img-mask-in"
               />
             </div>
           </Reveal>
 
-          {/* RIGHT: Zippy's PDF Text */}
+          {/* RIGHT: Minimal Available Spaces Text */}
           <Reveal delay={150} className="md:col-span-6 md:col-start-7 flex flex-col justify-center">
             <p className="eyebrow">Spaces & Facilities</p>
-            <h2 className="mt-5 font-serif text-3xl md:text-4xl leading-[1.2] text-balance">
-              Screening, exhibition, and performance spaces — alongside a bar, restaurant, and community studio.
+            <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
+              Everything you need to gather, see, and make.
             </h2>
-            <div className="mt-8 space-y-5 text-foreground/80 leading-relaxed">
-              <p>
-                The Terrace Art Space is a non-profit platform that celebrates the power of art to connect, inspire and gently shift perspectives. At its heart are the voices and lived experiences of the Kilifi people as vital contributors shaping culture and driving change in the region.
-              </p>
-              <p>
-                Through a dynamic and multidisciplinary approach, we create space for creativity to spark conversation, nurture understanding and contribute to a more inclusive and thoughtful cultural landscape. Our work is an open invitation to reimagine who shapes culture, to make room for stories that deserve to be seen and heard, and to embrace creativity as a powerful driver of lasting impact.
-              </p>
-              <p>
-                Rooted in a desire for deeper community connection and real, tangible change, The Terrace builds from over two decades of creative collaboration alongside partners such as Afrofilms International and I’ll Tell You My Story. Our mission is to support artists and communities in turning creative expression into meaningful, sustainable impact.
-              </p>
-            </div>
+            <p className="mt-8 text-xl leading-relaxed text-foreground/80">
+              The Art Space offers versatile screening, exhibition, and performance spaces — alongside a fully equipped bar, restaurant, and community studio.
+            </p>
           </Reveal>
 
         </div>
@@ -100,7 +94,8 @@ function ArtSpacePage() {
               <img 
                 src={IMAGES.ART_CROWD.src} 
                 alt="Sunset gathering at the creek" 
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
               />
             </div>
@@ -111,7 +106,8 @@ function ArtSpacePage() {
               <img 
                 src={IMAGES.ART_BAND_BW.src} 
                 alt="Live band performance" 
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
               />
             </div>
@@ -122,7 +118,8 @@ function ArtSpacePage() {
               <img 
                 src={IMAGES.ART_SINGERS.src} 
                 alt="Singing duo at sunset" 
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
               />
             </div>
@@ -133,7 +130,8 @@ function ArtSpacePage() {
               <img 
                 src={IMAGES.ART_SOLO_SINGER.src} 
                 alt="Solo performance" 
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
               />
             </div>
