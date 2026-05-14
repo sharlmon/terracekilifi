@@ -13,7 +13,10 @@ function ArtSpacePage() {
         eyebrow="The Art Space"
         title="Connecting, Inspiring, and Amplifying."
         description="A non-profit platform celebrating the power of art to gently shift perspectives. Rooted on Kilifi Creek, we draw on 20 years of collaboration to create vibrant cultural experiences."
-        image={IMAGES.ART_BAND_BW.src} 
+        image={IMAGES.ART_BAND_BW.src}
+        width={2000}
+        height={1333}
+        loading="eager"
         imageAlt="Live black and white band performance at The Terrace"
       />
 
@@ -28,6 +31,9 @@ function ArtSpacePage() {
               alt="Solo performance at The Terrace"
               loading="eager"
               fetchpriority="high"
+              width={1200}
+              height={1500}
+              decoding="async"
               className="h-full w-full object-cover img-mask-in"
             />
           </div>
@@ -65,6 +71,9 @@ function ArtSpacePage() {
                 alt="Community event and screening"
                 loading="eager"
                 fetchpriority="high"
+                width={1500}
+                height={1500}
+                decoding="async"
                 className="h-full w-full object-cover img-mask-in"
               />
             </div>
@@ -94,8 +103,10 @@ function ArtSpacePage() {
               <img 
                 src={IMAGES.ART_CROWD.src} 
                 alt="Sunset gathering at the creek" 
-                loading="eager"
-                fetchpriority="high"
+                loading="lazy"
+                width={1200}
+                height={1500}
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
               />
             </div>
@@ -106,8 +117,10 @@ function ArtSpacePage() {
               <img 
                 src={IMAGES.ART_BAND_BW.src} 
                 alt="Live band performance" 
-                loading="eager"
-                fetchpriority="high"
+                loading="lazy"
+                width={1500}
+                height={1500}
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
               />
             </div>
@@ -118,8 +131,10 @@ function ArtSpacePage() {
               <img 
                 src={IMAGES.ART_SINGERS.src} 
                 alt="Singing duo at sunset" 
-                loading="eager"
-                fetchpriority="high"
+                loading="lazy"
+                width={1500}
+                height={1500}
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
               />
             </div>

@@ -15,6 +15,9 @@ export default function ProfessionalResidency() {
         title="Professional Residency: Uninterrupted Mastery"
         description="A sanctuary for established artists to deepen their practice through focused solitude and meaningful cultural exchange on the Kenyan coast."
         image={IMAGES.RES_HERO.src}
+        width={2500}
+        height={1667}
+        loading="eager"
         imageAlt="Professional artist residency at The Terrace Kilifi"
       />
 
@@ -48,8 +51,11 @@ export default function ProfessionalResidency() {
                 <img
                   src={IMAGES.CONTENT_112.src}
                   alt="Artist performing"
-                  className="h-full w-full object-cover img-mask-in"
+                  width={1200}
+                  height={1500}
                   loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover img-mask-in"
                 />
               </div>
             </Reveal>
@@ -62,8 +68,11 @@ export default function ProfessionalResidency() {
                 <img
                   src={IMAGES.ART_BAND_BW.src}
                   alt="Artists working in the space"
-                  className="h-full w-full object-cover img-mask-in"
+                  width={1500}
+                  height={1500}
                   loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover img-mask-in"
                 />
               </div>
             </Reveal>

@@ -1,5 +1,6 @@
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
+import { Team } from "@/components/site/Team";
 import { IMAGES } from "@/utils/imageConstants";
 
 export default AboutPage;
@@ -22,6 +23,9 @@ function AboutPage() {
         title="An artist-led house on Kilifi Creek."
         description="The Terrace was founded as an independent platform for art, community and exchange — created by artists, for artists, in the heart of coastal Kenya."
         image={IMAGES.RESIDENCY_PILLAR.src}
+        width={1500}
+        height={1875}
+        loading="eager"
         imageAlt="The Terrace artist residency building overlooking Kilifi Creek"
       />
 
@@ -67,7 +71,7 @@ function AboutPage() {
         </div>
       </section>
 
-
+      <Team />
     </>
   );
 }

@@ -42,7 +42,11 @@ export function Header() {
             <img 
               src={IMAGES.LOGO_MAIN.src}
               alt="The Terrace Logo"
+              width={128}
+              height={128}
               className="h-10 sm:h-12 w-auto object-contain transition-transform duration-700 group-hover:scale-[1.03] mix-blend-screen drop-shadow-[0_0_12px_rgba(96,165,250,0.4)]"
+              loading="eager"
+              decoding="sync"
             />
           </Link>
 

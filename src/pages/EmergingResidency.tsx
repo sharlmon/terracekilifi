@@ -14,6 +14,9 @@ export default function EmergingResidency() {
         title="Emerging Residency: Cultivate Your Voice"
         description="A vibrant hub designed for artistic exploration, mentorship, and community. Nestled along Kilifi Creek, providing accessible infrastructure for the next generation of talent."
         image={IMAGES.RES_EMERGING_MAIN.src}
+        width={2500}
+        height={1667}
+        loading="eager"
         imageAlt="Emerging artist residency at The Terrace Kilifi"
       />
 

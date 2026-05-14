@@ -1,16 +1,26 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Suspense } from "react-router-dom";
+import { lazy } from "react";
 import { Header } from "./components/site/Header";
 import { Footer } from "./components/site/Footer";
 
-// Pages
-import Home from "./pages/index";
-import AboutPage from "./pages/about";
-import TeamPage from "./pages/TeamPage";
-import ArtSpacePage from "./pages/art-space";
-import EmergingResidency from "./pages/EmergingResidency";
-import ProfessionalResidency from "./pages/ProfessionalResidency";
-import ExchangePage from "./pages/exchange";
-import ContactPage from "./pages/contact";
+// Code-split page imports with lazy loading
+const Home = lazy(() => import("./pages/index"));
+const AboutPage = lazy(() => import("./pages/about"));
+const TeamPage = lazy(() => import("./pages/TeamPage"));
+const ArtSpacePage = lazy(() => import("./pages/art-space"));
+const EmergingResidency = lazy(() => import("./pages/EmergingResidency"));
+const ProfessionalResidency = lazy(() => import("./pages/ProfessionalResidency"));
+const ExchangePage = lazy(() => import("./pages/exchange"));
+const ContactPage = lazy(() => import("./pages/contact"));
+
+// Lightweight loading fallback - prevents layout shift
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="animate-pulse text-foreground/50">Loading...</div>
+    </div>
+  );
+}
 
 function NotFoundComponent() {
   return (
@@ -58,17 +68,19 @@ function Layout({ children }: { children: React.ReactNode }) {
 function App() {
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/art-space" element={<ArtSpacePage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/residency/emerging" element={<EmergingResidency />} />
-        <Route path="/residency/professional" element={<ProfessionalResidency />} />
-        <Route path="/exchange" element={<ExchangePage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundComponent />} />
-      </Routes>
+      <Suspense fallback={<LoadingFallback />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/art-space" element={<ArtSpacePage />} />
+          <Route path="/team" element={<TeamPage />} />
+          <Route path="/residency/emerging" element={<EmergingResidency />} />
+          <Route path="/residency/professional" element={<ProfessionalResidency />} />
+          <Route path="/exchange" element={<ExchangePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundComponent />} />
+        </Routes>
+      </Suspense>
     </Layout>
   );
 }

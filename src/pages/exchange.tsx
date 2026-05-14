@@ -42,6 +42,9 @@ function ExchangePage() {
         title="Cultures, Disciplines, and Communities."
         description="A collaborative space where disciplines converge and communities bridge. We foster meaningful cross-cultural dialogue rooted in authentic Kilifi partnerships."
         image={IMAGES.EXCHANGE_PILLAR.src}
+        width={2500}
+        height={1667}
+        loading="eager"
         imageAlt="Cultural exchange and collaborative art-making space at The Terrace"
       />
 
@@ -88,6 +91,9 @@ function ExchangePage() {
           alt=""
           loading="eager"
           fetchpriority="high"
+          width={2500}
+          height={1667}
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover img-mask-in"
         />
         <div className="absolute inset-0 bg-charcoal/70" />

@@ -50,8 +50,11 @@ export default function TeamPage() {
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)] group-hover:scale-105"
+                    width={1200}
+                    height={1500}
                     loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)] group-hover:scale-105"
                   />
                 </div>
                 

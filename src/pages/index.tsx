@@ -137,6 +137,9 @@ function HomePage() {
                       src={p.image}
                       alt={p.title}
                       loading="lazy"
+                      width={1200}
+                      height={1500}
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)] group-hover:scale-[1.06]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
@@ -189,16 +192,22 @@ function HomePage() {
                 <img
                   src={IMAGES.FACILITY_MANGROVE.src}
                   alt="Mangrove roots in still water"
-                  className="h-full w-full object-cover img-mask-in"
+                  width={1000}
+                  height={1250}
                   loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover img-mask-in"
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 w-40 aspect-square overflow-hidden rounded-sm border-8 border-background hidden md:block float-slow shadow-xl">
                 <img
                   src={IMAGES.FACILITY_SUNDECK.src}
                   alt="Sundeck"
-                  className="h-full w-full object-cover"
+                  width={600}
+                  height={600}
                   loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>

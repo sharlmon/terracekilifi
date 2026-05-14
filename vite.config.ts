@@ -13,5 +13,24 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split vendor libraries into separate chunks for better caching
+          "react-vendor": ["react", "react-dom"],
+          "router-vendor": ["react-router-dom"],
+          "icons-vendor": ["lucide-react"],
+        },
+      },
+    },
+    // Inline small CSS to reduce critical path
+    cssCodeSplit: true,
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
 });

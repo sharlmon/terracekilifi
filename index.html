@@ -20,12 +20,34 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <!-- Font Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    
+    <!-- Google Fonts with display=swap to prevent FOUT (Flash of Unstyled Text) -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap&family=Inter:wght@300;400;500;600&display=swap"
     />
+
+    <!-- Preload critical LCP image for faster discovery -->
+    <link
+      rel="preload"
+      as="image"
+      href="/terracekilifi/assets/images/content_133.jpg?v=2"
+      imagesrcset="/terracekilifi/assets/images/content_135.jpg?v=2 500w, /terracekilifi/assets/images/content_130.jpg?v=2 1000w, /terracekilifi/assets/images/content_133.jpg?v=2 2500w"
+      imagesizes="100vw"
+      media="(max-width: 768px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/terracekilifi/assets/images/content_133.jpg?v=2"
+      imagesrcset="/terracekilifi/assets/images/content_135.jpg?v=2 500w, /terracekilifi/assets/images/content_130.jpg?v=2 1000w, /terracekilifi/assets/images/content_133.jpg?v=2 2500w"
+      imagesizes="100vw"
+      media="(min-width: 769px)"
+    />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
