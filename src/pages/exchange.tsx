@@ -89,8 +89,7 @@ function ExchangePage() {
         <img
           src={IMAGES.EXCHANGE_PILLAR.src}
           alt=""
-          loading="eager"
-          fetchpriority="high"
+          loading="lazy"
           width={2500}
           height={1667}
           decoding="async"

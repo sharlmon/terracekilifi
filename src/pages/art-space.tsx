@@ -29,8 +29,7 @@ function ArtSpacePage() {
             <img
               src={IMAGES.ART_SOLO_SINGER.src}
               alt="Solo performance at The Terrace"
-              loading="eager"
-              fetchpriority="high"
+              loading="lazy"
               width={1200}
               height={1500}
               decoding="async"
@@ -145,8 +144,9 @@ function ArtSpacePage() {
               <img 
                 src={IMAGES.ART_SOLO_SINGER.src} 
                 alt="Solo performance" 
-                loading="eager"
-                fetchpriority="high"
+                loading="lazy"
+                width={1200}
+                height={1500}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
               />
             </div>

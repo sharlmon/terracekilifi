@@ -61,6 +61,8 @@ function HomePage() {
           src={IMAGES.ART_SPACE_HERO.src}
           srcSet={IMAGES.ART_SPACE_HERO.srcSet}
           alt="Art space at The Terrace Kilifi"
+          width={2500}
+          height={1667}
           className="absolute inset-0 h-full w-full object-cover ken-burns img-mask-in"
           loading="eager"
           fetchPriority="high"
@@ -313,6 +315,8 @@ function HomePage() {
         <img
           src={IMAGES.HERO_SUNSET.src}
           alt=""
+          width={2500}
+          height={1667}
           className="absolute inset-0 h-full w-full object-cover img-mask-in"
           loading="lazy"
         />
