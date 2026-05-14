@@ -99,13 +99,13 @@ function HomePage() {
           >
             <p>
               The Terrace is an artist-led, independent arts space and residency created to provide
-              a focused environment for reflection and creation. It offers respite from
-              the everyday challenges of creative careers, supporting artistic exploration.
+              a focused environment for reflection and creation. It offers respite from the everyday
+              challenges of creative careers, supporting artistic exploration.
             </p>
             <p>
-              Guided by the Sawazisha (Equalize) approach, we support
-              multidisciplinary artists through training, career development, and community-driven
-              projects, including Sawazisha Sinema (Film) and Sawazisha Sekta (Music &amp; Fashion).
+              Guided by the Sawazisha (Equalize) approach, we support multidisciplinary artists
+              through training, career development, and community-driven projects, including
+              Sawazisha Sinema (Film) and Sawazisha Sekta (Music &amp; Fashion).
             </p>
             <p>
               Founded to decentralize the arts from major urban centers, The Terrace operates
@@ -254,7 +254,7 @@ function HomePage() {
             <h2 className="font-serif text-4xl md:text-6xl text-white mb-12 drop-shadow-[0_0_20px_rgba(96,165,250,0.25)]">
               People who hold the space.
             </h2>
-            <Link 
+            <Link
               to="/team"
               className="inline-flex items-center justify-center rounded-full bg-white text-black px-12 py-5 text-xs font-bold uppercase tracking-[0.25em] hover:scale-105 hover:bg-primary hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(96,165,250,0.4)]"
             >
@@ -332,7 +332,8 @@ function HomePage() {
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-8 text-xl md:text-2xl text-ivory/90 max-w-2xl mx-auto leading-relaxed">
-              A space to express freely, exchange ideas, and connect. We bring together emerging and established voices seeking the time and support to develop their creative projects.
+              A space to express freely, exchange ideas, and connect. We bring together emerging and
+              established voices seeking the time and support to develop their creative projects.
             </p>
           </Reveal>
           <Reveal delay={360}>

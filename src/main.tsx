@@ -27,9 +27,7 @@ class ErrorBoundary extends Component<
           <h1>Something went wrong.</h1>
           <pre style={{ whiteSpace: "pre-wrap" }}>{this.state.message}</pre>
           <p>Check the browser console for more details.</p>
-          <button onClick={() => this.setState({ hasError: false, message: "" })}>
-            Try again
-          </button>
+          <button onClick={() => this.setState({ hasError: false, message: "" })}>Try again</button>
         </div>
       );
     }

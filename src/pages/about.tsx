@@ -1,6 +1,6 @@
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import { Team } from "@/components/site/Team";
+
 import { IMAGES } from "@/utils/imageConstants";
 
 export default AboutPage;
@@ -70,8 +70,6 @@ function AboutPage() {
           </div>
         </div>
       </section>
-
-      <Team />
     </>
   );
 }

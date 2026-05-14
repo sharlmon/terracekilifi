@@ -22,7 +22,6 @@ function ArtSpacePage() {
 
       {/* INTRO STORY SECTION */}
       <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-10 md:gap-16 items-center bg-grain">
-        
         {/* LEFT: Solo Singer Image */}
         <Reveal className="md:col-span-5">
           <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
@@ -61,7 +60,6 @@ function ArtSpacePage() {
       {/* FACILITIES SECTION - Cleaned up and stripped of redundancy */}
       <section className="bg-secondary/40 py-24 md:py-36">
         <div className="container-editorial grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-          
           {/* LEFT: Events/Screening Image */}
           <Reveal className="md:col-span-5 md:col-start-1">
             <div className="aspect-square overflow-hidden rounded-sm shadow-elegant">
@@ -85,69 +83,68 @@ function ArtSpacePage() {
               Everything you need to gather, see, and make.
             </h2>
             <p className="mt-8 text-xl leading-relaxed text-foreground/80">
-              The Art Space offers versatile screening, exhibition, and performance spaces — alongside a fully equipped bar, restaurant, and community studio.
+              The Art Space offers versatile screening, exhibition, and performance spaces —
+              alongside a fully equipped bar, restaurant, and community studio.
             </p>
           </Reveal>
-
         </div>
       </section>
 
       {/* PROPOSAL SECTION - 4-Image Staggered Grid */}
       <section className="container-editorial py-28 md:py-36 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center bg-grain">
-        
         {/* LEFT: 4-Image Grid */}
         <div className="lg:col-span-6 grid grid-cols-2 gap-4 md:gap-6 relative">
           <Reveal delay={100}>
             <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
-              <img 
-                src={IMAGES.ART_CROWD.src} 
-                alt="Sunset gathering at the creek" 
+              <img
+                src={IMAGES.ART_CROWD.src}
+                alt="Sunset gathering at the creek"
                 loading="lazy"
                 width={1200}
                 height={1500}
                 decoding="async"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]"
               />
             </div>
           </Reveal>
-          
+
           <Reveal delay={200} className="mt-12 md:mt-24">
             <div className="aspect-square overflow-hidden rounded-sm shadow-elegant">
-              <img 
-                src={IMAGES.ART_BAND_BW.src} 
-                alt="Live band performance" 
+              <img
+                src={IMAGES.ART_BAND_BW.src}
+                alt="Live band performance"
                 loading="lazy"
                 width={1500}
                 height={1500}
                 decoding="async"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]"
               />
             </div>
           </Reveal>
-          
+
           <Reveal delay={150}>
             <div className="aspect-square overflow-hidden rounded-sm shadow-elegant">
-              <img 
-                src={IMAGES.ART_SINGERS.src} 
-                alt="Singing duo at sunset" 
+              <img
+                src={IMAGES.ART_SINGERS.src}
+                alt="Singing duo at sunset"
                 loading="lazy"
                 width={1500}
                 height={1500}
                 decoding="async"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]"
               />
             </div>
           </Reveal>
-          
+
           <Reveal delay={250} className="mt-12 md:mt-24">
             <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
-              <img 
-                src={IMAGES.ART_SOLO_SINGER.src} 
-                alt="Solo performance" 
+              <img
+                src={IMAGES.ART_SOLO_SINGER.src}
+                alt="Solo performance"
                 loading="lazy"
                 width={1200}
                 height={1500}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1400ms] ease-[cubic-bezier(0.2,0.7,0.2,1)]"
               />
             </div>
           </Reveal>
@@ -172,7 +169,6 @@ function ArtSpacePage() {
             </a>
           </div>
         </Reveal>
-
       </section>
     </>
   );

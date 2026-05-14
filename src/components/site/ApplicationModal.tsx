@@ -25,7 +25,9 @@ export function ApplicationModal({ isOpen, onClose, residencyType }: Application
       document.body.style.overflow = "unset";
       setSubmitted(false);
     }
-    return () => { document.body.style.overflow = "unset"; };
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, [isOpen]);
 
   const countWords = (text: string) => {
@@ -35,7 +37,7 @@ export function ApplicationModal({ isOpen, onClose, residencyType }: Application
   const handleRequestChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const val = e.target.value;
     const currentWords = countWords(val);
-    
+
     // Only update if within limit or if user is deleting text
     if (currentWords <= 100 || val.length < formData.request.length) {
       setFormData({ ...formData, request: val });
@@ -55,13 +57,13 @@ export function ApplicationModal({ isOpen, onClose, residencyType }: Application
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
-      <div 
-        className="absolute inset-0 bg-black/60 backdrop-blur-xl transition-opacity animate-in fade-in duration-500" 
+      <div
+        className="absolute inset-0 bg-black/60 backdrop-blur-xl transition-opacity animate-in fade-in duration-500"
         onClick={onClose}
       />
-      
+
       <div className="relative w-full max-w-xl bg-charcoal/95 backdrop-blur-md p-8 md:p-12 rounded-sm shadow-[0_0_50px_rgba(96,165,250,0.15)] border border-white/5 animate-in zoom-in-95 slide-in-from-bottom-4 duration-500">
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-6 right-6 text-white/40 hover:text-white transition-colors"
         >
@@ -86,54 +88,74 @@ export function ApplicationModal({ isOpen, onClose, residencyType }: Application
               <p className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2">
                 Residency Application
               </p>
-              <h2 className="font-serif text-3xl text-white">
-                {residencyType} Residency
-              </h2>
+              <h2 className="font-serif text-3xl text-white">{residencyType} Residency</h2>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="space-y-1">
-                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">Name</label>
-                <input 
+                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">
+                  Name
+                </label>
+                <input
                   required
                   type="text"
                   value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:border-primary transition-colors outline-none"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">Contact (Email/WhatsApp)</label>
-                <input 
+                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">
+                  Contact (Email/WhatsApp)
+                </label>
+                <input
                   required
                   type="text"
                   value={formData.contact}
-                  onChange={(e) => setFormData({...formData, contact: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
                   className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:border-primary transition-colors outline-none"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">Artist Category</label>
-                <select 
+                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">
+                  Artist Category
+                </label>
+                <select
                   value={formData.category}
-                  onChange={(e) => setFormData({...formData, category: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                   className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:border-primary transition-colors outline-none appearance-none cursor-pointer"
                 >
-                  <option className="bg-charcoal" value="Visual Art">Visual Art</option>
-                  <option className="bg-charcoal" value="Music / Sound">Music / Sound</option>
-                  <option className="bg-charcoal" value="Film / Video">Film / Video</option>
-                  <option className="bg-charcoal" value="Literature / Writing">Literature / Writing</option>
-                  <option className="bg-charcoal" value="Performance">Performance</option>
-                  <option className="bg-charcoal" value="Research / Curation">Research / Curation</option>
-                  <option className="bg-charcoal" value="Craft / Design">Craft / Design</option>
+                  <option className="bg-charcoal" value="Visual Art">
+                    Visual Art
+                  </option>
+                  <option className="bg-charcoal" value="Music / Sound">
+                    Music / Sound
+                  </option>
+                  <option className="bg-charcoal" value="Film / Video">
+                    Film / Video
+                  </option>
+                  <option className="bg-charcoal" value="Literature / Writing">
+                    Literature / Writing
+                  </option>
+                  <option className="bg-charcoal" value="Performance">
+                    Performance
+                  </option>
+                  <option className="bg-charcoal" value="Research / Curation">
+                    Research / Curation
+                  </option>
+                  <option className="bg-charcoal" value="Craft / Design">
+                    Craft / Design
+                  </option>
                 </select>
               </div>
 
               <div className="space-y-1 relative">
-                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">Request</label>
-                <textarea 
+                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">
+                  Request
+                </label>
+                <textarea
                   required
                   value={formData.request}
                   onChange={handleRequestChange}
@@ -141,12 +163,14 @@ export function ApplicationModal({ isOpen, onClose, residencyType }: Application
                   rows={4}
                   className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:border-primary transition-colors outline-none resize-none"
                 />
-                <div className={`absolute bottom-[-20px] right-0 text-[9px] uppercase tracking-tighter ${wordCount >= 100 ? "text-primary" : "text-white/30"}`}>
+                <div
+                  className={`absolute bottom-[-20px] right-0 text-[9px] uppercase tracking-tighter ${wordCount >= 100 ? "text-primary" : "text-white/30"}`}
+                >
                   {wordCount} / 100 Words
                 </div>
               </div>
 
-              <button 
+              <button
                 type="submit"
                 className="w-full mt-8 rounded-full bg-white text-charcoal py-4 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-primary hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(96,165,250,0.3)]"
               >

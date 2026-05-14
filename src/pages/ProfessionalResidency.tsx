@@ -44,7 +44,7 @@ export default function ProfessionalResidency() {
                 </p>
               </div>
             </Reveal>
-            
+
             {/* Single Image replacing the layered ones */}
             <Reveal delay={200} className="md:col-span-5">
               <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
@@ -99,7 +99,8 @@ export default function ProfessionalResidency() {
             <div className="max-w-4xl mx-auto text-center space-y-16">
               <Reveal>
                 <h3 className="font-serif text-4xl md:text-6xl leading-tight text-pretty drop-shadow-[0_0_25px_rgba(96,165,250,0.25)]">
-                  "The Terrace works in dialogue with our sister venue, The Terrace Arts Space, hosting performances, exhibitions, screenings and music production."
+                  "The Terrace works in dialogue with our sister venue, The Terrace Arts Space,
+                  hosting performances, exhibitions, screenings and music production."
                 </h3>
               </Reveal>
               <div className="grid md:grid-cols-2 gap-12 text-left items-start mt-20">
@@ -157,9 +158,10 @@ export default function ProfessionalResidency() {
                     The Atmosphere
                   </p>
                   <p className="text-lg text-foreground/80 leading-relaxed">
-                    At subsidised rates, residents stay in private rooms within the Residency Premises, many with views
-                    of the creek and mangrove forest. The residency hosts a small number of artists
-                    at a time, creating a calm and supportive living environment.
+                    At subsidised rates, residents stay in private rooms within the Residency
+                    Premises, many with views of the creek and mangrove forest. The residency hosts
+                    a small number of artists at a time, creating a calm and supportive living
+                    environment.
                   </p>
                 </div>
                 <ul className="space-y-4">
@@ -233,7 +235,7 @@ export default function ProfessionalResidency() {
               <p className="text-foreground/50 text-sm uppercase tracking-[0.3em] mb-8">
                 Applications are open on a rolling basis
               </p>
-              <button 
+              <button
                 onClick={() => setIsFormOpen(true)}
                 className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-12 py-5 text-xs font-bold uppercase tracking-[0.25em] hover:scale-105 hover:bg-primary hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(96,165,250,0.4)]"
               >
@@ -244,10 +246,10 @@ export default function ProfessionalResidency() {
         </div>
       </section>
 
-      <ApplicationModal 
-        isOpen={isFormOpen} 
-        onClose={() => setIsFormOpen(false)} 
-        residencyType="Professional" 
+      <ApplicationModal
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+        residencyType="Professional"
       />
     </>
   );

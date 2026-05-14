@@ -29,9 +29,7 @@ export function Header() {
       <header className="fixed inset-x-0 top-0 z-50 transition-all duration-500 px-4 sm:px-6 md:px-8 mt-4 sm:mt-6">
         <div
           className={`mx-auto max-w-[1800px] flex items-center justify-between px-6 md:px-10 transition-all duration-500 rounded-[16px] border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ${
-            scrolled
-              ? "bg-black py-3.5"
-              : "bg-black py-5"
+            scrolled ? "bg-black py-3.5" : "bg-black py-5"
           }`}
         >
           <Link
@@ -39,7 +37,7 @@ export function Header() {
             className="group flex items-center z-50 relative"
             onClick={() => setOpen(false)}
           >
-            <img 
+            <img
               src={IMAGES.LOGO_MAIN.src}
               alt="The Terrace Logo"
               width={128}

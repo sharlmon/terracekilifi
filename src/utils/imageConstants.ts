@@ -1,7 +1,7 @@
-import artBandBw from './IMAGES.ART_BAND_BW.jpg';
-import artCrowd from './IMAGES.ART_CROWD.jpg';
-import artSingers from './IMAGES.ART_SINGERS.jpg';
-import artSoloSinger from './IMAGES.ART_SOLO_SINGER.jpg';
+import artBandBw from "./IMAGES.ART_BAND_BW.jpg";
+import artCrowd from "./IMAGES.ART_CROWD.jpg";
+import artSingers from "./IMAGES.ART_SINGERS.jpg";
+import artSoloSinger from "./IMAGES.ART_SOLO_SINGER.jpg";
 
 const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -32,7 +32,7 @@ export const IMAGES = {
     src: `${BASE_URL}/assets/images/other_155.jpeg`,
     srcSet: `${BASE_URL}/assets/images/other_155_500w.jpg 500w, ${BASE_URL}/assets/images/other_155.jpeg 1000w`,
   },
-  
+
   // Art Space Page
   ART_SPACE_HERO: {
     src: `${BASE_URL}/assets/images/content_133.jpg?v=2`,

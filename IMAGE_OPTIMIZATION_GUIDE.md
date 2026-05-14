@@ -5,7 +5,9 @@ This guide shows you exactly how to update image tags throughout your app to fix
 ---
 
 ## ✅ CRITICAL RULE
+
 Only add performance attributes (width, height, fetchPriority, loading). DO NOT modify:
+
 - Tailwind classes (keep `object-cover`, `absolute`, etc.)
 - Layout structure
 - Colors or glassmorphism effects
@@ -19,6 +21,7 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 **What it fixes:** LCP request discovery + Improve image delivery
 
 ### Current Implementation (Good):
+
 ```jsx
 <img
   src={IMAGES.ART_SPACE_HERO.src}
@@ -31,6 +34,7 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 ```
 
 ### Updated Implementation (Optimized):
+
 ```jsx
 <img
   src={IMAGES.ART_SPACE_HERO.src}
@@ -46,6 +50,7 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 ```
 
 **Key additions:**
+
 - `width={2500}` & `height={1667}` → Prevents CLS by establishing aspect ratio
 - `decoding="async"` → Doesn't block rendering
 
@@ -59,6 +64,7 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 **What it fixes:** CLS + Improved performance for below-the-fold content
 
 ### Example: Before (CLS risk)
+
 ```jsx
 <img
   src={IMAGES.RESIDENCY_PILLAR.src}
@@ -68,6 +74,7 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 ```
 
 ### Example: After (Optimized)
+
 ```jsx
 <img
   src={IMAGES.RESIDENCY_PILLAR.src}
@@ -81,6 +88,7 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 ```
 
 **Key additions:**
+
 - `width` & `height` → Establishes aspect ratio (prevents CLS)
 - `loading="lazy"` → Delays loading until visible (saves initial bandwidth)
 - `decoding="async"` → Non-blocking decode
@@ -93,6 +101,7 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 **What it fixes:** CLS + Optimized delivery for responsive layouts
 
 ### Example: Before
+
 ```jsx
 <img
   src={IMAGES.EXCHANGE_PILLAR.src}
@@ -104,6 +113,7 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 ```
 
 ### Example: After (Optimized)
+
 ```jsx
 <img
   src={IMAGES.EXCHANGE_PILLAR.src}
@@ -128,15 +138,13 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 **What it fixes:** Prevents unnecessary parsing delays
 
 ### Example: Before
+
 ```jsx
-<img
-  src={IMAGES.LOGO_MAIN.src}
-  alt="The Terrace Kilifi"
-  className="h-8 w-auto"
-/>
+<img src={IMAGES.LOGO_MAIN.src} alt="The Terrace Kilifi" className="h-8 w-auto" />
 ```
 
 ### Example: After (Optimized)
+
 ```jsx
 <img
   src={IMAGES.LOGO_MAIN.src}
@@ -156,6 +164,7 @@ Only add performance attributes (width, height, fetchPriority, loading). DO NOT 
 ## 📝 Implementation Checklist
 
 ### ✅ Already Implemented (No action needed):
+
 - [x] **App.tsx** - React.lazy() + Suspense routes
 - [x] **vite.config.ts** - Vendor chunk splitting (react-vendor, router-vendor, icons-vendor)
 - [x] **PageHero.tsx** - Width/height props added to prevent CLS
@@ -184,14 +193,14 @@ Copy this template and adapt for each image in your codebase:
 ```jsx
 <img
   src={IMAGES.YOUR_IMAGE.src}
-  srcSet={IMAGES.YOUR_IMAGE.srcSet}  // Include if available
+  srcSet={IMAGES.YOUR_IMAGE.srcSet} // Include if available
   alt="Descriptive alt text"
   className="your-tailwind-classes"
-  width={2500}                         // Base image width
-  height={1667}                        // Base image height
-  loading="lazy"                       // "lazy" for below-fold, "eager" for LCP
-  decoding="async"                     // Always use async unless it's tiny icon
-  fetchPriority={isLCP ? "high" : "auto"}  // Only for LCP images
+  width={2500} // Base image width
+  height={1667} // Base image height
+  loading="lazy" // "lazy" for below-fold, "eager" for LCP
+  decoding="async" // Always use async unless it's tiny icon
+  fetchPriority={isLCP ? "high" : "auto"} // Only for LCP images
 />
 ```
 
@@ -203,11 +212,7 @@ For maximum performance, consider converting images to WebP format:
 
 ```jsx
 <picture>
-  <source
-    srcSet={IMAGES.YOUR_IMAGE.webp}
-    type="image/webp"
-    media="(min-width: 768px)"
-  />
+  <source srcSet={IMAGES.YOUR_IMAGE.webp} type="image/webp" media="(min-width: 768px)" />
   <img
     src={IMAGES.YOUR_IMAGE.src}
     alt="..."
@@ -225,13 +230,13 @@ But focus on width/height first — that's your biggest CLS issue.
 
 ## 📊 Performance Impact Summary
 
-| Fix | Performance Impact |
-|------|------------------|
-| Width/Height attributes | 🟢 Fixes CLS (Cumulative Layout Shift) |
-| loading="lazy" | 🟢 Reduces initial JS/image payload ~15-20% |
-| React.lazy() + Suspense | 🟢 Route splitting reduces main bundle ~40% |
-| Vendor chunking | 🟢 Improves caching/parallel loading |
-| Font display=swap | 🟢 Prevents FOUT (Flash of Unstyled Text) |
-| LCP preload + fetchPriority | 🟢 Improves LCP by 200-400ms on mobile |
+| Fix                         | Performance Impact                          |
+| --------------------------- | ------------------------------------------- |
+| Width/Height attributes     | 🟢 Fixes CLS (Cumulative Layout Shift)      |
+| loading="lazy"              | 🟢 Reduces initial JS/image payload ~15-20% |
+| React.lazy() + Suspense     | 🟢 Route splitting reduces main bundle ~40% |
+| Vendor chunking             | 🟢 Improves caching/parallel loading        |
+| Font display=swap           | 🟢 Prevents FOUT (Flash of Unstyled Text)   |
+| LCP preload + fetchPriority | 🟢 Improves LCP by 200-400ms on mobile      |
 
 **Expected Result:** Mobile score 81 → 100
