@@ -3,6 +3,10 @@ import { ArrowUpRight, Quote } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { IMAGES } from "@/utils/imageConstants";
 
+// --- NEW ASSET IMPORTS ---
+import collectiveSectionImg from "@/assets/images/collectivesection.jpg";
+import pillarsImage from "@/assets/images/pillarsimage.jpeg"; // Make sure the extension matches your local file exactly!
+
 export default HomePage;
 
 const PILLARS = [
@@ -21,10 +25,10 @@ const PILLARS = [
     href: "/residency" as const,
   },
   {
-    label: "03 — Collaborative Projects",
+    label: "03 — The Collective", // Updated from Collaborative Projects
     title: "A bridge between cultures",
     body: "Cross-cultural dialogue, knowledge exchange and collaborative creation across disciplines.",
-    image: IMAGES.EXCHANGE_PILLAR.src,
+    image: pillarsImage, // Updated to use the new pillars image
     href: "/collaborative-projects" as const,
   },
 ];
@@ -71,13 +75,16 @@ function HomePage() {
 
         <div className="relative z-10 h-full flex items-start justify-center px-6 md:px-20 text-white pt-32 md:pt-40">
           <div className="text-center max-w-3xl">
-            <p className="uppercase tracking-widest text-xs text-white/70 font-medium reveal">
+            <p className="uppercase tracking-widest text-sm md:text-base text-white/80 font-medium reveal">
               The Terrace Kilifi
             </p>
+            
             <h1 className="reveal reveal-delay-1 mt-6 font-serif text-4xl md:text-5xl lg:text-5xl leading-[1.1] tracking-tight">
-              An Artist-led Sanctuary on the East African Coast
+              An Artist-led Sanctuary<br />
+              on the East African Coast
             </h1>
-            <p className="reveal reveal-delay-2 mt-8 uppercase tracking-widest text-xs font-bold text-white">
+            
+            <p className="reveal reveal-delay-2 mt-8 uppercase tracking-widest text-sm md:text-base font-bold text-white">
               ART. SPACE. COMMUNITY.
             </p>
           </div>
@@ -92,7 +99,16 @@ function HomePage() {
             <h2 className="mt-6 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
               Nestled along the Creek.
             </h2>
+            
+            <div className="mt-10 overflow-hidden rounded-sm shadow-sm">
+              <img 
+                src={collectiveSectionImg} 
+                alt="The Collective at Terrace Kilifi" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </Reveal>
+          
           <Reveal
             delay={150}
             className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80"
@@ -114,7 +130,7 @@ function HomePage() {
             <ul className="space-y-1 pl-4 list-none text-foreground/90 font-medium">
               <li>• The Terrace Art Space</li>
               <li>• The Terrace Residency</li>
-              <li>• Collaborative Projects</li>
+              <li>• The Collective</li>
             </ul>
           </Reveal>
         </div>
@@ -124,10 +140,12 @@ function HomePage() {
       <section id="pillars" className="bg-secondary/40 py-28 md:py-40">
         <div className="container-editorial">
           <Reveal>
-            <p className="eyebrow">Three pillars</p>
-            <h2 className="mt-5 font-serif text-4xl md:text-6xl leading-[1.02] max-w-3xl text-balance">
-              One ecosystem of art, residency and exchange.
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.02] text-balance uppercase tracking-wide">
+              THREE PILLARS
             </h2>
+            <p className="mt-4 text-xl md:text-2xl text-foreground/70 font-medium tracking-wide">
+              Create — Retreat — Exchange
+            </p>
           </Reveal>
 
           <div className="mt-20 grid gap-10 md:grid-cols-3">
@@ -158,62 +176,6 @@ function HomePage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* EDITORIAL SPLIT */}
-      <section id="place" className="container-editorial py-28 md:py-40 bg-grain">
-        <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-          <Reveal className="md:col-span-6 order-2 md:order-1">
-            <p className="eyebrow">The place</p>
-            <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
-              Where the mangroves meet the morning tide.
-            </h2>
-            <div className="mt-7 space-y-5 text-foreground/80 leading-relaxed max-w-xl">
-              <p>
-                Kilifi Creek is a slow, generous landscape — silver water at dawn, mangrove forests
-                stitched with dhows, the call of birds at dusk. It shapes the way we work and the
-                way we host.
-              </p>
-              <p>
-                Our spaces are designed for conversation and quiet alike: open studios, a screening
-                room, a music studio, a kitchen that becomes a gathering place.
-              </p>
-            </div>
-            <Link
-              to="/about"
-              className="mt-9 inline-flex items-center gap-2 text-sm font-medium text-foreground link-underline"
-            >
-              Read our story
-              <ArrowUpRight size={14} />
-            </Link>
-          </Reveal>
-          <Reveal delay={200} className="md:col-span-6 order-1 md:order-2">
-            <div className="relative">
-              <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
-                <img
-                  src={IMAGES.FACILITY_MANGROVE.src}
-                  alt="Mangrove roots in still water"
-                  width={1000}
-                  height={1250}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover img-mask-in"
-                />
-              </div>
-              <div className="absolute -bottom-8 -left-8 w-40 aspect-square overflow-hidden rounded-sm border-8 border-background hidden md:block float-slow shadow-xl">
-                <img
-                  src={IMAGES.FACILITY_SUNDECK.src}
-                  alt="Sundeck"
-                  width={600}
-                  height={600}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
 

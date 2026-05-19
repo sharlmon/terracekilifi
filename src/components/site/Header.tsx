@@ -8,7 +8,7 @@ const NAV = [
   { to: "/art-space", label: "ART SPACE" },
   { to: "/residency/emerging", label: "EMERGING RESIDENCY" },
   { to: "/residency/professional", label: "PROFESSIONAL RESIDENCY" },
-  { to: "/exchange", label: "COLLABORATIVE PROJECTS" },
+  { to: "/exchange", label: "THE COLLECTIVE" },
   { to: "/team", label: "TEAM" },
   { to: "/contact", label: "CONTACT US" },
 ] as const;

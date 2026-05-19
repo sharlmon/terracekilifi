@@ -49,7 +49,7 @@ export function Footer() {
             </li>
             <li>
               <Link to="/exchange" className="link-underline">
-                Artists' Exchange
+                The Collective
               </Link>
             </li>
             <li>

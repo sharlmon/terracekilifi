@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import { IMAGES } from "@/utils/imageConstants";
 import { ApplicationModal } from "@/components/site/ApplicationModal";
+
+// --- ASSET IMPORTS ---
+import emergenceImage from "@/assets/images/emergenceimage.jpg";
+import emergence1 from "@/assets/images/emergence1.jpg.jpg";
+import emergence2 from "@/assets/images/emergence2.jpg.jpg";
+import emergence3 from "@/assets/images/emergence3.jpg.jpg";
+import sanara1 from "@/assets/images/sanara1.jpg.jpg"; //common vite issue ususally appears due to file naming
+import sanara2 from "@/assets/images/sanara2.jpeg.jpeg";
 
 export default function EmergingResidency() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -11,9 +18,9 @@ export default function EmergingResidency() {
     <>
       <PageHero
         eyebrow="Residency"
-        title="Emerging Residency: Cultivate Your Voice"
+        title="Emerging: Cultivate Your Voice"
         description="A vibrant hub designed for artistic exploration, mentorship, and community. Nestled along Kilifi Creek, providing accessible infrastructure for the next generation of talent."
-        image={IMAGES.RES_EMERGING_MAIN.src}
+        image={emergenceImage}
         width={2500}
         height={1667}
         loading="eager"
@@ -74,26 +81,50 @@ export default function EmergingResidency() {
               </div>
             </Reveal>
 
-            {/* Empty Visual Placeholders for Zippy's Photos */}
-            <Reveal delay={200} className="md:col-span-6">
+            {/* Visual Grid: Emergence & Sanara Images */}
+            <Reveal delay={200} className="md:col-span-6 space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                {/* Top Wide Placeholder */}
-                <div className="col-span-2 aspect-video rounded-sm shadow-elegant bg-foreground/5 border-2 border-dashed border-foreground/20 flex items-center justify-center transition-colors hover:bg-foreground/10">
-                  <span className="text-5xl text-foreground/30 font-light select-none">
-                    &times;
-                  </span>
+                {/* Top Wide Image */}
+                <div className="col-span-2 aspect-video rounded-sm shadow-elegant overflow-hidden">
+                  <img 
+                    src={emergence1} 
+                    alt="Emerging residency community gathering" 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
                 </div>
-                {/* Bottom Left Square Placeholder */}
-                <div className="aspect-square rounded-sm shadow-soft bg-foreground/5 border-2 border-dashed border-foreground/20 flex items-center justify-center transition-colors hover:bg-foreground/10">
-                  <span className="text-4xl text-foreground/30 font-light select-none">
-                    &times;
-                  </span>
+                {/* Bottom Left Square Image */}
+                <div className="aspect-square rounded-sm shadow-soft overflow-hidden">
+                  <img 
+                    src={emergence2} 
+                    alt="Creative collaboration in session" 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
                 </div>
-                {/* Bottom Right Square Placeholder */}
-                <div className="aspect-square rounded-sm shadow-soft bg-foreground/5 border-2 border-dashed border-foreground/20 flex items-center justify-center transition-colors hover:bg-foreground/10">
-                  <span className="text-4xl text-foreground/30 font-light select-none">
-                    &times;
-                  </span>
+                {/* Bottom Right Square Image */}
+                <div className="aspect-square rounded-sm shadow-soft overflow-hidden">
+                  <img 
+                    src={emergence3} 
+                    alt="Studio work environment" 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+              </div>
+
+              {/* Sanara Showcase Row */}
+              <div className="grid grid-cols-2 gap-4 pt-2">
+                <div className="aspect-video rounded-sm shadow-soft overflow-hidden">
+                  <img 
+                    src={sanara1} 
+                    alt="Sanara program recording session" 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+                <div className="aspect-video rounded-sm shadow-soft overflow-hidden">
+                  <img 
+                    src={sanara2} 
+                    alt="Sanara program live collaboration" 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
                 </div>
               </div>
             </Reveal>
@@ -107,7 +138,7 @@ export default function EmergingResidency() {
               },
               {
                 title: "Infrastructure",
-                desc: "Professional sound studios, screening decks, and shared co-working environments.",
+                desc: "screening space, performance deck, and shared co-working environments.",
               },
               {
                 title: "Network",
