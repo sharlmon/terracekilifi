@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { Header } from "./components/site/Header";
 import { Footer } from "./components/site/Footer";
@@ -76,6 +76,7 @@ function App() {
           <Route path="/team" element={<TeamPage />} />
           <Route path="/residency/emerging" element={<EmergingResidency />} />
           <Route path="/residency/professional" element={<ProfessionalResidency />} />
+          <Route path="/residency" element={<Navigate to="/residency/emerging" replace />} />
           <Route path="/exchange" element={<ExchangePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFoundComponent />} />

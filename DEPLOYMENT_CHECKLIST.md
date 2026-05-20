@@ -32,18 +32,21 @@
 
 ### ✅ Navigation & Routing
 
-- [x] React Router configured for SPA
-- [x] 6 main routes + 404 handler:
+- [x] React Router (BrowserRouter) configured for SPA with clean URLs (basename="/terracekilifi")
+- [x] Routes + 404 handler configured:
   - `/` → Home
   - `/about` → About
   - `/art-space` → Art Space
-  - `/residency` → Residency
+  - `/team` → Team
+  - `/residency` → Redirects to `/residency/emerging`
+  - `/residency/emerging` → Emerging Residency
+  - `/residency/professional` → Professional Residency
   - `/exchange` → Exchange
   - `/contact` → Contact
   - `*` → Custom 404
 - [x] No client-side routing errors detected
-- [x] `.nojekyll` file present in dist (enables SPA routing)
-- [x] `404.html` configured for GitHub Pages
+- [x] `.nojekyll` file present in dist (stops GitHub Pages from running Jekyll)
+- [x] Compiled `404.html` generated automatically postbuild (copies compiled `index.html` to `404.html` to support sub-route reloads)
 
 ### ✅ GitHub Pages Configuration
 
