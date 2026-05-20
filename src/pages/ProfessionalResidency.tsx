@@ -4,9 +4,9 @@ import { Reveal } from "@/components/site/Reveal";
 import { ApplicationModal } from "@/components/site/ApplicationModal"; 
 
 // Asset Imports
-import professional1Image from "@/assets/images/professional1.jpg";
+import professional1Image from "@/assets/images/professional1.JPG";
 import professional2Image from "@/assets/images/professional2.jpg.jpeg"; 
-import professionalGImage from "@/assets/images/professionalG.jpg";
+import professionalGImage from "@/assets/images/professionalG.JPG";
 
 export default function ProfessionalResidency() {
   const [isFormOpen, setIsFormOpen] = useState(false);

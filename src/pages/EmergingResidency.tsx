@@ -4,15 +4,15 @@ import { Reveal } from "@/components/site/Reveal";
 import { ApplicationModal } from "@/components/site/ApplicationModal";
 
 // --- ASSET IMPORTS ---
-import emergenceImage from "@/assets/images/emergenceimage.jpg";
+import emergenceImage from "@/assets/images/emergenceimage.JPG";
 import emergence1 from "@/assets/images/emergence1.jpg.jpg";
 import emergence2 from "@/assets/images/emergence2.jpg.jpg";
 import emergence3 from "@/assets/images/emergence3.jpg.jpg";
 import sanara1 from "@/assets/images/sanara1.jpg.jpg"; 
 import sanara2 from "@/assets/images/sanara2.jpeg.jpeg";
 // --- NEW SANARA ASSETS ---
-import sanara2W from "@/assets/images/sanaraw.jpg.jpg";
-import sanara3W from "@/assets/images/sanaraw1.jpg.jpg";
+import sanara2W from "@/assets/images/sanaraw.jpg.JPG";
+import sanara3W from "@/assets/images/sanaraw1.jpg.JPG";
 
 export default function EmergingResidency() {
   const [isFormOpen, setIsFormOpen] = useState(false);
