@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import { X, CheckCircle2 } from "lucide-react";
-import { Reveal } from "./Reveal";
+import { useState, useEffect, FormEvent } from "react";
+import { X } from "lucide-react";
 
 interface ApplicationModalProps {
   isOpen: boolean;
@@ -12,173 +11,339 @@ export function ApplicationModal({ isOpen, onClose, residencyType }: Application
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
-    category: "Visual Art",
-    request: "",
+    nationality: "", 
+    socialMedia: "", 
+    artistCategory: "",
+    soloOrGroup: "Solo",
+    numberOfPeople: 1,
+    stayDatesStart: "",
+    stayDatesEnd: "",
+    stayLogistics: "Bed only",
+    projectDescription: "",
   });
-  const [wordCount, setWordCount] = useState(0);
-  const [submitted, setSubmitted] = useState(false);
 
+  const [wordCount, setWordCount] = useState(0);
+  const MAX_WORDS = 200;
+
+  // Prevent background scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
-      setSubmitted(false);
     }
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
-  const countWords = (text: string) => {
-    return text.trim() ? text.trim().split(/\s+/).length : 0;
-  };
+  if (!isOpen) return null;
 
-  const handleRequestChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const val = e.target.value;
-    const currentWords = countWords(val);
-
-    // Only update if within limit or if user is deleting text
-    if (currentWords <= 100 || val.length < formData.request.length) {
-      setFormData({ ...formData, request: val });
-      setWordCount(currentWords);
+  // Handle word count for textarea
+  const handleDescriptionChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const text = e.target.value;
+    const words = text.trim().split(/\s+/).filter((word) => word.length > 0);
+    
+    if (words.length <= MAX_WORDS) {
+      setFormData({ ...formData, projectDescription: text });
+      setWordCount(words.length);
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      onClose();
-    }, 2500);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  if (!isOpen) return null;
+  // --- Dynamic Copy based on Residency Type ---
+  const isProfessional = residencyType === "Professional";
+  const introText = isProfessional
+    ? "Are you a professional artist or group needing a getaway on a subsidised budget? Fill out the details below."
+    : "Are you an upcoming artist looking to cultivate your voice? Apply for our free Emerging Residency below.";
+
+  // --- Date Blocking Logic ---
+  const getMinDate = () => {
+    const today = new Date();
+    return today.toISOString().split("T")[0];
+  };
+
+  const isDateBlocked = (dateString: string) => {
+    if (!isProfessional || !dateString) return false;
+
+    const date = new Date(dateString);
+    const month = date.getMonth(); // 0-indexed
+    const day = date.getDate();
+
+    // Block Oct 20th - 31st
+    if (month === 9 && day >= 20 && day <= 31) return true;
+    
+    // Block Dec 28th - Jan 15th
+    if (month === 11 && day >= 28) return true; 
+    if (month === 0 && day <= 15) return true;  
+
+    return false;
+  };
+
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    if (isProfessional && isDateBlocked(value)) {
+      alert("These dates are unavailable due to Festival blockouts (Oct 20-31 and Dec 28-Jan 15). Please select alternative dates.");
+      setFormData({ ...formData, [name]: "" }); 
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
+
+  // --- Custom Email Template Submit Trigger ---
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const recipientEmail = "hello@theterracekilifi.com";
+    const emailSubject = `${residencyType} Residency Application - ${formData.name}`;
+    
+    // Building a structured, highly legible plaintext text layout
+    const emailBody = `Residency Application Details
+=============================================
+Residency Type: ${residencyType}
+Applicant Name: ${formData.name}
+Contact Info:   ${formData.contact}
+Nationality:    ${formData.nationality}
+Website/Social: ${formData.socialMedia || "Not provided"}
+
+Practice Profile
+---------------------------------------------
+Creative Category:   ${formData.artistCategory}
+Attendance Style:    ${formData.soloOrGroup} (${formData.numberOfPeople} person/people total)
+Logistics Preferred: ${formData.stayLogistics}
+
+Proposed Window
+---------------------------------------------
+Check-in Target:  ${formData.stayDatesStart}
+Check-out Target: ${formData.stayDatesEnd}
+
+Project Intent & Focus
+---------------------------------------------
+${formData.projectDescription}
+=============================================`;
+
+    // Construct URI protected values for mailto trigger
+    const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Direct link trigger to native or web-based default email software
+    window.location.href = mailtoUrl;
+    onClose(); 
+  };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
-      <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-xl transition-opacity animate-in fade-in duration-500"
-        onClick={onClose}
-      />
-
-      <div className="relative w-full max-w-xl bg-charcoal/95 backdrop-blur-md p-8 md:p-12 rounded-sm shadow-[0_0_50px_rgba(96,165,250,0.15)] border border-white/5 animate-in zoom-in-95 slide-in-from-bottom-4 duration-500">
-        <button
-          onClick={onClose}
-          className="absolute top-6 right-6 text-white/40 hover:text-white transition-colors"
-        >
-          <X size={24} />
-        </button>
-
-        {submitted ? (
-          <div className="py-12 text-center space-y-6">
-            <Reveal>
-              <div className="flex justify-center">
-                <CheckCircle2 size={64} className="text-primary animate-pulse" />
-              </div>
-              <h2 className="font-serif text-3xl text-white mt-6">Application Received</h2>
-              <p className="text-white/60 tracking-wide uppercase text-xs">
-                We will review your proposal and get in touch.
-              </p>
-            </Reveal>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm">
+      <div className="relative w-full max-w-2xl bg-background rounded-sm shadow-2xl flex flex-col max-h-[90vh]">
+        
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 border-b border-border/40 shrink-0">
+          <div>
+            <h2 className="font-serif text-2xl md:text-3xl text-primary">
+              {residencyType} Application
+            </h2>
+            <p className="text-sm text-foreground/70 mt-2 pr-8">{introText}</p>
           </div>
-        ) : (
-          <>
-            <div className="mb-10">
-              <p className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2">
-                Residency Application
-              </p>
-              <h2 className="font-serif text-3xl text-white">{residencyType} Residency</h2>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-secondary/50 rounded-full transition-colors absolute top-6 right-6"
+            aria-label="Close modal"
+          >
+            <X className="w-5 h-5 text-foreground/70" />
+          </button>
+        </div>
+
+        {/* Scrollable Form Body */}
+        <div className="p-6 sm:p-8 overflow-y-auto">
+          <form onSubmit={handleSubmit} className="space-y-8">
+            
+            {/* Standard Info Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider">Name</label>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-secondary/20 border border-border/50 rounded-sm focus:outline-none focus:border-primary transition-colors"
+                  placeholder="Your full name or group name"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider">Contact</label>
+                <input
+                  required
+                  type="text"
+                  name="contact"
+                  value={formData.contact}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-secondary/20 border border-border/50 rounded-sm focus:outline-none focus:border-primary transition-colors"
+                  placeholder="Email or Phone number"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider">Nationality</label>
+                <input
+                  required
+                  type="text"
+                  name="nationality"
+                  value={formData.nationality}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-secondary/20 border border-border/50 rounded-sm focus:outline-none focus:border-primary transition-colors"
+                  placeholder="Your nationality"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider">Website / Socials</label>
+                <input
+                  type="text"
+                  name="socialMedia"
+                  value={formData.socialMedia}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-secondary/20 border border-border/50 rounded-sm focus:outline-none focus:border-primary transition-colors"
+                  placeholder="Portfolio link or social handle"
+                />
+              </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="space-y-1">
-                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">
-                  Name
-                </label>
+            {/* Artist Details Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider">Category</label>
                 <input
                   required
                   type="text"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:border-primary transition-colors outline-none"
+                  name="artistCategory"
+                  value={formData.artistCategory}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-secondary/20 border border-border/50 rounded-sm focus:outline-none focus:border-primary transition-colors"
+                  placeholder="e.g. Visual Art, Sound"
                 />
               </div>
-
-              <div className="space-y-1">
-                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">
-                  Contact (Email/WhatsApp)
-                </label>
-                <input
-                  required
-                  type="text"
-                  value={formData.contact}
-                  onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
-                  className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:border-primary transition-colors outline-none"
-                />
-              </div>
-
-              <div className="space-y-1">
-                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">
-                  Artist Category
-                </label>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider">Type</label>
                 <select
-                  value={formData.category}
-                  onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                  className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:border-primary transition-colors outline-none appearance-none cursor-pointer"
+                  name="soloOrGroup"
+                  value={formData.soloOrGroup}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-secondary/20 border border-border/50 rounded-sm focus:outline-none focus:border-primary transition-colors cursor-pointer"
                 >
-                  <option className="bg-charcoal" value="Visual Art">
-                    Visual Art
-                  </option>
-                  <option className="bg-charcoal" value="Music / Sound">
-                    Music / Sound
-                  </option>
-                  <option className="bg-charcoal" value="Film / Video">
-                    Film / Video
-                  </option>
-                  <option className="bg-charcoal" value="Literature / Writing">
-                    Literature / Writing
-                  </option>
-                  <option className="bg-charcoal" value="Performance">
-                    Performance
-                  </option>
-                  <option className="bg-charcoal" value="Research / Curation">
-                    Research / Curation
-                  </option>
-                  <option className="bg-charcoal" value="Craft / Design">
-                    Craft / Design
-                  </option>
+                  <option value="Solo">Solo</option>
+                  <option value="Group">Group</option>
                 </select>
               </div>
-
-              <div className="space-y-1 relative">
-                <label className="text-[10px] uppercase tracking-widest text-white/40 font-medium">
-                  Request
-                </label>
-                <textarea
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider">People</label>
+                <input
                   required
-                  value={formData.request}
-                  onChange={handleRequestChange}
-                  placeholder="Describe your intended focus (100 words max)..."
-                  rows={4}
-                  className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:border-primary transition-colors outline-none resize-none"
+                  type="number"
+                  min="1"
+                  name="numberOfPeople"
+                  value={formData.numberOfPeople}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-secondary/20 border border-border/50 rounded-sm focus:outline-none focus:border-primary transition-colors"
                 />
-                <div
-                  className={`absolute bottom-[-20px] right-0 text-[9px] uppercase tracking-tighter ${wordCount >= 100 ? "text-primary" : "text-white/30"}`}
-                >
-                  {wordCount} / 100 Words
+              </div>
+            </div>
+
+            {/* Dates & Logistics Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 bg-secondary/10 rounded-sm border border-border/30">
+              
+              {/* Dates Column */}
+              <div className="flex flex-col justify-between">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider mb-3 block">
+                  Proposed Stay Dates
+                  {isProfessional && (
+                    <span className="block text-xs font-normal text-red-500/80 mt-1 normal-case tracking-normal">
+                      *Oct 20-31 & Dec 28-Jan 15 unavailable.
+                    </span>
+                  )}
+                </label>
+                
+                <div className="grid grid-cols-2 gap-3 mt-auto">
+                  <div>
+                    <span className="block text-[10px] text-foreground/60 uppercase mb-1 font-bold tracking-wide">Check-in</span>
+                    <input
+                      required
+                      type="date"
+                      name="stayDatesStart"
+                      min={getMinDate()}
+                      value={formData.stayDatesStart}
+                      onChange={handleDateChange}
+                      className="w-full p-3 text-sm bg-background border border-border/50 rounded-sm focus:outline-none focus:border-primary cursor-pointer transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <span className="block text-[10px] text-foreground/60 uppercase mb-1 font-bold tracking-wide">Check-out</span>
+                    <input
+                      required
+                      type="date"
+                      name="stayDatesEnd"
+                      min={formData.stayDatesStart || getMinDate()}
+                      value={formData.stayDatesEnd}
+                      onChange={handleDateChange}
+                      className="w-full p-3 text-sm bg-background border border-border/50 rounded-sm focus:outline-none focus:border-primary cursor-pointer transition-colors"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <button
-                type="submit"
-                className="w-full mt-8 rounded-full bg-white text-charcoal py-4 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-primary hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(96,165,250,0.3)]"
-              >
-                Submit Application
-              </button>
-            </form>
-          </>
-        )}
+              {/* Logistics Column */}
+              <div className="flex flex-col justify-between">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider mb-3 block">
+                  Logistics Preference
+                </label>
+                <div className="mt-auto">
+                  <span className="block text-[10px] text-transparent select-none mb-1">Spacer</span>
+                  <select
+                    name="stayLogistics"
+                    value={formData.stayLogistics}
+                    onChange={handleChange}
+                    className="w-full p-3 text-sm bg-background border border-border/50 rounded-sm focus:outline-none focus:border-primary cursor-pointer transition-colors"
+                  >
+                    <option value="Bed only">Bed only</option>
+                    <option value="Bed and Breakfast">Bed and Breakfast</option>
+                    <option value="Full Board">Full Board</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Description */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-end mb-2">
+                <label className="text-sm font-bold text-primary uppercase tracking-wider">Project Focus</label>
+                <span className={`text-xs font-medium ${wordCount >= MAX_WORDS ? 'text-red-500' : 'text-foreground/50'}`}>
+                  {wordCount} / {MAX_WORDS} words
+                </span>
+              </div>
+              <textarea
+                required
+                name="projectDescription"
+                value={formData.projectDescription}
+                onChange={handleDescriptionChange}
+                rows={4}
+                className="w-full p-4 bg-secondary/20 border border-border/50 rounded-sm focus:outline-none focus:border-primary transition-colors resize-none leading-relaxed"
+                placeholder="Describe the project that you intend to focus on at the residency..."
+              />
+            </div>
+            
+            {/* Submit Button */}
+            <div className="pt-6 border-t border-border/30 flex justify-end">
+               <button
+                  type="submit"
+                  className="inline-flex items-center justify-center rounded-sm bg-foreground text-background px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg"
+                >
+                  Generate Email Application
+                </button>
+            </div>
+
+          </form>
+        </div>
       </div>
     </div>
   );

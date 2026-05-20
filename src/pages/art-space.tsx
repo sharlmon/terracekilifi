@@ -3,6 +3,10 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { IMAGES } from "@/utils/imageConstants";
 import { SITE } from "@/lib/site";
+import artspaceImage from "@/assets/images/artspace1.jpg";
+import artspace2Image from "@/assets/images/artspace2.jpg";
+import artspace3Image from "@/assets/images/artspace3.jpg"; // Imported the new screening image
+import artspace4Image from "@/assets/images/artspace4.jpg"; // Imported the new audience image
 
 export default ArtSpacePage;
 
@@ -22,12 +26,12 @@ function ArtSpacePage() {
 
       {/* INTRO STORY SECTION */}
       <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-10 md:gap-16 items-center bg-grain">
-        {/* LEFT: Solo Singer Image */}
+        {/* LEFT: Intro Image */}
         <Reveal className="md:col-span-5">
           <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
             <img
-              src={IMAGES.ART_SOLO_SINGER.src}
-              alt="Solo performance at The Terrace"
+              src={artspace2Image}
+              alt="Live musical performance at The Terrace"
               loading="lazy"
               width={1200}
               height={1500}
@@ -57,14 +61,14 @@ function ArtSpacePage() {
         </Reveal>
       </section>
 
-      {/* FACILITIES SECTION - Cleaned up and stripped of redundancy */}
+      {/* FACILITIES SECTION */}
       <section className="bg-secondary/40 py-24 md:py-36">
         <div className="container-editorial grid md:grid-cols-12 gap-10 md:gap-16 items-center">
           {/* LEFT: Events/Screening Image */}
           <Reveal className="md:col-span-5 md:col-start-1">
             <div className="aspect-square overflow-hidden rounded-sm shadow-elegant">
               <img
-                src={IMAGES.ART_SPACE_EVENTS.src}
+                src={artspaceImage}
                 alt="Community event and screening"
                 loading="eager"
                 fetchpriority="high"
@@ -97,8 +101,8 @@ function ArtSpacePage() {
           <Reveal delay={100}>
             <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
               <img
-                src={IMAGES.ART_CROWD.src}
-                alt="Sunset gathering at the creek"
+                src={artspace4Image}
+                alt="Audience gathered for an outdoor screening"
                 loading="lazy"
                 width={1200}
                 height={1500}
@@ -111,8 +115,8 @@ function ArtSpacePage() {
           <Reveal delay={200} className="mt-12 md:mt-24">
             <div className="aspect-square overflow-hidden rounded-sm shadow-elegant">
               <img
-                src={IMAGES.ART_BAND_BW.src}
-                alt="Live band performance"
+                src={artspace3Image}
+                alt="Outdoor film screening event"
                 loading="lazy"
                 width={1500}
                 height={1500}

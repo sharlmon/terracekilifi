@@ -1,11 +1,12 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Quote } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { IMAGES } from "@/utils/imageConstants";
 
-// --- NEW ASSET IMPORTS ---
+// --- EXISTING ASSET IMPORTS ---
 import collectiveSectionImg from "@/assets/images/collectivesection.jpg";
-import pillarsImage from "@/assets/images/pillarsimage.jpeg"; // Make sure the extension matches your local file exactly!
+import pillarsImage from "@/assets/images/pillarsimage.jpeg"; 
 
 export default HomePage;
 
@@ -25,38 +26,53 @@ const PILLARS = [
     href: "/residency" as const,
   },
   {
-    label: "03 — The Collective", // Updated from Collaborative Projects
+    label: "03 — The Collective", 
     title: "A bridge between cultures",
     body: "Cross-cultural dialogue, knowledge exchange and collaborative creation across disciplines.",
-    image: pillarsImage, // Updated to use the new pillars image
+    image: pillarsImage, 
     href: "/collaborative-projects" as const,
   },
 ];
 
+// --- TESTIMONIALS WITH STRICTLY RELATIVE PATHS ---
 const TESTIMONIALS = [
   {
-    quote:
-      "The Terrace is rare — a place where the rhythm of the creek shapes the work, and the work in turn shapes a community.",
-    name: "Jackie Lebo",
-    role: "Writer & Filmmaker",
+    quote: "This is the perfect embodiment of a space that allows collaboration within us Black African Women. I can’t wait to see what we create together.",
+    name: "MUTHONI DRUMMER QUEEN",
+    role: "Musician & Founder Blankets & Wine Festival",
+    imagePath: "assets/images/placeholder1.jpg",
   },
   {
-    quote:
-      "An honest, generous space. The kind of residency that quietly changes how you see your own practice.",
-    name: "Visiting Artist",
-    role: "Professional Residency, 2025",
+    quote: "I like how everytime I come here it enables me to forget all my troubles and opens me up to new ways of being, new ways to view my projects. I get unstuck and the interactions I get makes me have a new perspective to viewing life.",
+    name: "JACKIE LEBO",
+    role: "Filmmaker & Cultural Enthusiast",
+    imagePath: "assets/images/placeholder2.jpeg",
   },
   {
-    quote:
-      "Mentorship here isn't a programme — it's a way of being together. I left with skills, friends, and a body of work.",
-    name: "Emerging Resident",
-    role: "Kilifi, 2025",
+    quote: "It was magical waking up to the epic view of the mangroves and the creek. It was the perfect, serene environment to be with my team, and just focus on producing my third album. It’s my best hideout ever!",
+    name: "POLYCARP 'FANCY FINGERS' OTIENO",
+    role: "Grammy Winning Musician, Producer & Songwriter",
+    imagePath: "assets/images/placeholder3.jpg",
+  },
+  {
+    quote: "It’s just great to have spaces for not only black people, but also queer friendly that allows us to be and create. That was always hard to find in Kilifi.",
+    name: "KEVIN MWACHIRO",
+    role: "Award Winning Writer & Podcaster",
+    imagePath: "assets/images/placeholder4.jpg",
   },
 ];
 
-const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, "");
-
 function HomePage() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? TESTIMONIALS.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev === TESTIMONIALS.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <>
       {/* HERO */}
@@ -179,31 +195,79 @@ function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
-      <section id="testimonials" className="bg-charcoal text-ivory py-28 md:py-40">
+      {/* TESTIMONIAL CAROUSEL SECTION */}
+      <section id="testimonials" className="py-28 md:py-40 bg-grain border-t border-border/60 relative overflow-hidden select-none">
         <div className="container-editorial">
-          <Reveal>
-            <Quote className="text-clay" size={36} />
+          
+          <Reveal className="mb-16">
+            <p className="eyebrow">Voices from the creek</p>
+            <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] uppercase tracking-wide text-foreground">
+              What Our Artists Say
+            </h2>
           </Reveal>
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {TESTIMONIALS.map((t, i) => (
-              <Reveal
-                key={t.name}
-                delay={i * 150}
-                className="bg-ivory/5 p-8 rounded-lg border border-ivory/10 hover:bg-ivory/10 transition-colors duration-500"
-              >
-                <Quote className="text-clay mb-6 opacity-40" size={24} />
-                <blockquote className="font-serif text-xl md:text-2xl leading-[1.3] text-ivory/95 text-pretty italic">
-                  "{t.quote}"
-                </blockquote>
-                <footer className="mt-8 pt-6 border-t border-ivory/10">
-                  <p className="text-sm font-medium tracking-wide">{t.name}</p>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-ivory/40 mt-1">
-                    {t.role}
+
+          <div className="grid md:grid-cols-12 gap-12 md:gap-20 items-center">
+            
+            {/* Left Column: Testimonial Interface */}
+            <div className="md:col-span-7 flex flex-col justify-between min-h-[320px]">
+              <div className="space-y-8">
+                <span className="font-serif text-6xl text-primary/30 block -mb-4">“</span>
+                
+                <p className="font-serif text-xl md:text-2xl leading-relaxed text-foreground/90 text-balance italic transition-all duration-500">
+                  {TESTIMONIALS[activeIndex].quote}
+                </p>
+                
+                <div className="pt-6 border-t border-border/40 space-y-1">
+                  <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">
+                    {TESTIMONIALS[activeIndex].name}
+                  </h4>
+                  <p className="text-xs font-medium tracking-wide text-foreground/60">
+                    {TESTIMONIALS[activeIndex].role}
                   </p>
-                </footer>
-              </Reveal>
-            ))}
+                </div>
+              </div>
+
+              {/* Navigation Actions */}
+              <div className="flex items-center gap-3 mt-10">
+                <button
+                  onClick={handlePrev}
+                  className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground/70 hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 group"
+                  aria-label="Previous Testimonial"
+                >
+                  <ChevronLeft className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground/70 hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 group"
+                  aria-label="Next Testimonial"
+                >
+                  <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                </button>
+                
+                <span className="text-xs font-mono text-foreground/40 ml-4 tracking-widest">
+                  {String(activeIndex + 1).padStart(2, '0')} / {String(TESTIMONIALS.length).padStart(2, '0')}
+                </span>
+              </div>
+            </div>
+
+            {/* Right Column: Graphic Display Frame */}
+            <div className="md:col-span-5 aspect-[4/5] bg-secondary/20 border border-border/40 rounded-sm relative overflow-hidden shadow-sm">
+              {TESTIMONIALS.map((slide, idx) => (
+                <img
+                  key={idx}
+                  src={slide.imagePath}
+                  alt={slide.name}
+                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
+                    idx === activeIndex 
+                      ? "opacity-100 scale-100 rotate-0" 
+                      : "opacity-0 scale-105 pointer-events-none"
+                  }`}
+                  loading="lazy"
+                />
+              ))}
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/10 via-transparent to-transparent pointer-events-none" />
+            </div>
+
           </div>
         </div>
       </section>

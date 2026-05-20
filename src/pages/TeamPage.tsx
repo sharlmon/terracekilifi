@@ -18,16 +18,18 @@ const TEAM_MEMBERS = [
 
 export default function TeamPage() {
   return (
-    <div className="bg-background text-foreground min-h-screen">
+    // Changed bg-background to bg-grain to give the whole page the texture
+    <div className="bg-grain text-foreground min-h-screen">
+      
       {/* Intro Section */}
-      <section className="pt-40 pb-20 md:pt-48 md:pb-24 bg-grain">
+      <section className="pt-40 pb-20 md:pt-48 md:pb-24">
         <div className="container-editorial text-center max-w-3xl mx-auto">
           <Reveal>
             <h1 className="font-serif text-4xl md:text-6xl leading-[1.05] text-balance mb-6">
               People who hold the space.
             </h1>
             <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-              The Terrace is run by a collective of artists, curators, and community builders
+              The Terrace is run by a collective of artists, curators, and community builders<br />
               devoted to creating space for ambitious creative work on Kilifi Creek.
             </p>
           </Reveal>
@@ -35,7 +37,7 @@ export default function TeamPage() {
       </section>
 
       {/* Team Grid - Minimalist 2-Column */}
-      <section className="pb-32 md:pb-48 bg-grain">
+      <section className="pb-32 md:pb-48">
         <div className="container-editorial">
           <div className="grid md:grid-cols-2 gap-16 md:gap-24 max-w-5xl mx-auto">
             {TEAM_MEMBERS.map((member, i) => (
@@ -66,7 +68,7 @@ export default function TeamPage() {
       </section>
 
       {/* Footer Teaser */}
-      <section className="py-24 md:py-32 border-t border-border bg-secondary/30 text-center">
+      <section className="py-24 md:py-32 border-t border-border/30 bg-secondary/20 text-center">
         <div className="container-editorial">
           <Reveal>
             <p className="eyebrow mb-6 text-foreground/60">Collective Action</p>

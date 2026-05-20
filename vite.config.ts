@@ -7,6 +7,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   base: "/terracekilifi/",
   plugins: [react(), tailwindcss(), tsconfigPaths()],
+  // Add this line to tell Vite to treat .HEIC files as static assets
+  assetsInclude: ['**/*.HEIC'],
   server: {
     port: 8080,
   },

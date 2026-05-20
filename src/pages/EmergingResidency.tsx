@@ -8,8 +8,11 @@ import emergenceImage from "@/assets/images/emergenceimage.jpg";
 import emergence1 from "@/assets/images/emergence1.jpg.jpg";
 import emergence2 from "@/assets/images/emergence2.jpg.jpg";
 import emergence3 from "@/assets/images/emergence3.jpg.jpg";
-import sanara1 from "@/assets/images/sanara1.jpg.jpg"; //common vite issue ususally appears due to file naming
+import sanara1 from "@/assets/images/sanara1.jpg.jpg"; 
 import sanara2 from "@/assets/images/sanara2.jpeg.jpeg";
+// --- NEW SANARA ASSETS ---
+import sanara2W from "@/assets/images/sanaraw.jpg.jpg";
+import sanara3W from "@/assets/images/sanaraw1.jpg.jpg";
 
 export default function EmergingResidency() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -110,8 +113,9 @@ export default function EmergingResidency() {
                 </div>
               </div>
 
-              {/* Sanara Showcase Row */}
+              {/* Sanara Showcase Grid */}
               <div className="grid grid-cols-2 gap-4 pt-2">
+                {/* Row 1 - Original Images */}
                 <div className="aspect-video rounded-sm shadow-soft overflow-hidden">
                   <img 
                     src={sanara1} 
@@ -123,6 +127,22 @@ export default function EmergingResidency() {
                   <img 
                     src={sanara2} 
                     alt="Sanara program live collaboration" 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+                
+                {/* Row 2 - New Images */}
+                <div className="aspect-video rounded-sm shadow-soft overflow-hidden">
+                  <img 
+                    src={sanara2W} 
+                    alt="Artist singing during Sanara mentorship" 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+                <div className="aspect-video rounded-sm shadow-soft overflow-hidden">
+                  <img 
+                    src={sanara3W} 
+                    alt="Duo performing at community event" 
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
