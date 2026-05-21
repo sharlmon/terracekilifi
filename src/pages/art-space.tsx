@@ -5,8 +5,8 @@ import { IMAGES } from "@/utils/imageConstants";
 import { SITE } from "@/lib/site";
 import artspaceImage from "@/assets/images/artspace1.jpg";
 import artspace2Image from "@/assets/images/artspace2.jpg";
-import artspace3Image from "@/assets/images/artspace3.jpg"; // Imported the new screening image
-import artspace4Image from "@/assets/images/artspace4.jpg"; // Imported the new audience image
+import artspace3Image from "@/assets/images/artspace3.jpg";
+import artspace4Image from "@/assets/images/artspace4.jpg";
 
 export default ArtSpacePage;
 
@@ -26,17 +26,19 @@ function ArtSpacePage() {
 
       {/* INTRO STORY SECTION */}
       <section className="container-editorial py-24 md:py-36 grid md:grid-cols-12 gap-10 md:gap-16 items-center bg-grain">
-        {/* LEFT: Intro Image */}
+        {/* LEFT: Intro Image (SWAPPED: NOW SHOWING THE NYATITI PLAYER via artspace2Image) */}
         <Reveal className="md:col-span-5">
           <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
             <img
               src={artspace2Image}
-              alt="Live musical performance at The Terrace"
+              alt="Solo performance by a musician playing the Nyatiti"
               loading="lazy"
               width={1200}
               height={1500}
               decoding="async"
+              // Custom object position to show both Makadem's face and the audience
               className="h-full w-full object-cover img-mask-in"
+              style={{ objectPosition: "70% top" }}
             />
           </div>
         </Reveal>
@@ -68,14 +70,14 @@ function ArtSpacePage() {
           <Reveal className="md:col-span-5 md:col-start-1">
             <div className="aspect-square overflow-hidden rounded-sm shadow-elegant">
               <img
-                src={artspaceImage}
-                alt="Community event and screening"
+                src={artspace3Image}
+                alt="Community gathering for a film screening event"
                 loading="eager"
                 fetchpriority="high"
                 width={1500}
                 height={1500}
                 decoding="async"
-                className="h-full w-full object-cover img-mask-in"
+                className="h-full w-full object-cover img-mask-in" 
               />
             </div>
           </Reveal>
@@ -84,11 +86,12 @@ function ArtSpacePage() {
           <Reveal delay={150} className="md:col-span-6 md:col-start-7 flex flex-col justify-center">
             <p className="eyebrow">Spaces & Facilities</p>
             <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
-              Everything you need to gather, see, and make.
+              Everything you need to gather, create, and celebrate.
             </h2>
             <p className="mt-8 text-xl leading-relaxed text-foreground/80">
-              The Art Space offers versatile screening, exhibition, and performance spaces —
-              alongside a fully equipped bar, restaurant, and community studio.
+              The Art Space offers a range of versatile public and professional spaces for exhibition,
+              performance, and community engagement — alongside a fully equipped bar, restaurant, and
+              studio.
             </p>
           </Reveal>
         </div>
@@ -115,8 +118,8 @@ function ArtSpacePage() {
           <Reveal delay={200} className="mt-12 md:mt-24">
             <div className="aspect-square overflow-hidden rounded-sm shadow-elegant">
               <img
-                src={artspace3Image}
-                alt="Outdoor film screening event"
+                src={artspaceImage} 
+                alt="Art space community event"
                 loading="lazy"
                 width={1500}
                 height={1500}
@@ -140,11 +143,12 @@ function ArtSpacePage() {
             </div>
           </Reveal>
 
+          {/* SWAPPED: NOW SHOWING THE GUY WITH HAND UP via IMAGES.ART_SOLO_SINGER.src */}
           <Reveal delay={250} className="mt-12 md:mt-24">
             <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
               <img
                 src={IMAGES.ART_SOLO_SINGER.src}
-                alt="Solo performance"
+                alt="Solo performance with hand raised"
                 loading="lazy"
                 width={1200}
                 height={1500}

@@ -257,11 +257,6 @@ ${formData.projectDescription}
               <div className="flex flex-col justify-between">
                 <label className="text-sm font-bold text-primary uppercase tracking-wider mb-3 block">
                   Proposed Stay Dates
-                  {isProfessional && (
-                    <span className="block text-xs font-normal text-red-500/80 mt-1 normal-case tracking-normal">
-                      *Oct 20-31 & Dec 28-Jan 15 unavailable.
-                    </span>
-                  )}
                 </label>
                 
                 <div className="grid grid-cols-2 gap-3 mt-auto">

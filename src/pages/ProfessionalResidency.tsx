@@ -2,11 +2,21 @@ import { useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { ApplicationModal } from "@/components/site/ApplicationModal"; 
+import { IMAGES } from "@/utils/imageConstants";
 
 // Asset Imports
 import professional1Image from "@/assets/images/professional1.JPG";
-import professional2Image from "@/assets/images/professional2.jpg.jpeg"; 
-import professionalGImage from "@/assets/images/professionalG.JPG";
+import professional2Image from "@/assets/images/professional2.jpg.jpeg";
+
+// IMPORT YOUR NEW WHATSAPP IMAGES HERE:
+import profGallery1 from "@/assets/professionalimages/prof-gallery-1.jpeg";
+import profGallery2 from "@/assets/professionalimages/prof-gallery-2.jpeg";
+import profGallery3 from "@/assets/professionalimages/prof-gallery-3.jpeg";
+import profGallery4 from "@/assets/professionalimages/prof-gallery-4.jpeg";
+import profGallery5 from "@/assets/professionalimages/prof-gallery-5.jpeg";
+import profGallery6 from "@/assets/professionalimages/prof-gallery-6.jpeg";
+import profGallery7 from "@/assets/professionalimages/prof-gallery-7.jpeg";
+import profGallery8 from "@/assets/professionalimages/prof-gallery-8.jpeg";
 
 export default function ProfessionalResidency() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -22,187 +32,193 @@ export default function ProfessionalResidency() {
         height={1667}
         loading="eager"
         imageAlt="Professional artist residency at The Terrace Kilifi"
-        titleClassName="text-5xl md:text-7xl lg:text-[5.5rem]" 
       />
 
-      <section className="bg-background py-32 md:py-48 overflow-hidden relative">
+      <section className="bg-background py-20 md:py-32 overflow-hidden relative">
         <div className="container-editorial">
           
-          {/* Section 1: Intro Block */}
-          <div className="grid md:grid-cols-12 gap-12 md:gap-20 items-end mb-32 md:mb-48">
-            <Reveal className="md:col-span-7">
-              <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2 mb-10">
-                <div className="h-2 w-2 bg-primary rounded-full mr-3" />
-                <p className="text-sm uppercase tracking-widest text-primary font-medium">
-                  Professional Residency
-                </p>
-              </div>
-              <h2 className="font-serif text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] text-balance mb-12 drop-shadow-[0_0_30px_rgba(96,165,250,0.3)]">
-                A place for focus, exchange and renewal
-              </h2>
-              <div className="space-y-8 text-xl md:text-2xl leading-relaxed text-foreground/90 max-w-2xl font-light">
-                <p>
-                  The Terrace Professional Residency is an artist-run residency space on the Kenyan
-                  coast, created to support time for reflection, creation, experimentation and
-                  creative exchange. The program welcomes multi-sectoral and interdisciplinary
-                  artists, working either individually or collaboratively.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={200} className="md:col-span-5">
-              <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-elegant">
-                <img
-                  src={professional2Image}
-                  alt="Polycarp from Sauti Sol playing a traditional stringed instrument at the residency"
-                  width={1200}
-                  height={1500}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover img-mask-in"
-                />
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Section 2: Environment & Pace */}
-          <div className="grid md:grid-cols-12 gap-12 md:gap-20 items-center mb-24">
-            <Reveal className="md:col-span-5 order-2 md:order-1">
-              <div className="aspect-square overflow-hidden rounded-sm shadow-elegant">
-                <img
-                  src={professionalGImage}
-                  alt="Artists gathering and relaxing at the residency"
-                  width={1500}
-                  height={1500}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover img-mask-in"
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={150} className="md:col-span-6 md:col-start-7 order-1 md:order-2">
-              <div className="space-y-10">
-                <p className="text-lg md:text-xl leading-relaxed text-foreground/80">
-                  The residency sits quietly overlooking the mangrove forests and tidal waters of
-                  Kilifi Creek, offering artists a peaceful environment away from urban distractions
-                  - a place where ideas can unfold slowly and work can deepen.
-                </p>
-                <div className="pt-10 border-t border-border/40">
-                  <p className="text-lg md:text-xl leading-relaxed text-foreground/80">
-                    Founded and operated by African Women Artists, the Terrace is part of a growing
-                    independent cultural ecosystem in Kilifi dedicated to nurturing artistic
-                    practice while remaining deeply connected to place and community.
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Section 3: Merged Context, Programs & Location */}
-          <div className="py-24 md:py-32 bg-grain/50 -mx-6 md:-mx-20 px-6 md:px-20 mb-32 md:mb-48">
-            <Reveal className="max-w-4xl mx-auto space-y-8">
-              <p className="font-serif text-3xl md:text-4xl leading-tight text-balance text-primary mb-12">
-                The program welcomes cross-disciplinary work spanning visual art, writing, film,
-                sound, performance, research, craft, design and socially engaged practices.
-              </p>
-              <p className="text-lg leading-relaxed text-foreground/80">
-                The Terrace Residency offers a rare balance of focused solitude and meaningful
-                exchange. Residents develop their work alongside a community of artists and
-                cultural practitioners, with space for informal dialogue, shared meals and
-                organic collaboration.
-              </p>
-              <p className="text-lg leading-relaxed text-foreground/80 italic font-serif py-4">
-                Many use the time to slow down, reconnect with their practice and pursue ideas
-                that need depth and duration. Daily life is unhurried - walking, swimming, and
-                time on The Terrace often shape the creative process.
-              </p>
-              <p className="text-lg leading-relaxed text-foreground/80 border-t border-border/30 pt-8">
-                <span className="font-bold">Location & Sustainability:</span> Located about 35 minutes 
-                from Kilifi town, it offers both seclusion and access to a vibrant local cultural scene. 
-                The residency operates with an eco-conscious approach, in collaboration with a local 
-                mangrove conservation group.
-              </p>
-            </Reveal>
-          </div>
-
-          {/* Section 4: Merged Living, Working & Duration */}
-          <div className="mb-32 md:mb-48">
-            <Reveal className="mb-12 text-center">
-              <h3 className="font-serif text-4xl md:text-5xl">Living, Working & Duration</h3>
-            </Reveal>
+          {/* COMBINED COMPACT LAYOUT: Text on Left, Photo Gallery on Right */}
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-24">
             
-            <div className="grid md:grid-cols-2 gap-12 md:gap-1px bg-border border border-border mb-12">
-              <div className="bg-background p-8 md:p-10 space-y-6">
-                <div className="space-y-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
-                    The Atmosphere
-                  </p>
-                  <p className="text-base text-foreground/80 leading-relaxed">
-                    At subsidised rates, residents stay in private rooms within the Residency
-                    Premises, many with views of the creek and mangrove forest. The residency hosts
-                    a small number of artists at a time, creating a calm and supportive living
-                    environment.
+            {/* LEFT COLUMN: Condensed Text Block & Features */}
+            <div className="lg:col-span-5 space-y-8 sticky top-32">
+              <Reveal>
+                <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2 mb-4">
+                  <div className="h-2 w-2 bg-primary rounded-full mr-3" />
+                  <p className="text-xs uppercase tracking-widest text-primary font-medium">
+                    Professional Residency
                   </p>
                 </div>
-                <ul className="space-y-2">
-                  {[
-                    "5 Private bedrooms",
-                    "Quiet indoor and outdoor nooks for reading",
-                    "Rooftop, terraces and shaded outdoor areas",
-                    "Informal meeting and collaboration areas",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-4 text-foreground/75 text-sm">
-                      <div className="h-1 w-1 bg-primary rounded-full shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-background p-8 md:p-10 space-y-6">
-                <div className="space-y-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-primary font-bold">
-                    Workspace & Collaboration
+                
+                <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl leading-tight text-balance mb-6">
+                  A place for focus, exchange and renewal
+                </h2>
+                
+                <div className="space-y-4 text-sm md:text-base leading-relaxed text-foreground/80 font-light">
+                  <p>
+                    The Terrace Professional Residency is an artist-run residency space on the Kenyan
+                    coast, created to support time for reflection, creation, experimentation and
+                    creative exchange. The program welcomes multi-sectoral and interdisciplinary
+                    artists, working either individually or collaboratively.
                   </p>
-                  <p className="text-base text-foreground/80 leading-relaxed">
-                    It offers flexible creative workspaces suited to a wide range of practices.
-                    Residents also have access to a workspace and a music studio at our sister
-                    venue, The Terrace Arts Space.
+                  <p>
+                    The residency sits quietly overlooking the mangrove forests and tidal waters of
+                    Kilifi Creek, offering artists a peaceful environment away from urban distractions
+                    - a place where ideas can unfold slowly and work can deepen. Founded and operated by African Women Artists, the Terrace is part of a growing independent cultural ecosystem in Kilifi dedicated to nurturing artistic practice while remaining deeply connected to place and community.
+                  </p>
+                  <p>
+                    The program welcomes cross-disciplinary work spanning visual art, writing, film,
+                    sound, performance, research, craft, design and socially engaged practices.
+                  </p>
+                  <p className="italic font-serif py-1 text-foreground/70">
+                    Many use the time to slow down, reconnect with their practice and pursue ideas
+                    that need depth and duration. Daily life is unhurried - walking, swimming, and
+                    time on The Terrace often shape the creative process.
+                  </p>
+                  <p className="pt-2">
+                    <span className="font-bold text-foreground">Location & Sustainability:</span> Located about 35 minutes 
+                    from Kilifi town, it offers both seclusion and access to a vibrant local cultural scene. 
+                    The residency operates with an eco-conscious approach, in collaboration with a local 
+                    mangrove conservation group.
                   </p>
                 </div>
-                <ul className="space-y-2">
-                  {[
-                    "Traditional hut ideal for edit/design suite",
-                    "Access to professional music studio",
-                    "Shared outdoor kitchen and dining",
-                    "Creekside sundecks and gathering places",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-4 text-foreground/75 text-sm">
-                      <div className="h-1 w-1 bg-primary rounded-full shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              </Reveal>
+
+              {/* Condensed Facilities & Duration Box directly woven into the column */}
+              <Reveal delay={150} className="bg-secondary/10 p-5 rounded-sm border border-border/40 space-y-5">
+                <div className="space-y-3 border-b border-border/40 pb-4">
+                  <p className="text-xs md:text-sm leading-relaxed text-foreground/80">
+                    <strong className="font-serif font-bold text-primary">SOLO Residencies</strong> typically range from one week deep dive up to 3 months. (4–8 weeks recommended).
+                  </p>
+                  <p className="text-xs md:text-sm leading-relaxed text-foreground/80">
+                    <strong className="font-serif font-bold text-primary">GROUP Residencies</strong> are tailored for collaborators requiring a quick turnaround - usually intensive one-week sessions.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Living</p>
+                    <ul className="space-y-1 text-xs text-foreground/75">
+                      <li>• 5 Private bedrooms</li>
+                      <li>• Quiet reading nooks</li>
+                      <li>• Rooftop & terraces</li>
+                      <li>• Informal meeting areas</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-2">Working</p>
+                    <ul className="space-y-1 text-xs text-foreground/75">
+                      <li>• Traditional hut suite</li>
+                      <li>• Music studio access</li>
+                      <li>• Shared outdoor kitchen</li>
+                      <li>• Creekside sundecks</li>
+                    </ul>
+                  </div>
+                </div>
+              </Reveal>
             </div>
 
-            <Reveal className="p-10 md:p-16 bg-secondary/30 rounded-sm border border-border/50 max-w-4xl mx-auto text-center space-y-6">
-              <p className="text-lg md:text-xl leading-relaxed text-foreground/80">
-                <strong className="font-serif font-bold text-primary">SOLO Residencies</strong> typically range from one week deep dive up to 3 months. While shorter stays are possible, we recommend 4–8 weeks or longer.
-              </p>
-              <div className="w-12 h-[1px] bg-border/50 mx-auto"></div>
-              <p className="text-lg md:text-xl leading-relaxed text-foreground/80">
-                We also tailor make <strong className="font-serif font-bold text-primary">GROUP Residencies</strong> for groups of collaborators working on specific projects requiring a quick turnaround - usually intensive one-week sessions.
-              </p>
-            </Reveal>
+            {/* RIGHT COLUMN: Modern Masonry/Collage Photo Gallery */}
+            <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 h-fit">
+              
+              {/* Slot 1: Large Featured */}
+              <Reveal delay={200} className="col-span-2 row-span-2 aspect-[4/3] md:aspect-auto md:h-full overflow-hidden rounded-sm shadow-elegant">
+                <img
+                  src={profGallery1}
+                  alt="Residency environment"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </Reveal>
+
+              {/* Slot 2: Tall Vertical */}
+              <Reveal delay={250} className="col-span-1 row-span-2 aspect-[3/4] overflow-hidden rounded-sm shadow-elegant">
+                <img 
+                  src={profGallery2} 
+                  alt="Workspace detail" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </Reveal>
+              
+              {/* Slot 3: Standard Square */}
+              <Reveal delay={300} className="aspect-square overflow-hidden rounded-sm shadow-elegant">
+                <img 
+                  src={profGallery3} 
+                  alt="Artist in residence" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </Reveal>
+
+              {/* Slot 4: Standard Square */}
+              <Reveal delay={350} className="aspect-square overflow-hidden rounded-sm shadow-elegant">
+                <img 
+                  src={profGallery4} 
+                  alt="Creative process" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </Reveal>
+
+              {/* Slot 5: Standard Square */}
+              <Reveal delay={400} className="aspect-square overflow-hidden rounded-sm shadow-elegant">
+                <img 
+                  src={profGallery5} 
+                  alt="Living spaces" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </Reveal>
+
+              {/* Slot 6: Wide Landscape */}
+              <Reveal delay={450} className="col-span-2 aspect-video overflow-hidden rounded-sm shadow-elegant">
+                <img 
+                  src={profGallery6} 
+                  alt="Residency grounds" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </Reveal>
+              
+              {/* Slot 7: Standard Square */}
+              <Reveal delay={500} className="col-span-1 aspect-square overflow-hidden rounded-sm shadow-elegant">
+                <img 
+                  src={profGallery7} 
+                  alt="Creekside views" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </Reveal>
+              
+              {/* Slot 8: Standard Square */}
+              <Reveal delay={550} className="col-span-1 md:col-span-2 lg:col-span-3 aspect-[21/9] overflow-hidden rounded-sm shadow-elegant hidden md:block">
+                <img 
+                  src={profGallery8} 
+                  alt="Collaborative meeting area" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </Reveal>
+
+            </div>
           </div>
 
-          {/* Section 5: Final CTA */}
+          {/* Section: Final CTA */}
           <div className="text-center py-20 border-t border-border/20">
             <Reveal className="max-w-2xl mx-auto flex flex-col items-center">
               <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-8 uppercase">
                 Applications are open on a rolling basis
               </h3>
-              <p className="text-lg text-foreground/80 mb-10 text-balance">
+              <p className="text-base md:text-lg text-foreground/80 mb-10 text-balance">
                 Are you a professional artist or group - and need a getaway on a subsidised budget? Write to us and we'll get back to you!
               </p>
               <button

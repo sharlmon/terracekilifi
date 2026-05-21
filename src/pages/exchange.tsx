@@ -6,31 +6,34 @@ import { SITE } from "@/lib/site";
 
 export default ExchangePage;
 
-const PILLARS = [
+const COLLECTIVE_ITEMS = [
   {
     n: "01",
-    title: "Cross-cultural dialogue",
-    body: "Hosted conversations between artists working across geographies, languages and traditions.",
+    title: "Artists Exchange",
+    body: "An immersive collaboration rooted in our local community, partnering closely with the Mtongani Kidundu initiative and regional mangrove conservation groups to foster sustainable, cross-cultural dialogue.",
+    link: "/art-space",
+    linkLabel: "Discover More",
   },
   {
     n: "02",
-    title: "Community partnerships",
-    body: "Long-term collaborations with neighbours, schools and cultural organisations along the creek.",
+    title: "Kilifi Creek Festival",
+    body: "An annual celebration of music, coastal arts, and creative culture in Kilifi. A vibrant gathering that brings together diverse voices, sounds, and traditions along the shores of the creek.",
+    link: "https://kilificreekfestival.com/",
+    linkLabel: "Visit Festival",
   },
   {
     n: "03",
-    title: "Knowledge exchange",
-    body: "Reciprocal learning — skills, methods, and stories travel in both directions.",
+    title: "I'll Tell You My Story",
+    body: "A dedicated narrative and storytelling project that amplifies personal histories and community voices, weaving them into a broader tapestry of shared coastal experiences.",
+    link: "https://www.illtellyoumystory.com/",
+    linkLabel: "Read Stories",
   },
   {
     n: "04",
-    title: "Collaborative creation",
-    body: "Co-authored works that could only exist because two practices met here.",
-  },
-  {
-    n: "05",
-    title: "Local & international networks",
-    body: "A growing constellation of artists, curators and institutions linked by The Terrace.",
+    title: "Afrofilms International",
+    body: "Focusing on independent African filmmaking, cinema, and media production. They provide a crucial platform for regional filmmakers to produce, showcase, and distribute compelling visual stories.",
+    link: "https://afrofilmsinternational.com/",
+    linkLabel: "View Films",
   },
 ];
 
@@ -49,36 +52,49 @@ function ExchangePage() {
       />
 
       <section className="container-editorial py-24 md:py-32 bg-grain">
-        <div className="grid md:grid-cols-12 gap-12">
-          <Reveal className="md:col-span-5">
-            <p className="eyebrow">Bridging Cultures</p>
-            <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
-              Exchange rooted in place, open to the world.
-            </h2>
-          </Reveal>
-          <Reveal
-            delay={150}
-            className="md:col-span-6 md:col-start-7 text-lg leading-relaxed text-foreground/80"
-          >
-            <p>
-              Our exchange programmes are grounded in Kilifi and rooted in authentic partnership.
-              Through collaboration with the Mtongani Kidundu community initiative and artists
-              across the region, we create space for genuine cross-cultural dialogue. We believe
-              that meaningful exchange takes time — slow conversations, shared creation, and
-              projects that emerge from trust and mutual respect.
-            </p>
-          </Reveal>
-        </div>
+        <Reveal className="max-w-3xl mb-16">
+          <p className="eyebrow">The Collective</p>
+          <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-balance">
+            Our Network & Partners
+          </h2>
+        </Reveal>
 
-        <div className="mt-20 space-y-px bg-border border border-border shadow-elegant overflow-hidden">
-          {PILLARS.map((p, i) => (
-            <Reveal key={p.title} delay={i * 80}>
-              <article className="bg-background grid md:grid-cols-12 gap-6 p-8 md:p-12 group hover:bg-secondary/40 transition-colors duration-500">
-                <div className="md:col-span-2 font-serif text-3xl text-primary">{p.n}</div>
-                <h3 className="md:col-span-4 font-serif text-2xl md:text-3xl leading-tight">
-                  {p.title}
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          {COLLECTIVE_ITEMS.map((item, i) => (
+            <Reveal key={item.title} delay={i * 100} className="flex h-full">
+              <article className="flex flex-col h-full w-full bg-background border border-border/60 p-8 md:p-10 rounded-sm shadow-soft hover:shadow-elegant transition-shadow duration-500 group">
+                <div className="font-serif text-2xl text-primary/40 mb-4">{item.n}</div>
+                <h3 className="font-serif text-2xl md:text-3xl leading-tight mb-4 group-hover:text-primary transition-colors duration-300">
+                  {item.title}
                 </h3>
-                <p className="md:col-span-6 text-foreground/75 leading-relaxed text-lg">{p.body}</p>
+                <p className="text-foreground/75 leading-relaxed text-base md:text-lg flex-grow mb-8">
+                  {item.body}
+                </p>
+                <div className="mt-auto">
+                  {item.link.startsWith('http') ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-xs uppercase tracking-widest text-primary font-bold hover:text-foreground transition-colors duration-300"
+                    >
+                      {item.linkLabel}
+                      <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.link}
+                      className="inline-flex items-center text-xs uppercase tracking-widest text-primary font-bold hover:text-foreground transition-colors duration-300"
+                    >
+                      {item.linkLabel}
+                      <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </Link>
+                  )}
+                </div>
               </article>
             </Reveal>
           ))}
