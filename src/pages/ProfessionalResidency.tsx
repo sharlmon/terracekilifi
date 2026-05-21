@@ -41,7 +41,7 @@ export default function ProfessionalResidency() {
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-24">
             
             {/* LEFT COLUMN: Condensed Text Block & Features */}
-            <div className="lg:col-span-5 space-y-8 sticky top-32">
+            <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
               <Reveal>
                 <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2 mb-4">
                   <div className="h-2 w-2 bg-primary rounded-full mr-3" />
