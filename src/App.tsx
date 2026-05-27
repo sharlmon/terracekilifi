@@ -67,7 +67,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
 function App() {
   return (
-    <BrowserRouter basename="/terracekilifi">
+    <BrowserRouter>
       <Layout>
         <Suspense fallback={<LoadingFallback />}>
           <Routes>

@@ -3,23 +3,26 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { ApplicationModal } from "@/components/site/ApplicationModal"; 
 import { IMAGES } from "@/utils/imageConstants";
+import { AnimatePresence, motion } from "framer-motion";
+import { X } from "lucide-react";
 
 // Asset Imports
 import professional1Image from "@/assets/images/professional1.JPG";
 import professional2Image from "@/assets/images/professional2.jpg.jpeg";
 
 // IMPORT YOUR NEW WHATSAPP IMAGES HERE:
-import profGallery1 from "@/assets/professionalimages/prof-gallery-1.jpeg";
-import profGallery2 from "@/assets/professionalimages/prof-gallery-2.jpeg";
+import profGallery1 from "@/assets/professionalimages/galleryprof1.JPG";
+import profGallery2 from "@/assets/professionalimages/galleryprof.JPG";
 import profGallery3 from "@/assets/professionalimages/prof-gallery-3.jpeg";
 import profGallery4 from "@/assets/professionalimages/prof-gallery-4.jpeg";
 import profGallery5 from "@/assets/professionalimages/prof-gallery-5.jpeg";
-import profGallery6 from "@/assets/professionalimages/prof-gallery-6.jpeg";
+// profGallery6 removed
 import profGallery7 from "@/assets/professionalimages/prof-gallery-7.jpeg";
 import profGallery8 from "@/assets/professionalimages/prof-gallery-8.jpeg";
 
 export default function ProfessionalResidency() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <>
@@ -118,7 +121,7 @@ export default function ProfessionalResidency() {
               </Reveal>
             </div>
 
-            {/* RIGHT COLUMN: Modern Masonry/Collage Photo Gallery */}
+            {/* RIGHT COLUMN: Modern Masonry/Collage Photo Gallery (7 Images) */}
             <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 h-fit">
               
               {/* Slot 1: Large Featured */}
@@ -128,84 +131,82 @@ export default function ProfessionalResidency() {
                   alt="Residency environment"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer"
+                  onClick={() => setSelectedImage(profGallery1)}
                 />
               </Reveal>
 
               {/* Slot 2: Tall Vertical */}
-              <Reveal delay={250} className="col-span-1 row-span-2 aspect-[3/4] overflow-hidden rounded-sm shadow-elegant">
+              <Reveal delay={250} className="col-span-1 md:row-span-2 aspect-[3/4] overflow-hidden rounded-sm shadow-elegant">
                 <img 
                   src={profGallery2} 
                   alt="Workspace detail" 
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" 
+                  onClick={() => setSelectedImage(profGallery2)}
                 />
               </Reveal>
               
               {/* Slot 3: Standard Square */}
-              <Reveal delay={300} className="aspect-square overflow-hidden rounded-sm shadow-elegant">
+              <Reveal delay={300} className="col-span-1 aspect-square overflow-hidden rounded-sm shadow-elegant">
                 <img 
                   src={profGallery3} 
                   alt="Artist in residence" 
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" 
+                  onClick={() => setSelectedImage(profGallery3)}
                 />
               </Reveal>
 
               {/* Slot 4: Standard Square */}
-              <Reveal delay={350} className="aspect-square overflow-hidden rounded-sm shadow-elegant">
+              <Reveal delay={350} className="col-span-1 aspect-square overflow-hidden rounded-sm shadow-elegant">
                 <img 
                   src={profGallery4} 
                   alt="Creative process" 
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" 
+                  onClick={() => setSelectedImage(profGallery4)}
                 />
               </Reveal>
 
               {/* Slot 5: Standard Square */}
-              <Reveal delay={400} className="aspect-square overflow-hidden rounded-sm shadow-elegant">
+              <Reveal delay={400} className="col-span-1 aspect-square overflow-hidden rounded-sm shadow-elegant">
                 <img 
                   src={profGallery5} 
                   alt="Living spaces" 
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" 
+                  onClick={() => setSelectedImage(profGallery5)}
                 />
               </Reveal>
 
-              {/* Slot 6: Wide Landscape */}
-              <Reveal delay={450} className="col-span-2 aspect-video overflow-hidden rounded-sm shadow-elegant">
-                <img 
-                  src={profGallery6} 
-                  alt="Residency grounds" 
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
-                />
-              </Reveal>
+              {/* Image 6 Removed */}
               
-              {/* Slot 7: Standard Square */}
-              <Reveal delay={500} className="col-span-1 aspect-square overflow-hidden rounded-sm shadow-elegant">
+              {/* Slot 7: Re-mapped to Wide Landscape */}
+              <Reveal delay={500} className="col-span-2 aspect-video overflow-hidden rounded-sm shadow-elegant">
                 <img 
                   src={profGallery7} 
                   alt="Creekside views" 
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" 
+                  onClick={() => setSelectedImage(profGallery7)}
                 />
               </Reveal>
               
-              {/* Slot 8: Standard Square */}
-              <Reveal delay={550} className="col-span-1 md:col-span-2 lg:col-span-3 aspect-[21/9] overflow-hidden rounded-sm shadow-elegant hidden md:block">
+              {/* Slot 8: Re-mapped to Standard Square */}
+              <Reveal delay={550} className="col-span-1 aspect-square md:aspect-auto md:h-full overflow-hidden rounded-sm shadow-elegant">
                 <img 
                   src={profGallery8} 
                   alt="Collaborative meeting area" 
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" 
+                  onClick={() => setSelectedImage(profGallery8)}
                 />
               </Reveal>
 
@@ -238,6 +239,34 @@ export default function ProfessionalResidency() {
         onClose={() => setIsFormOpen(false)}
         residencyType="Professional"
       />
+
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md"
+            onClick={() => setSelectedImage(null)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <button
+              className="absolute top-6 right-6 md:top-8 md:right-8 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors z-[101]"
+              onClick={() => setSelectedImage(null)}
+            >
+              <X size={24} />
+            </button>
+            <motion.img
+              src={selectedImage}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="max-w-[95vw] max-h-[90vh] object-contain rounded-sm shadow-2xl cursor-pointer"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

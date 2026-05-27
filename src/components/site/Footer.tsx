@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import { Mail, MapPin, Instagram, Facebook, ArrowUpRight } from "lucide-react";
 import { SITE, mapDirectionsUrl } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
@@ -121,8 +121,20 @@ export function Footer() {
       </div>
 
       <div className="border-t border-ivory/10">
-        <div className="container-editorial py-6 flex flex-col sm:flex-row gap-3 justify-between text-xs text-ivory/50">
+        <div className="container-editorial py-6 flex flex-col md:flex-row flex-wrap gap-4 items-center justify-between text-xs text-ivory/50">
           <p>© 2026 The Terrace Kilifi. All rights reserved.</p>
+          <div className="flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity order-last md:order-none w-full md:w-auto justify-center">
+            <span>Crafted by</span>
+            <a 
+              href="https://sharl-tech.co.ke/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-ivory hover:text-clay font-medium transition-colors flex items-center gap-0.5 group"
+            >
+              Sharltech
+              <ArrowUpRight size={12} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300" />
+            </a>
+          </div>
           <p>Independent · Artist-led · Coastal Kenya</p>
         </div>
       </div>
